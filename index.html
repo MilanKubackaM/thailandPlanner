@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thajsko — Honeymoon · 3.–20. február 2027 · Milan &amp; Terka</title>
+<style>
+  :root{
+    --teal:#0f766e; --teal-dark:#115e59; --teal-light:#ccfbf1;
+    --ink:#1e293b; --muted:#64748b; --bg:#f8fafc; --card:#ffffff;
+    --amber:#b45309; --amber-bg:#fef3c7; --green:#15803d; --green-bg:#dcfce7;
+    --red:#b91c1c; --red-bg:#fee2e2; --border:#e2e8f0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  html,body{max-width:100%;overflow-x:hidden}
+  img,table{max-width:100%}
+  a{overflow-wrap:anywhere}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px 60px}
+  .tbl-scroll{max-width:100%;-webkit-overflow-scrolling:touch}
+  header.hero{background:linear-gradient(135deg,var(--teal-dark),var(--teal));color:#fff;padding:40px 20px 30px}
+  header.hero .wrap{padding-bottom:0}
+  header.hero h1{font-size:2rem;letter-spacing:-.5px}
+  header.hero p{opacity:.92;margin-top:6px}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 14px;font-size:.85rem}
+  nav.toc{background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+  nav.toc .wrap{display:flex;flex-wrap:wrap;gap:4px;padding:10px 20px}
+  nav.toc a{color:var(--teal-dark);text-decoration:none;font-size:.9rem;padding:6px 12px;border-radius:8px}
+  nav.toc a:hover{background:var(--teal-light)}
+  section{margin-top:44px}
+  h2{color:var(--teal-dark);font-size:1.45rem;margin-bottom:6px;padding-bottom:6px;border-bottom:3px solid var(--teal-light)}
+  h3{color:var(--ink);font-size:1.1rem;margin:22px 0 8px}
+  .sub{color:var(--muted);font-size:.92rem;margin-bottom:14px}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;font-size:.92rem}
+  th{background:var(--teal-dark);color:#fff;text-align:left;padding:10px 12px;font-weight:600}
+  td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top}
+  tr:nth-child(even) td{background:#f8fafc}
+  td.num,th.num{text-align:right;white-space:nowrap}
+  .tbl-scroll{overflow-x:auto;border-radius:12px}
+  a{color:var(--teal);font-weight:500}
+  .tag{display:inline-block;border-radius:6px;padding:1px 8px;font-size:.78rem;font-weight:600;white-space:nowrap}
+  .tag.rec{background:var(--green-bg);color:var(--green)}
+  .tag.warn{background:var(--amber-bg);color:var(--amber)}
+  .tag.info{background:var(--teal-light);color:var(--teal-dark)}
+  .tag.alt{background:#e0e7ff;color:#3730a3}
+  .tag.crit{background:var(--red-bg);color:var(--red)}
+  .card{background:var(--card);border:1px solid var(--border);border-left:5px solid var(--teal);border-radius:12px;padding:16px 18px;margin:14px 0}
+  .card.amber{border-left-color:var(--amber);background:#fffbeb}
+  .card.green{border-left-color:var(--green);background:#f0fdf4}
+  .card.red{border-left-color:var(--red);background:#fef2f2}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:18px 0}
+  .kpi{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+  .kpi .v{font-size:1.5rem;font-weight:700;color:var(--teal-dark)}
+  .kpi .l{font-size:.82rem;color:var(--muted);margin-top:2px}
+  .kpi.green .v{color:var(--green)}
+  tfoot td{font-weight:700;background:var(--teal-light)!important}
+  .small{font-size:.83rem;color:var(--muted)}
+  footer{margin-top:60px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:.85rem}
+  .day-loc{font-weight:700;color:var(--teal-dark);white-space:nowrap}
+  .price{white-space:nowrap;font-weight:600}
+  ul.clean{margin:8px 0 0 18px}
+  ul.clean li{margin:6px 0}
+  .flt{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f1f5f9;border:1px solid var(--border);border-radius:5px;padding:1px 6px;font-size:.85em;font-weight:600}
+  .wf{background:#ecfeff;border-left:3px solid #06b6d4;padding:6px 10px;margin-top:8px;border-radius:0 6px 6px 0;font-size:.88em}
+  /* ---------- ZMENOVE ZNACKY "i" ---------- */
+  .chg{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;min-width:18px;padding:0;margin:0 0 0 5px;border:0;border-radius:50%;background:var(--teal);color:#fff;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:700;font-size:.78rem;line-height:1;cursor:pointer;vertical-align:middle;-webkit-tap-highlight-color:transparent}
+  .chg:hover,.chg.on{background:var(--teal-dark);box-shadow:0 0 0 3px var(--teal-light)}
+  .chg-demo{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--teal);color:#fff;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:.78rem;vertical-align:middle}
+  #chgTip{position:fixed;z-index:200;max-width:320px;background:#0f172a;color:#f1f5f9;font-size:.83rem;line-height:1.5;padding:10px 13px;border-radius:10px;box-shadow:0 10px 30px rgba(15,23,42,.35);opacity:0;visibility:hidden;transition:opacity .13s;pointer-events:none}
+  #chgTip.show{opacity:1;visibility:visible}
+  #chgTip b,#chgTip strong{color:#fff}
+  @media (max-width:820px){
+    #chgTip{max-width:calc(100vw - 24px);font-size:.86rem}
+    .chg{width:21px;height:21px;min-width:21px;font-size:.85rem}
+  }
+
+  /* ---------- SYNC ---------- */
+  .sync{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--teal);border-radius:12px;padding:12px 14px;margin:0 0 14px}
+  .sync-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:9px}
+  .sync-title{font-weight:700;color:var(--teal-dark);font-size:.95rem}
+  .sync-who{flex:1 1 170px;min-width:0;font:inherit;font-size:.85rem;padding:6px 10px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--ink)}
+  .sync-who:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-light)}
+  .sync-row{display:flex;gap:6px;flex-wrap:wrap}
+  .sync-status{font-size:.83rem;color:var(--muted);margin-top:8px;min-height:18px;overflow-wrap:anywhere}
+  .sync-status.ok{color:var(--green);font-weight:600}
+  .sync-status.err{color:var(--amber);font-weight:600}
+  .sync-panel{margin-top:10px;padding:11px 12px;background:#f1f5f9;border:1px solid var(--border);border-radius:10px}
+  .sync-tok{display:block;width:100%;font:inherit;font-size:.85rem;padding:7px 10px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--ink)}
+  .sync-tok:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-light)}
+  @media (max-width:820px){ .sync-row .ck-btn{flex:1 1 auto;text-align:center} .sync-who{flex:1 1 100%} }
+
+  /* ---------- CHECKLIST ---------- */
+  .ck-demo{font-size:.9em}
+  .ck-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:8px;position:sticky;top:46px;z-index:9}
+  .ck-prog{flex:1 1 160px;height:9px;background:var(--border);border-radius:999px;overflow:hidden;min-width:120px}
+  .ck-prog{display:flex}
+  .ck-prog-in{height:100%;width:0;background:var(--green);transition:width .25s}
+  .ck-prog-part{height:100%;width:0;background:#f59e0b;transition:width .25s}
+  .ck-prog-txt{display:flex;align-items:center;gap:7px;font-weight:700;color:var(--teal-dark);font-size:.9rem;white-space:nowrap}
+  .pg-p{display:inline-flex;align-items:center;gap:4px}
+  .ck-actions{display:flex;gap:6px;flex-wrap:wrap}
+  .ck-btn{font:inherit;font-size:.82rem;font-weight:600;color:var(--teal-dark);background:var(--teal-light);border:1px solid transparent;border-radius:8px;padding:6px 11px;cursor:pointer}
+  .ck-btn:hover{border-color:var(--teal)}
+  .ck-btn-warn{background:var(--amber-bg);color:var(--amber)}
+  .ck-note{font-size:.83rem;color:var(--green);font-weight:600;min-height:18px;margin-bottom:10px}
+
+  .ck-day{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden}
+  .ck-day.ck-done{border-color:#86efac;background:#f6fefa}
+  .ck-head{display:flex;align-items:center;gap:10px;padding:11px 14px;background:#f1f5f9;border-bottom:1px solid var(--border);flex-wrap:wrap}
+  .ck-day.ck-done .ck-head{background:var(--green-bg);border-bottom-color:#86efac}
+  .ck-date{font-weight:800;color:var(--teal-dark);white-space:nowrap}
+  .ck-where{color:var(--muted);font-size:.9rem;flex:1 1 auto}
+  .ck-count{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;font-weight:700;color:var(--muted);background:#fff;border:1px solid var(--border);border-radius:999px;padding:2px 9px;white-space:nowrap}
+  .ck-count .ck-box-d,.ck-prog-txt .ck-box-d{width:13px;height:13px;border-width:2px;border-radius:4px}
+  .ck-day.ck-done .ck-count{color:var(--green);border-color:#86efac}
+
+  .ck-legend{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:.85rem;color:var(--muted);margin:0 0 14px;padding:10px 12px;background:var(--card);border:1px solid var(--border);border-radius:10px}
+  .ck-legend span{display:flex;align-items:center;gap:7px}
+  .ck-legend-hint{font-style:italic;opacity:.85}
+  .ck-box-d{width:17px;height:17px;flex:0 0 auto;border:2px solid #94a3b8;border-radius:5px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:900;color:#fff;font-style:normal}
+  .ck-box-d[data-s="1"]{border-color:#d97706;background:linear-gradient(to top,#f59e0b 50%,#fff 50%)}
+  .ck-box-d[data-s="2"]{border-color:var(--green);background:var(--green)}
+
+  .ck-box{flex:0 0 auto;width:22px;height:22px;margin-top:1px;padding:0;border:2px solid #94a3b8;border-radius:6px;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font:inherit;font-size:.78rem;font-weight:900;line-height:1;color:#fff;transition:background .12s,border-color .12s}
+  .ck-box:hover{border-color:var(--teal)}
+  .ck-box[data-s="1"]{border-color:#d97706;background:linear-gradient(to top,#f59e0b 50%,#fff 50%)}
+  .ck-box[data-s="2"]{border-color:var(--green);background:var(--green)}
+  .ck-item.s1 .ck-text{color:var(--ink)}
+  .ck-item.s2 .ck-text{text-decoration:line-through;color:var(--muted)}
+  .ck-count-part{color:var(--amber)!important;border-color:#fcd34d!important;background:var(--amber-bg)!important}
+  .pg-d{color:var(--green)}
+  .pg-p{color:var(--amber)}
+  .pg-t{color:var(--muted);font-weight:600}
+
+  .ck-items{list-style:none;margin:0;padding:6px 8px 8px}
+  .ck-item{display:block;padding:7px 6px;border-radius:8px}
+  .ck-item:hover{background:#f8fafc}
+  .ck-text{flex:1 1 auto;min-width:0;outline:none;border-radius:5px;padding:1px 3px;line-height:1.45;overflow-wrap:anywhere}
+  .ck-text:focus{background:#fff;box-shadow:0 0 0 2px var(--teal-light)}
+  .ck-tools{flex:0 0 auto;display:flex;gap:2px;align-items:center}
+  .ck-ico{font:inherit;font-size:.95rem;line-height:1;background:none;border:0;border-radius:6px;padding:4px 5px;cursor:pointer;color:var(--muted);text-decoration:none}
+  .ck-ico:hover{background:var(--teal-light);color:var(--teal-dark)}
+  .ck-ico.set{color:var(--teal);opacity:1}
+  .ck-ico.unset{opacity:.32}
+  .ck-ico.del:hover{background:var(--red-bg);color:var(--red)}
+  .ck-add{font:inherit;font-size:.84rem;font-weight:600;color:var(--teal);background:none;border:1px dashed var(--border);border-radius:8px;padding:6px 11px;margin:2px 8px 10px;cursor:pointer}
+  .ck-add:hover{border-color:var(--teal);background:var(--teal-light)}
+
+  .ck-row{display:flex;align-items:flex-start;gap:9px;width:100%}
+  .ck-panel{margin:6px 0 4px 29px;padding:10px 12px;background:#f1f5f9;border:1px solid var(--border);border-radius:10px}
+  .ck-panel-del{background:var(--red-bg);border-color:#fca5a5}
+  .ck-panel-l{display:block;font-size:.76rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .ck-panel-del .ck-panel-l{color:var(--red);text-transform:none;font-size:.88rem;letter-spacing:0}
+  .ck-panel-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .ck-url,.ck-urlview{display:block;width:100%;font:inherit;font-size:.88rem;padding:7px 10px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--ink)}
+  .ck-urlview{color:var(--muted);font-size:.83rem}
+  .ck-url:focus,.ck-urlview:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-light)}
+  .ck-primary{background:var(--teal)!important;color:#fff!important;text-decoration:none}
+  .ck-ico.on{background:var(--teal-light);color:var(--teal-dark)}
+  .ck-ico.del.on{background:var(--red-bg);color:var(--red)}
+  .ck-ghost{background:#fff!important;color:var(--muted)!important;border:1px solid var(--border)!important}
+  .ck-btn-danger{background:var(--red)!important;color:#fff!important}
+  .ck-panel-cur{font-size:.78rem;color:var(--muted);margin-top:6px;overflow-wrap:anywhere}
+
+  @media (max-width:820px){
+    .ck-bar{position:static;padding:11px 12px}
+    .ck-actions{width:100%}
+    .ck-btn{flex:1 1 auto;text-align:center}
+    .ck-item{padding:9px 4px}
+    .ck-panel{margin-left:0}
+
+    .ck-panel-row .ck-btn{flex:1 1 auto}
+    .ck-box{width:25px;height:25px;font-size:.85rem}
+    .ck-ico{padding:7px 7px;font-size:1.02rem}
+  }
+
+  @media print{nav.toc{position:static}}
+
+  /* ---------- MOBIL: tabuľky ako stohované kartičky, obsah na celú šírku ---------- */
+  @media (max-width:820px){
+    .wrap{padding:0 12px 40px}
+    header.hero{padding:26px 12px 20px}
+    header.hero h1{font-size:1.5rem;line-height:1.2}
+    header.hero p{font-size:.9rem}
+    .badge{font-size:.78rem;padding:3px 11px}
+    nav.toc .wrap{padding:8px 12px;gap:2px}
+    nav.toc a{font-size:.82rem;padding:5px 9px}
+    section{margin-top:34px}
+    h2{font-size:1.18rem}
+    h3{font-size:1.02rem}
+    h4{font-size:.98rem}
+    .card{padding:13px 14px;border-left-width:4px}
+    .kpis{grid-template-columns:1fr 1fr;gap:8px}
+    .kpi{padding:11px 12px}
+    .kpi .v{font-size:1.25rem}
+    ul.clean{margin-left:16px}
+
+    /* tabuľka -> zoznam kartičiek */
+    .tbl-scroll{overflow:visible;border-radius:0}
+    table{border:0;background:transparent;border-radius:0;overflow:visible;font-size:.93rem}
+    thead{display:none}
+    table,tbody,tfoot,tr,td{display:block;width:100%}
+    tr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:11px}
+    tr:nth-child(even) td{background:transparent}
+    td{border:0!important;padding:0 0 10px!important;background:transparent!important;text-align:left!important;white-space:normal!important;overflow-wrap:break-word}
+    td:last-child{padding-bottom:0!important}
+    td::before{content:attr(data-l);display:block;font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+    td[data-l=""]::before,td:not([data-l])::before{display:none}
+    /* číselné buňky kompaktne: popis a hodnota na jednom riadku */
+    td.num{display:flex!important;gap:8px;align-items:baseline;flex-wrap:wrap}
+    td.num::before{margin-bottom:0;flex:0 0 auto}
+    tfoot tr{background:var(--teal-light);border-color:var(--teal)}
+    tfoot td{background:transparent!important}
+    .day-loc{white-space:normal}
+    .price{white-space:normal}
+    .wf{padding:8px 10px;margin-top:10px}
+    footer{font-size:.8rem}
+  }
+  @media (max-width:420px){
+    .wrap{padding:0 9px 36px}
+    .kpis{grid-template-columns:1fr}
+    table{font-size:.9rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Thajsko — Honeymoon 🌴</h1>
+    <p>3. – 20. február 2027 · 16 dní v Thajsku · Praha → Bangkok → sever → ostrovy → Praha · Milan &amp; Terka</p>
+    <div class="badges">
+      <span class="badge">💰 Rozpočet: 3 500 € / 2 osoby (bez letenky PRG–BKK–PRG)</span>
+      <span class="badge">🎒 Len príručná batožina</span>
+      <span class="badge">✈️ Turkish Airlines cez Istanbul</span>
+      <span class="badge">🛫 Priamy let Chiang Mai → Surat Thani</span>
+      <span class="badge">📅 Verzia 2 · aktualizované podľa reálnych leteniek</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#rozpocet">💰 Rozpočet</a>
+    <a href="#itinerar">🗓️ Denný itinerár</a>
+    <a href="#checklist">✅ Checklist</a>
+    <a href="#doprava">✈️ Letenky &amp; presuny</a>
+    <a href="#ubytko">🏨 Ubytovanie</a>
+    <a href="#aktivity">🤿 Aktivity</a>
+    <a href="#odchylky">📐 Odchýlky</a>
+    <a href="#prestup">✈️ Prestup BKK</a>
+    <a href="#poznamky">📌 Poznámky &amp; checklist</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ ROZPOCET ============ -->
+<section id="rozpocet">
+  <h2>💰 Rozpočet — prehľad</h2>
+  <p class="sub">Všetky sumy sú pre 2 osoby spolu. Kurz: 1 € ≈ 37 THB. Ceny leteniek a hotelov na február 2027 sú kvalifikované odhady z high-season dát, priamy let CNX→URT je z reálneho vyhľadávania.</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">3 500 €</div><div class="l">Celkový rozpočet (2 os.)</div></div>
+    <div class="kpi"><div class="v">≈ 2 565 €</div><div class="l">Odhadované výdavky spolu</div></div>
+    <div class="kpi green"><div class="v">≈ 935 €</div><div class="l">Rezerva (~27 %)</div></div>
+    <div class="kpi"><div class="v">≈ 160 €/deň</div><div class="l">Priemer na deň (2 os.)</div></div>
+  </div>
+
+  <div class="tbl-scroll"><table>
+    <thead><tr><th>Kategória</th><th>Čo zahŕňa</th><th class="num">THB</th><th class="num">EUR</th></tr></thead>
+    <tbody>
+      <tr><td data-l="Kategória"><strong>Vnútroštátna doprava</strong></td><td data-l="Čo zahŕňa">3 vnútroštátne letenky (vrátane priameho CNX→Surat Thani), Greenbus, Lomprayah, ferry
+        <span class="chg" data-prev="PREDTÝM: 530 € — 2 letenky + nočný vlak 1. triedy (84 €) + let DMK→Surat Thani. Priamy let z Chiang Mai je drahší, ale nahradil vlak aj jeden presunový deň.">i</span></td><td class="num" data-l="THB">21 800</td><td class="num" data-l="EUR">590 €</td></tr>
+      <tr><td data-l="Kategória"><strong>Ubytovanie</strong></td><td data-l="Čo zahŕňa">14 platených nocí (2 noci v cene treku, 2 v lietadle)
+        <span class="chg" data-prev="PREDTÝM: 505 € / 13 nocí — z toho 1 noc vo vlaku a 1 v hoteli pri letisku BKK. Teraz o jednu noc viac (Chiang Mai 10.–11. 2.) a dve noci v centre Bangkoku namiesto letiskového hotela.">i</span></td><td class="num" data-l="THB">20 000</td><td class="num" data-l="EUR">540 €</td></tr>
+      <tr><td data-l="Kategória"><strong>Aktivity a vstupy</strong></td><td data-l="Čo zahŕňa">3D/2N trek, Doi Inthanon, snorkel Koh Tao, ATV, Phi Phi tour, cooking class, Muay Thai, vodopády, vstupy do chrámov
+        <span class="chg" data-prev="PREDTÝM: 780 € — Doi Inthanon musel byť privátny výlet (~54 €/os.) kvôli nočnému vlaku. Teraz stačí skupinová tura (~49 €/os.).">i</span></td><td class="num" data-l="THB">28 500</td><td class="num" data-l="EUR">770 €</td></tr>
+      <tr><td data-l="Kategória"><strong>Jedlo a pitie</strong></td><td data-l="Čo zahŕňa">16 dní, prevažne lokálne + občas lepšia reštika (~1 100 THB/deň pre dvoch; počas treku je jedlo v cene)</td><td class="num" data-l="THB">17 600</td><td class="num" data-l="EUR">475 €</td></tr>
+      <tr><td data-l="Kategória"><strong>Skútre + palivo</strong></td><td data-l="Čo zahŕňa">~8 dní prenájmu (Chiang Rai, Chiang Mai, Phangan, Samui)</td><td class="num" data-l="THB">2 900</td><td class="num" data-l="EUR">80 €</td></tr>
+      <tr><td data-l="Kategória"><strong>Miestna doprava</strong></td><td data-l="Čo zahŕňa">Grab/taxi Bangkok, songthaew, transfery na letiská a móla
+        <span class="chg" data-prev="PREDTÝM: 130 € — obsahovalo aj Grab o 5:00 z Bangkoku na Don Mueang a kyvadlovku pri letiskovom hoteli. Oboje vypadlo.">i</span></td><td class="num" data-l="THB">4 100</td><td class="num" data-l="EUR">110 €</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="2">Spolu odhad</td><td class="num">94 900</td><td class="num">≈ 2 565 €</td></tr></tfoot>
+  </table></div>
+
+  <div class="card green">
+    <strong>✅ Verdikt:</strong> Nová trasa cez priamy let do Surat Thani zdvihla rozpočet len o <strong>~65 €</strong> (priamy let je drahší, ale ušetril nočný vlak, letiskový hotel aj transfery) a za to ste získali <strong>celý deň v Bangkoku, jednu noc v posteli namiesto vlaku a žiadny budíček o 5:00</strong>. Rezerva ostáva ~935 €, čo je stále pohodlný polštár na masáže, lepšie večere a nepredvídané veci.
+  </div>
+</section>
+
+<!-- ============ ITINERAR ============ -->
+<section id="itinerar">
+  <h2>🗓️ Denný itinerár</h2>
+  <p class="sub">Ikonka <span class="chg-demo">i</span> pri riadku ukazuje, čo tam bolo pred poslednou zmenou — prejdi na ňu myšou alebo na mobile ťukni.</p>
+
+  <div class="tbl-scroll"><table>
+    <thead><tr><th>Dátum</th><th>Lokalita</th><th>Program</th><th>Nocľah</th></tr></thead>
+    <tbody>
+
+      <tr><td data-l="Dátum"><strong>3. 2.</strong><br><span class="small">streda</span></td><td class="day-loc" data-l="Lokalita">Praha ✈</td>
+      <td data-l="Program"><strong>14:45 odlet Praha</strong> <span class="flt">TK1772</span> → Istanbul → <span class="flt">TK52</span> → Bangkok. Celkový čas cesty 14 h 50 min. Economy (U).</td>
+      <td data-l="Nocľah">lietadlo</td></tr>
+
+      <tr><td data-l="Dátum"><strong>4. 2.</strong><br><span class="small">štvrtok</span></td><td class="day-loc" data-l="Lokalita">Chiang Rai</td>
+      <td data-l="Program"><strong>11:35 prílet Bangkok (BKK Suvarnabhumi)</strong> → pasová kontrola → <strong>Thai Airways, BKK 16:50 → Chiang Rai 18:20</strong> (~£53 / 61 € na osobu).<br>
+      Prestoj 5 h 15 min nie je moja voľba, ale <strong>daný letovým rozpisom</strong> — z BKK do Chiang Rai letí po 13:25 najbližšie až o 16:50. Prečo nesadneme na ten o 13:25, je <a href="#prestup">rozobrané nižšie</a>.<br>
+      Prestoj sa dá využiť: <strong>Miracle Lounge</strong> (~1 200 THB/os., sprcha + jedlo) alebo <strong>Airport Rail Link</strong> do mesta na obed (26 min do Phaya Thai, 45 THB).<br>
+      Večer už len ubytovanie + <strong>night bazaar</strong> a prvá thajská večera.</td>
+      <td data-l="Nocľah">Chiang Rai</td></tr>
+
+      <tr><td data-l="Dátum"><strong>5. 2.</strong><br><span class="small">piatok</span></td><td class="day-loc" data-l="Lokalita">Chiang Rai</td>
+      <td data-l="Program">Skúter na celý deň (~250 THB). <strong>Wat Rong Khun (Biely chrám)</strong> 200 THB/os. → <strong>Wat Rong Suea Ten (Modrý chrám)</strong> zdarma → <strong>Baan Dam (Čierny dom)</strong> → centrum, kaviarne, večer night bazaar.<br><span class="small"><span class="tag alt">ALTERNATÍVA</span> Ak chcete radšej hory ako chrámy: celodenný výlet na <strong>Doi Mae Salong</strong> (~1,5 h jazdy) — čajové plantáže, akhaské dediny, výhľady. Nedá sa stihnúť spolu s chrámami.</span></td>
+      <td data-l="Nocľah">Chiang Rai</td></tr>
+
+      <tr><td data-l="Dátum"><strong>6. 2.</strong><br><span class="small">sobota</span></td><td class="day-loc" data-l="Lokalita">Chiang Mai</td>
+      <td data-l="Program"><strong>Greenbus VIP Chiang Rai → Chiang Mai</strong> ráno (3 h 20 min, 400 THB/os.) → ubytovanie v Old Town → skúter → <strong>Doi Suthep</strong> (30 min do kopca, 30–50 THB/os., ideálne na západ slnka) → chrámy Old Town (Wat Chedi Luang, Wat Phra Singh) → večerný trh.<br><span class="tag warn">⚠️ 6. 2. = čínsky Nový rok</span> — lístok na bus kúpiť online pár dní vopred.</td>
+      <td data-l="Nocľah">Chiang Mai</td></tr>
+
+      <tr><td data-l="Dátum"><strong>7.–9. 2.</strong><br><span class="small">ne–ut</span></td><td class="day-loc" data-l="Lokalita">Hory (trek)</td>
+      <td data-l="Program"><strong>3D/2N jungle trek — organizovaný, oblasť Mae Taeng (~65 km severne od Chiang Mai).</strong><br>
+      <span class="small"><strong>Deň 1:</strong> odchod ~9:30 z CM → trh → obed v shanskej dedine → 3 h trek do hill-tribe dediny, nocľah u rodiny.<br>
+      <strong>Deň 2:</strong> celodenný trek → karenská dedina → vodopád (obed + kúpanie) → sloní tábor (kŕmenie a kúpanie, <strong>bez jazdenia</strong>) → nocľah pri rieke.<br>
+      <strong>Deň 3:</strong> <strong>rafting na rieke Mae Taeng + bamboo rafting</strong> → obed → návrat do Chiang Mai ~17:00.</span><br>
+      Sprievodca, nosiči, všetky jedlá, spacie vybavenie, vstupy a poistenie v cene. <strong>Batohy nechať v hoteli v Chiang Mai.</strong> Odporúčaný operátor je <a href="#trek-cm">nižšie v sekcii Aktivity</a>.</td>
+      <td data-l="Nocľah">2× dedina / camp<br><span class="small">(v cene treku)</span></td></tr>
+
+      <tr><td data-l="Dátum"><strong>10. 2.</strong><br><span class="small">streda</span></td><td class="day-loc" data-l="Lokalita">Doi Inthanon</td>
+      <td data-l="Program"><strong>Celodenný výlet Doi Inthanon</strong>: Kew Mae Pan trek (~3 km, 2–3 h, povinný lokálny sprievodca — vo februári je trasa otvorená a suchá) → najvyšší bod Thajska → Ang Ka boardwalk → Royal Chedis. Návrat do Chiang Mai podvečer, večer oddych pred skorým odletom.
+      <span class="chg" data-prev="PREDTÝM: Doi Inthanon musel byť PRIVÁTNY výlet s písomne dohodnutým dovozom na vlakovú stanicu do 17:45, aby ste stihli nočný vlak o 18:20. Teraz stačí bežná skupinová tura a nočný vlak vypadol úplne — šetrí ~11 € a hlavne stres.">i</span></td>
+      <td data-l="Nocľah">Chiang Mai
+      <span class="chg" data-prev="PREDTÝM: noc vo vlaku (vlak č. 10, Chiang Mai 18:20 → Bangkok 06:30, 1. trieda, 3 106 THB za oboch).">i</span></td></tr>
+
+      <tr><td data-l="Dátum"><strong>11. 2.</strong><br><span class="small">štvrtok</span></td><td class="day-loc" data-l="Lokalita">Koh Phangan</td>
+      <td data-l="Program"><span class="tag alt">NOVÁ TRASA</span> <strong>Priamy let Chiang Mai → Surat Thani</strong>, Thai AirAsia <strong>08:10 → 10:05</strong> (1 h 55 min, denne, <strong>£82 / ~95 € na osobu</strong>) → z letiska <strong>Lomprayah bus + katamarán 12:30 → Thong Sala 16:30</strong>.<br>
+      Poobede/podvečer skúter, ubytovanie, prvá pláž.
+      <span class="chg" data-prev="PREDTÝM: 11. 2. bol celý deň v Bangkoku (Grand Palace, Wat Pho, Chinatown) po príchode nočným vlakom, a na ostrovy sa letelo až 12. 2. — budíček o 5:00, Grab na Don Mueang, let DMK→Surat Thani, príchod na Phangan 12:45. Nová trasa ušetrí celý jeden presunový deň.">i</span><br>
+      <span class="small"><strong>⚠️ Musí to byť ranný let 08:10.</strong> Druhý denný spoj (17:30 → 19:20) pristáva až po poslednom trajekte — s ním by ste museli nocovať v Surat Thani.</span></td>
+      <td data-l="Nocľah">Koh Phangan</td></tr>
+
+      <tr><td data-l="Dátum"><strong>12. 2.</strong><br><span class="small">piatok</span></td><td class="day-loc" data-l="Lokalita">Koh Phangan</td>
+      <td data-l="Program">Island tour na skútri — pláže, viewpointy, <strong>vodopády</strong>.
+        <div class="wf">💧 <strong>Vodopády na Koh Phangan — čo sa vo februári reálne oplatí:</strong><br>
+        <strong>1. Than Sadet</strong> (východné pobrežie, ~30–40 min od Thong Sala, 100 THB vstup do NP) — <span class="tag rec">NAJLEPŠÍ VO FEBRUÁRI</span> jediný na ostrove, ktorý v suchom období spoľahlivo tečie. Reťaz kamenných bazénikov na hladkej žule, dá sa v nich plávať. Od parkoviska ~100 m. Bonus: do skaly vytesané kráľovské nápisy Rámu V. z r. 1888 a pláž Haad Than Sadet 5 minút odtiaľ. <em>Pozor — príjazdová cesta je najstrmšia na ostrove. Ak si na skútri nie ste istí, vezmite taxík.</em><br>
+        <strong>2. Phaeng + vyhliadka Domsila</strong> (stred ostrova, 10–15 min od Thong Sala, 100 THB) — <strong>vodopád je vo februári len stružka, choďte tam kvôli vyhliadke.</strong> Výstup 1,7 km tam a späť, ~50 min, strmé úseky s lanami, panoráma džungľa–oceán. Vo februári je chodník suchý, teda najbezpečnejší v roku.<br>
+        <strong>3. Paradise</strong> (pri Chaloklame, 30 THB vrátane fľaše vody) — malý, ale existujú februárové správy, že ešte tiekol. Prírodný bazénik v tieni, lanová hojdačka.<br>
+        <span class="small"><strong>Vynechajte:</strong> Than Prawet (ďaleká rozbitá cesta za suché koryto) a Wang Sai, ak vás nezaujme priľahlý zipline a čajovňa.</span></div></td>
+      <td data-l="Nocľah">Koh Phangan</td></tr>
+
+      <tr><td data-l="Dátum"><strong>13. 2.</strong><br><span class="small">sobota</span></td><td class="day-loc" data-l="Lokalita">Koh Tao</td>
+      <td data-l="Program">Celodenný <strong>snorkel trip speedboatom na Koh Tao + Koh Nang Yuan</strong> (7,5 h) — pickup z hotela, raňajky a obed na lodi, výstroj v cene. <strong>+250 THB/os. vstup na Nang Yuan v hotovosti.</strong><br>Nang Yuan je tá pohľadnicová trojica ostrovčekov spojených pieskovou kosou — výhľad z viewpointu je najfotenejšie miesto v Thajskom zálive.</td>
+      <td data-l="Nocľah">Koh Phangan</td></tr>
+
+      <tr><td data-l="Dátum"><strong>14. 2.</strong><br><span class="small">nedeľa 💝</span></td><td class="day-loc" data-l="Lokalita">Koh Samui<br><span class="small">Valentín</span></td>
+      <td data-l="Program"><strong>Ferry Seatran Thong Sala → Bangrak</strong> (~30–45 min, 200–300 THB/os.) → skúter → pláže → <strong>Big Buddha</strong> → večer <strong>Fisherman's Village</strong> v Bophute a <strong>romantická valentínska večera</strong> priamo na pláži (stôl rezervovať vopred!).
+      <span class="chg" data-prev="PREDTÝM: 14. 2. bol Valentín na Koh Phangan (island tour + večera v rezorte) a na Samui sa presúvalo až 15. 2. Teraz padne Valentín na Bophut / Fisherman's Village, kde je výber plážových reštaurácií výrazne lepší.">i</span></td>
+      <td data-l="Nocľah">Koh Samui</td></tr>
+
+      <tr><td data-l="Dátum"><strong>15. 2.</strong><br><span class="small">pondelok</span></td><td class="day-loc" data-l="Lokalita">Koh Samui</td>
+      <td data-l="Program"><strong>ATV / štvorkolky v horách</strong> (1 h džungľa + viewpoint, pickup z hotela v cene) → poobede vodopády a vyhliadky.
+        <div class="wf">💧 <strong>Vodopády na Koh Samui — jeden výlet, obidva naraz:</strong><br>
+        <strong>Na Muang 1</strong> (12 km do vnútrozemia od Nathonu, asfalt až k parkovisku, 20 THB parkovné, vstup zdarma) — <span class="tag rec">NAJLEPŠÍ NA KÚPANIE</span> 5 minút pešo po rovine. 30 m vysoká fialovkastá skalná stena; vo februári to nebude burácajúci prúd, ale <strong>tôňa pod ním drží vodu po celý rok</strong>. Jediné spoľahlivé kúpanie vo vodopáde na Samui v suchom období.<br>
+        <strong>Na Muang 2</strong> (rovnaké údolie, 1,5 km vyššie) — výstup 20–35 min, strmý, s lanami a poriadne šmykľavými skalami. Hore plytké bazéniky a <strong>najlepšia vyhliadka zo všetkých vodopádov na ostrove</strong>. <em>Bezpečnosť: na tejto trase sa už stali smrteľné pády — nešpekulujte mimo značenej cesty a choďte v poriadnych topánkach, nie v žabkách.</em><br>
+        <span class="small"><strong>Pozor na trik:</strong> pri prvom parkovisku pri sloňom tábore vás budú tlačiť do platenej 4×4 kyvadlovky a jazdy na slonovi — nič z toho nepotrebujete, pokračujte po ceste vyššie k voľnému parkovisku.<br>
+        <strong>Vynechajte vo februári:</strong> Hin Lad (45 min do kopca v horúčave za stružku) a Wang Sao Thong.</span></div></td>
+      <td data-l="Nocľah">Koh Samui</td></tr>
+
+      <tr><td data-l="Dátum"><strong>16. 2.</strong><br><span class="small">utorok</span></td><td class="day-loc" data-l="Lokalita">Krabi / Ao Nang</td>
+      <td data-l="Program"><strong>Lomprayah ferry + minibus, Nathon 08:30 → Krabi 12:30</strong> (pri kúpe zvoľte cieľ „Ao Nang", inak končíte v Krabi town) → ubytovanie → pláž Ao Nang → <strong>podvečer longtailom na Railay</strong> (~200 THB/os. spiatočne) na západ slnka.
+      <span class="chg" data-prev="PREDTÝM: presun na Krabi bol 17. 2. Celý ostrovný blok sa posunul o deň skôr, pretože nová trasa 11. 2. ušetrila jeden presunový deň.">i</span></td>
+      <td data-l="Nocľah">Krabi / Ao Nang</td></tr>
+
+      <tr><td data-l="Dátum"><strong>17. 2.</strong><br><span class="small">streda</span></td><td class="day-loc" data-l="Lokalita">Phi Phi</td>
+      <td data-l="Program">Celodenný <strong>Phi Phi / 4-island tour speedboatom</strong> — Maya Bay, šnorchlovanie, obed. <strong>+400 THB/os. park fee v hotovosti.</strong>
+        <div class="wf">💧 <span class="tag alt">ALTERNATÍVA PRE MILOVNÍKOV VODY</span> <strong>Jediný vodopádový výlet v itinerári, ktorý je vo februári v najlepšej forme</strong> — obe atrakcie sú geotermálne a pramenité, teda nezávislé od dažďov:<br>
+        <strong>Namtok Ron Khlong Thom (Horúci vodopád)</strong>, 200 THB/os. — termálna voda 40–50 °C tečie po hladkom vápenci do rady prírodných „vaní" vymletých do skaly, z ktorých sa skáče do studeného potoka. 400 m od parkoviska. Choďte hneď na otvorenie (8:30).<br>
+        <strong>Emerald Pool (Sa Morakot)</strong>, 400 THB/os., 10 min odtiaľ — tyrkysové pramenité jazierko 1–2 m hlboké, 27–30 °C, v suchom období <strong>najčistejšie v roku</strong>. O 400 m ďalej <strong>Blue Pool</strong> — sýto zafírový prameň, len na pozeranie, otvorený iba mimo mája–októbra, takže február je jedna z mála príležitostí ho vidieť.<br>
+        <span class="small">Z Ao Nangu ~1,5 h cesty, vyrážať o 7:00. Spolu ~600 THB/os. na vstupoch + doprava.</span></div></td>
+      <td data-l="Nocľah">Krabi / Ao Nang</td></tr>
+
+      <tr><td data-l="Dátum"><strong>18. 2.</strong><br><span class="small">štvrtok</span></td><td class="day-loc" data-l="Lokalita">Krabi → Bangkok</td>
+      <td data-l="Program">Doobeda <strong>thai cooking class vo dvojici</strong> (4 h, transfer z hotela v cene) → poobede <strong>Muay Thai couple training</strong> (~15:00–16:30) → check-out, transfer na letisko Krabi (~40 min z Ao Nangu).<br>
+      <strong>Večerný let Krabi → Bangkok</strong> — VietJet <span class="flt">VZ345</span> 20:35 → BKK 22:05. Nocľah <strong>v meste</strong>, nie na letisku.
+      <span class="chg" data-prev="PREDTÝM: tento presun bol 19. 2. a nocovalo sa v hoteli pri letisku Suvarnabhumi, pretože na Bangkok neostával žiadny čas. Teraz máte v Bangkoku dve noci a jeden celý deň.">i</span><br>
+      <span class="small">Ak by vám Muay Thai a let v jeden deň prišli natlačené, dá sa Muay Thai presunúť na podvečer 16. 2. namiesto Railay a letieť už <span class="flt">VZ343</span> 16:30 → BKK 18:05.</span></td>
+      <td data-l="Nocľah">Bangkok (mesto)</td></tr>
+
+      <tr><td data-l="Dátum"><strong>19. 2.</strong><br><span class="small">piatok</span></td><td class="day-loc" data-l="Lokalita">Bangkok</td>
+      <td data-l="Program"><span class="tag rec">ZÍSKANÝ DEŇ</span> <strong>Celý deň v Bangkoku bez zhonu.</strong> <strong>Wat Pho</strong> (otvára 8:00, 300 THB/os.) → <strong>Grand Palace</strong> (8:30, 500 THB/os. — ramená a kolená zakryté!) → poobede thajská masáž alebo Jim Thompson House → večer <strong>Chinatown (Yaowarat)</strong> street food a <strong>rooftop bar</strong> na rozlúčku.
+      <span class="chg" data-prev="PREDTÝM: tento deň v itinerári vôbec nebol — 19. 2. sa presúvalo z Krabi do Bangkoku a spalo pri letisku. Bangkok mal len jedno rýchle poobedie 11. 2. po nočnom vlaku.">i</span><br>
+      <span class="small">Hotel si vyberte s dobrým spojením na letisko — ráno o ~6:00 potrebujete Grab na Suvarnabhumi (~45 min), dohodnite ho večer na recepcii.</span></td>
+      <td data-l="Nocľah">Bangkok (mesto)</td></tr>
+
+      <tr><td data-l="Dátum"><strong>20. 2.</strong><br><span class="small">sobota</span></td><td class="day-loc" data-l="Lokalita">Návrat ✈</td>
+      <td data-l="Program">~06:00 Grab na letisko → <strong>10:20 odlet Bangkok</strong> <span class="flt">TK65</span> → Istanbul → <span class="flt">TK1769</span> → <strong>Praha 18:25</strong>. Celkový čas cesty 14 h 5 min. Economy (P).</td>
+      <td data-l="Nocľah">—</td></tr>
+
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ============ CHECKLIST ============ -->
+<section id="checklist">
+  <h2>✅ Checklist po dňoch</h2>
+  <p class="sub">Odklikaj, čo máte hotové. Text sa dá prepísať kliknutím, položky pridávať aj mazať, a ku každej sa dá pripnúť odkaz — kliknutím na <span class="ck-demo">🔗</span> si vyberieš <b>Otvoriť</b>, <b>Kopírovať</b> alebo <b>Zmeniť</b> URL. <strong>Zmeny sa ukladajú do tohto prehliadača automaticky.</strong></p>
+
+  <div class="ck-legend">
+    <span><i class="ck-box-d" data-s="0"></i> nemáme nič</span>
+    <span><i class="ck-box-d" data-s="1"></i> vybraté / nájdené, ešte nie dorobené</span>
+    <span><i class="ck-box-d" data-s="2">✓</i> hotové na 100 %</span>
+    <span class="ck-legend-hint">Klikaním na štvorček sa stavy prepínajú dokola.</span>
+  </div>
+
+  <div class="ck-bar">
+    <div class="ck-prog"><div class="ck-prog-in" id="ckProgIn"></div><div class="ck-prog-part" id="ckProgPart"></div></div>
+    <div class="ck-prog-txt" id="ckProgTxt">0 / 0</div>
+    <div class="ck-actions">
+      <button type="button" class="ck-btn" id="ckExport">⬇︎ Export</button>
+      <button type="button" class="ck-btn" id="ckImport">⬆︎ Import</button>
+      <button type="button" class="ck-btn ck-btn-warn" id="ckReset">↺ Reset</button>
+      <input type="file" id="ckFile" accept="application/json" hidden>
+    </div>
+  </div>
+  <div class="ck-note" id="ckNote"></div>
+
+  <div class="sync">
+    <div class="sync-head">
+      <span class="sync-title">☁️ Spoločný zoznam</span>
+      <input type="text" id="syncWho" class="sync-who" placeholder="Kto si? (Milan / Terka)" maxlength="24" autocomplete="off">
+    </div>
+    <div class="sync-row">
+      <button type="button" class="ck-btn" id="syncLoad">⬇︎ Načítať spoločné</button>
+      <button type="button" class="ck-btn ck-primary" id="syncSave">⬆︎ Uložiť do spoločného</button>
+      <button type="button" class="ck-btn ck-ghost" id="syncToken">🔑 Token</button>
+    </div>
+    <div class="sync-status" id="syncStatus"></div>
+    <div class="sync-panel" id="syncPanel" style="display:none">
+      <label class="ck-panel-l">Prístupový token na ukladanie</label>
+      <input type="password" class="sync-tok" placeholder="github_pat_…" autocomplete="off" spellcheck="false">
+      <div class="ck-panel-row" style="margin-top:7px">
+        <button type="button" class="ck-btn ck-primary sync-tok-save">Uložiť token</button>
+        <button type="button" class="ck-btn ck-btn-warn sync-tok-clear">Odstrániť</button>
+        <button type="button" class="ck-btn ck-ghost sync-tok-cancel">Zavrieť</button>
+      </div>
+      <div class="small" style="margin-top:8px">Token sa uloží <strong>len do tohto prehliadača</strong>, nikdy nie do stránky. Bez neho môžeš spoločný zoznam čítať, ale nie ukladať.</div>
+    </div>
+  </div>
+
+  <div id="ckRoot"></div>
+
+  <div class="card small" style="margin-top:18px">
+    <strong>Ako to funguje:</strong> stav sa ukladá lokálne v tomto prehliadači na tomto zariadení — medzi mobilom a Macom sa <strong>nesynchronizuje sám</strong>. Ak chceš stav preniesť, klikni <strong>Export</strong>, súbor prenes a na druhom zariadení daj <strong>Import</strong>. <strong>Reset</strong> vráti pôvodný zoznam a zmaže tvoje úpravy.
+  </div>
+</section>
+
+<!-- ============ DOPRAVA ============ -->
+<section id="doprava">
+  <h2>✈️ Letenky &amp; presuny</h2>
+  <p class="sub">Ceny sú za osobu, len príručná batožina. <strong>Predaj lacných vnútroštátnych leteniek na február 2027 sa naplno otvorí ~september/október 2026.</strong></p>
+
+  <div class="card green">
+    <strong>✅ Medzinárodné lety — už kúpené (Turkish Airlines, cez Istanbul)</strong>
+    <table style="margin-top:10px">
+      <thead><tr><th>Smer</th><th>Dátum</th><th>Odlet</th><th>Prílet</th><th>Lety</th><th>Trvanie</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Smer"><strong>Praha → Bangkok</strong></td><td data-l="Dátum">3. 2. 2027 (st)</td><td data-l="Odlet">14:45 PRG</td><td data-l="Prílet">11:35 BKK <span class="small">(nasl. deň, 4. 2.)</span></td><td data-l="Lety"><span class="flt">TK1772</span> → IST → <span class="flt">TK52</span></td><td data-l="Trvanie">14 h 50 min</td></tr>
+        <tr><td data-l="Smer"><strong>Bangkok → Praha</strong></td><td data-l="Dátum">20. 2. 2027 (so)</td><td data-l="Odlet">10:20 BKK</td><td data-l="Prílet">18:25 PRG</td><td data-l="Lety"><span class="flt">TK65</span> → IST → <span class="flt">TK1769</span></td><td data-l="Trvanie">14 h 5 min</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card amber">
+    <strong>⚠️ Čínsky Nový rok je 6. 2. 2027.</strong> Vlna cestovania 5.–8. 2. zasiahne najmä sever. Let BKK→Chiang Rai (4. 2.) a Greenbus do Chiang Mai (6. 2.) rezervujte čo najskôr — ceny letov v tomto okne bývajú +20–40 % a busy sa vypredávajú.
+  </div>
+
+  <div class="tbl-scroll"><table>
+    <thead><tr><th>Dátum</th><th>Trasa</th><th>Odporúčanie</th><th class="num">Cena / os.</th><th>Linky</th></tr></thead>
+    <tbody>
+      <tr>
+        <td data-l="Dátum">4. 2.</td>
+        <td data-l="Trasa"><strong>Bangkok → Chiang Rai (CEI)</strong><br><span class="small">~1 h 30 min</span></td>
+        <td data-l="Odporúčanie"><span class="tag rec">ODPORÚČAM</span> <strong>Thai Airways 16:50 → 18:20</strong> z BKK (Suvarnabhumi) — prilietate tam Turkishom, žiadny presun letiska. Full-service, a keby niečo, TG vás ochotnejšie presadí na spoj o 18:00.<br>
+        <span class="small">Z BKK do CEI letia <strong>len Thai Airways a Thai VietJet</strong>. Reálne časy a ceny: Thai 12:25→13:55 (£53) · VietJet 13:25→14:50 (£52) · <strong>Thai 16:50→18:20 (£53)</strong> · VietJet 18:00→19:25 (£52). Medzi <strong>13:25 a 16:50 nič neletí</strong> — a 13:25 sa po prílete o 11:35 nedá stihnúť. Detaily <a href="#prestup">nižšie</a>.</span></td>
+        <td class="num price" data-l="Cena / os.">~61 €<br><span class="small">£53</span></td>
+        <td data-l="Linky"><a href="https://www.google.com/travel/flights?q=flights%20from%20BKK%20to%20CEI%20on%202027-02-04%20one%20way" target="_blank">Google Flights</a></td>
+      </tr>
+      <tr>
+        <td data-l="Dátum">6. 2.</td>
+        <td data-l="Trasa"><strong>Chiang Rai → Chiang Mai</strong><br><span class="small">bus, 3 h 20 min</span></td>
+        <td data-l="Odporúčanie"><span class="tag rec">ODPORÚČAM</span> Greenbus VIP (V-Class), 9 spojov denne 08:00–18:00, terminál CR 1 → CM Arcade 3. Priame lety CEI→CNX neexistujú. <span class="tag warn">6. 2. = deň CNY</span> — kúpiť online vopred.</td>
+        <td class="num price" data-l="Cena / os.">11 €<br><span class="small">400 THB</span></td>
+        <td data-l="Linky"><a href="https://www.greenbusthailand.com/website/" target="_blank">Greenbus</a></td>
+      </tr>
+      <tr>
+        <td data-l="Dátum"><strong>11. 2.</strong></td>
+        <td data-l="Trasa"><strong>Chiang Mai → Surat Thani (URT)</strong><br><span class="small">priamy let, 1 h 55 min</span></td>
+        <td data-l="Odporúčanie"><span class="tag alt">NOVÁ TRASA</span> <strong>Thai AirAsia, CNX 08:10 → URT 10:05, denne.</strong> Jediný operátor na tejto priamej linke.<br>
+        <strong>⚠️ Musí to byť ranný spoj.</strong> Druhý denný let 17:30 → 19:20 pristáva až po poslednom trajekte na Phangan — nocovali by ste v Surat Thani.
+        <span class="chg" data-prev="PREDTÝM: z Chiang Mai sa cestovalo nočným vlakom č. 10 do Bangkoku (18:20 → 06:30, 1. trieda 3 106 THB za oboch), tam sa strávil deň 11. 2., prespalo sa v Bangkoku a až 12. 2. o 5:00 bol budíček na Grab na Don Mueang + let DMK → Surat Thani (~57–76 €/os. vrátane trajektu). Nová priama linka nahrádza vlak, jednu noc v hoteli aj celý presunový deň.">i</span></td>
+        <td class="num price" data-l="Cena / os.">~95 €<br><span class="small">£82</span><br><span class="small">za oboch £164</span></td>
+        <td data-l="Linky"><a href="https://www.skyscanner.net/transport/flights/cnx/urt/270211/" target="_blank">Skyscanner</a><br><a href="https://www.airasia.com/flights/from-chiang-mai-cnx-to-surat-thani-urt/" target="_blank">AirAsia</a></td>
+      </tr>
+      <tr>
+        <td data-l="Dátum"><strong>11. 2.</strong></td>
+        <td data-l="Trasa"><strong>Letisko URT → Koh Phangan</strong><br><span class="small">bus + katamarán, ~4 h</span></td>
+        <td data-l="Odporúčanie"><strong>Lomprayah 12:30 → Thong Sala 16:30.</strong> Po pristátí o 10:05 vám ostáva ~2 h na letisku — akurát na obed a pokojný presun k prípojnému busu.<br>
+        <span class="small">Rýchly Lomprayah 09:30 (3 h 15) sa nedá stihnúť. Posledná použiteľná väzba dňa je ~16:00–16:15 (príchod 20:30), takže máte aj záložnú možnosť, keby let meškal.</span></td>
+        <td class="num price" data-l="Cena / os.">~26 €<br><span class="small">909–1 003 THB</span></td>
+        <td data-l="Linky"><a href="https://12go.asia/en/travel/surat-thani-airport/koh-phangan?date=2027-02-11" target="_blank">12go</a><br><a href="https://www.lomprayah.com/" target="_blank">Lomprayah</a></td>
+      </tr>
+      <tr>
+        <td data-l="Dátum"><strong>14. 2.</strong></td>
+        <td data-l="Trasa"><strong>Koh Phangan → Koh Samui</strong><br><span class="small">ferry, ~30–45 min</span></td>
+        <td data-l="Odporúčanie">Seatran Discovery Thong Sala → <strong>Bangrak</strong> (najbližšie k Fisherman's Village, kde budete mať valentínsku večeru). 6 spojov denne 07:45–17:00.
+        <span class="chg" data-prev="PREDTÝM: tento presun bol 15. 2. Ostrovný blok sa celý posunul o deň skôr.">i</span></td>
+        <td class="num price" data-l="Cena / os.">6–8 €<br><span class="small">200–300 THB</span></td>
+        <td data-l="Linky"><a href="https://12go.asia/en/travel/koh-phangan/samui?date=2027-02-14" target="_blank">12go</a></td>
+      </tr>
+      <tr>
+        <td data-l="Dátum"><strong>16. 2.</strong></td>
+        <td data-l="Trasa"><strong>Koh Samui → Ao Nang</strong><br><span class="small">ferry + bus, ~4 h</span></td>
+        <td data-l="Odporúčanie">Lomprayah, Nathon 08:30 → Krabi 12:30. Zvoľte cieľ „Ao Nang" (+100–200 THB), inak končíte v Krabi town. Budget alternatíva: Phantip 480 THB (5,5 h).
+        <span class="chg" data-prev="PREDTÝM: tento presun bol 17. 2.">i</span></td>
+        <td class="num price" data-l="Cena / os.">30–35 €<br><span class="small">1 100–1 300 THB</span></td>
+        <td data-l="Linky"><a href="https://12go.asia/en/travel/samui/ao-nang?date=2027-02-16" target="_blank">12go</a></td>
+      </tr>
+      <tr>
+        <td data-l="Dátum"><strong>18. 2.</strong></td>
+        <td data-l="Trasa"><strong>Krabi (KBV) → Bangkok</strong><br><span class="small">~1 h 35 min, večer</span></td>
+        <td data-l="Odporúčanie">VietJet <span class="flt">VZ345</span> 20:35 → <strong>BKK</strong> 22:05 <span class="tag rec">ODPORÚČAM</span> — priamo na letisko, z ktorého letíte domov, a ostane vám celý deň v Krabi na cooking class a Muay Thai.<br>
+        <span class="small">Ak by ste chceli prísť do Bangkoku skôr, je <span class="flt">VZ343</span> 16:30 → 18:05 — vtedy ale treba Muay Thai presunúť na 16. 2. Medzi 10:00 a 16:00 z Krabi do BKK nič neletí.</span>
+        <span class="chg" data-prev="PREDTÝM: tento let bol 19. 2. večer a nasledovala noc v hoteli pri letisku Suvarnabhumi, pretože na samotný Bangkok neostával žiadny čas.">i</span></td>
+        <td class="num price" data-l="Cena / os.">30–54 €<br><span class="small">1 100–2 000 THB</span></td>
+        <td data-l="Linky"><a href="https://www.google.com/travel/flights?q=flights%20from%20KBV%20to%20BKK%20on%202027-02-18%20one%20way" target="_blank">Google Flights</a></td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <div class="card green">
+    <strong>💡 Čo priamy let z Chiang Mai do Surat Thani reálne zmenil</strong>
+    <ul class="clean">
+      <li><strong>Získali ste celý deň.</strong> Predtým sa 11. 2. strávilo v Bangkoku a na ostrovy sa cestovalo 12. 2.; teraz ste na Phangane už 11. 2. podvečer. Ten deň sa presunul na konec do Bangkoku.</li>
+      <li><strong>Vypadol nočný vlak</strong> (~84 € za oboch) a s ním aj podmienka, že Doi Inthanon musí byť privátny výlet s dovozom na stanicu do 17:45. Teraz stačí bežná skupinová tura.</li>
+      <li><strong>Vypadol budíček o 5:00</strong> a Grab na Don Mueang.</li>
+      <li><strong>Vypadla noc v hoteli pri letisku</strong> — namiesto nej máte dve noci v meste.</li>
+      <li><strong>Cena je takmer neutrálna:</strong> priamy let je drahší (~95 € vs ~50 €/os.), ale ušetríte vlak, jednu hotelovú noc a transfery. Celkovo rozpočet stúpol len o ~65 €.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ UBYTOVANIE ============ -->
+<section id="ubytko">
+  <h2>🏨 Ubytovanie</h2>
+  <p class="sub">Stratégia: na severe lacnejšie kvalitné guesthousy, na ostrovoch a v Krabi krajšie 3* s bazénom. Ceny = odhad za noc pre dvoch vo februári (high season). <strong>Február = špička — ostrovy rezervovať 2–4 mesiace vopred, s bezplatným stornom.</strong></p>
+
+  <div class="tbl-scroll"><table>
+    <thead><tr><th>Lokalita / noci</th><th>Hotel</th><th class="num">Cena / noc</th><th>Prečo</th></tr></thead>
+    <tbody>
+      <tr>
+        <td data-l="Lokalita / noci"><strong>Chiang Rai</strong><br><span class="small">4.–6. 2. · 2 noci</span></td>
+        <td data-l="Hotel"><span class="tag rec">VOĽBA</span> <a href="https://www.booking.com/hotel/th/po-baan-norn-plearn.html" target="_blank">Baan Norn Plearn</a></td>
+        <td class="num price" data-l="Cena / noc">22–27 €</td>
+        <td data-l="Prečo">Rodinný guesthouse so záhradou pri clock tower, 7 min k night bazaar, hodnotenie ~9,0.</td>
+      </tr>
+      <tr>
+        <td data-l="Lokalita / noci"><strong>Chiang Rai</strong><br><span class="small">alternatíva</span></td>
+        <td data-l="Hotel"><span class="tag info">ALT</span> <a href="https://www.booking.com/searchresults.html?ss=Nak+Nakara+Chiang+Rai&checkin=2027-02-04&checkout=2027-02-06&group_adults=2" target="_blank">Nak Nakara Hotel</a></td>
+        <td class="num price" data-l="Cena / noc">35–40 €</td>
+        <td data-l="Prečo">Lanna štýl + bazén, ak chcete o stupienok viac komfortu po dlhom lete.</td>
+      </tr>
+      <tr>
+        <td data-l="Lokalita / noci"><strong>Chiang Mai</strong><br><span class="small">6.–7. a 9.–11. 2. · 3 noci, Old Town</span>
+        <span class="chg" data-prev="PREDTÝM: 2 noci (6.–7. a 9.–10. 2.), pretože 10. 2. sa spalo v nočnom vlaku do Bangkoku. Teraz pridaná noc 10.–11. 2. — po Doi Inthanone si oddýchnete v posteli a ráno letíte priamo na juh.">i</span></td>
+        <td data-l="Hotel"><span class="tag rec">VOĽBA</span> <a href="https://www.booking.com/searchresults.html?ss=Yi%27s+Garden+Villa+Chiang+Mai&checkin=2027-02-06&checkout=2027-02-07&group_adults=2" target="_blank">Yi's Garden Villa</a></td>
+        <td class="num price" data-l="Cena / noc">27–35 €</td>
+        <td data-l="Prečo">Guesthouse s bazénom, veľké izby s balkónmi (~9,0+). <strong>Uschová batožinu počas 3-dňového treku</strong> — potvrdiť pri rezervácii. Dve rezervácie: 6.–7. 2. a 9.–11. 2.</td>
+      </tr>
+      <tr>
+        <td data-l="Lokalita / noci"><strong>Chiang Mai</strong><br><span class="small">alternatíva</span></td>
+        <td data-l="Hotel"><span class="tag info">ALT</span> <a href="https://www.booking.com/hotel/th/rendezvous-classic-house.html" target="_blank">Rendezvous Classic House</a></td>
+        <td class="num price" data-l="Cena / noc">24–30 €</td>
+        <td data-l="Prečo">Klasický teakový dom pri Tha Phae Gate, top recenzie; bez bazéna.</td>
+      </tr>
+      <tr>
+        <td data-l="Lokalita / noci"><strong>Koh Phangan</strong><br><span class="small">11.–14. 2. · 3 noci, západ = sunsety</span>
+        <span class="chg" data-prev="PREDTÝM: 12.–15. 2. Rovnaký počet nocí, len o deň skôr.">i</span></td>
+        <td data-l="Hotel"><span class="tag rec">VOĽBA</span> <a href="https://www.booking.com/searchresults.html?ss=Sunset+Cove+Resort+Koh+Phangan&checkin=2027-02-11&checkout=2027-02-14&group_adults=2" target="_blank">Sunset Cove Resort</a> (Haad Chao Phao)</td>
+        <td class="num price" data-l="Cena / noc">35–51 €</td>
+        <td data-l="Prečo">Infinity pool nad plážou, slávne západy slnka — honeymoon pocit za 3* cenu.</td>
+      </tr>
+      <tr>
+        <td data-l="Lokalita / noci"><strong>Koh Phangan</strong><br><span class="small">alternatíva</span></td>
+        <td data-l="Hotel"><span class="tag info">ALT</span> <a href="https://www.booking.com/searchresults.html?ss=Loyfa+Natural+Resort+Koh+Phangan&checkin=2027-02-11&checkout=2027-02-14&group_adults=2" target="_blank">Loyfa Natural Resort</a> (Srithanu)</td>
+        <td class="num price" data-l="Cena / noc">40–54 €</td>
+        <td data-l="Prečo">Infinity pool na útese nad vlastnou zátokou, bungalovy v záhrade.</td>
+      </tr>
+      <tr>
+        <td data-l="Lokalita / noci"><strong>Koh Samui</strong><br><span class="small">14.–16. 2. · 2 noci</span>
+        <span class="chg" data-prev="PREDTÝM: 15.–17. 2. Teraz sem padne aj Valentín (14. 2.) — pri rezervácii sa hodí spomenúť, že ide o svadobnú cestu.">i</span></td>
+        <td data-l="Hotel"><span class="tag rec">VOĽBA</span> <a href="https://www.booking.com/searchresults.html?ss=Baan+Bophut+Beach+Hotel+Samui&checkin=2027-02-14&checkout=2027-02-16&group_adults=2" target="_blank">Baan Bophut Beach Hotel</a></td>
+        <td class="num price" data-l="Cena / noc">49–57 €</td>
+        <td data-l="Prečo">Malý beachfront hotel s bazénom priamo vo Fisherman's Village — valentínska večera je za rohom. Rezervovať veľmi skoro!</td>
+      </tr>
+      <tr>
+        <td data-l="Lokalita / noci"><strong>Koh Samui</strong><br><span class="small">alternatíva</span></td>
+        <td data-l="Hotel"><span class="tag info">ALT</span> <a href="https://www.booking.com/searchresults.html?ss=Lamai+Coconut+Beach+Resort+Samui&checkin=2027-02-14&checkout=2027-02-16&group_adults=2" target="_blank">Lamai Coconut Beach Resort</a></td>
+        <td class="num price" data-l="Cena / noc">35–46 €</td>
+        <td data-l="Prečo">Plážové bungalovy + bazén na pokojnom konci Lamai — najlepšia hodnota, ak je Bophut plný.</td>
+      </tr>
+      <tr>
+        <td data-l="Lokalita / noci"><strong>Krabi / Ao Nang</strong><br><span class="small">16.–18. 2. · 2 noci</span>
+        <span class="chg" data-prev="PREDTÝM: 17.–19. 2.">i</span></td>
+        <td data-l="Hotel"><span class="tag rec">VOĽBA</span> <a href="https://www.booking.com/searchresults.html?ss=Sugar+Marina+Cliffhanger+Aonang&checkin=2027-02-16&checkout=2027-02-18&group_adults=2" target="_blank">Sugar Marina Hotel – Cliffhanger</a></td>
+        <td class="num price" data-l="Cena / noc">32–43 €</td>
+        <td data-l="Prečo">2 bazény, štýlový dizajn, výhľady na skaly, pár minút k pláži a k mólam na tours.</td>
+      </tr>
+      <tr>
+        <td data-l="Lokalita / noci"><strong>Krabi / Ao Nang</strong><br><span class="small">alternatíva</span></td>
+        <td data-l="Hotel"><span class="tag info">ALT</span> <a href="https://www.booking.com/searchresults.html?ss=BlueSotel+SMART+Krabi+Ao+Nang&checkin=2027-02-16&checkout=2027-02-18&group_adults=2" target="_blank">BlueSotel SMART</a> (adults-only)</td>
+        <td class="num price" data-l="Cena / noc">46–51 €</td>
+        <td data-l="Prečo">Rooftop infinity pool so sunset výhľadom, 2 min od pláže, adults-only pokoj — najviac „honeymoon" voľba.</td>
+      </tr>
+      <tr>
+        <td data-l="Lokalita / noci"><strong>Bangkok — mesto</strong><br><span class="small">18.–20. 2. · 2 noci</span>
+        <span class="chg" data-prev="PREDTÝM: 1 noc v hoteli pri letisku Suvarnabhumi (19.–20. 2., ~35–60 €), plus 1 noc v meste v strede výletu (11.–12. 2., Casa Vimaya Riverside). Teraz sú obe noci v meste na konci a máte celý deň 19. 2. na Bangkok.">i</span></td>
+        <td data-l="Hotel"><span class="tag rec">VOĽBA</span> <a href="https://www.booking.com/searchresults.html?ss=Casa+Vimaya+Riverside+Bangkok&checkin=2027-02-18&checkout=2027-02-20&group_adults=2" target="_blank">Casa Vimaya Riverside</a></td>
+        <td class="num price" data-l="Cena / noc">38–46 €</td>
+        <td data-l="Prečo">Koloniálny boutique s rooftop bazénom pri rieke, 10 min od Grand Palace. Ráno 20. 2. treba Grab na Suvarnabhumi o ~6:00 (~45 min, 450–600 THB) — dohodnúť večer na recepcii.</td>
+      </tr>
+      <tr>
+        <td data-l="Lokalita / noci"><strong>Bangkok — mesto</strong><br><span class="small">alternatíva</span></td>
+        <td data-l="Hotel"><span class="tag info">ALT</span> <a href="https://www.booking.com/searchresults.html?ss=Riva+Surya+Bangkok&checkin=2027-02-18&checkout=2027-02-20&group_adults=2" target="_blank">Riva Surya</a> (Phra Athit)</td>
+        <td class="num price" data-l="Cena / noc">55–70 €</td>
+        <td data-l="Prečo">Riečny boutique s bazénom pri móle Phra Athit — o stupienok vyššie, dobrá voľba na poslednú noc svadobky.</td>
+      </tr>
+    </tbody>
+    <tfoot><tr><td colspan="2">Spolu 14 nocí (prvé voľby)</td><td class="num">≈ 540 €</td><td>7.–8. 2. v cene treku · 3. a 20. 2. v lietadle</td></tr></tfoot>
+  </table></div>
+</section>
+
+<!-- ============ AKTIVITY ============ -->
+<section id="aktivity">
+  <h2>🤿 Aktivity &amp; vstupy</h2>
+  <p class="sub">Ceny za osobu, spolu = pre dvoch. Treky a tours rezervovať vopred (feb = high season) — viď checklist nižšie.</p>
+
+  <div class="tbl-scroll"><table>
+    <thead><tr><th>Dátum</th><th>Aktivita</th><th class="num">Cena / os.</th><th class="num">Spolu (2 os.)</th><th>Booking</th></tr></thead>
+    <tbody>
+      <tr id="trek-cm"><td data-l="Dátum">7.–9. 2.</td><td data-l="Aktivita"><strong>Chiang Mai 3D/2N jungle trek</strong> — plne organizovaný, s odvozom z Chiang Mai.<br><span class="small">• <strong>CM Local Tours — 2 500 THB/os. (~68 €)</strong>, oblasť Mae Taeng: Lahu → Karen → Akha dediny, vodopád, sloní camp, white-water + bamboo rafting, nocľah 1× dedina + 1× river camp. V cene 7 jedál, songthaew, licencovaný anglický sprievodca, nosiči, spacie vybavenie, vstupy, úrazové poistenie.<br>• <strong>Thailand Treks — 3 400 THB/os. (~92 €)</strong>, oblasť Mae Win: Karen homestay, sloní sanctuary, jungle camp, bamboo rafting. <strong>Min. 2 osoby — dá sa ísť aj len vo dvojici.</strong></span></td><td class="num price" data-l="Cena / os.">68–92 €</td><td class="num price" data-l="Spolu (2 os.)">~136–184 €</td><td data-l="Booking"><a href="https://www.chiangmailocaltours.com/package/tour-detail.php?id=49" target="_blank">CM Local Tours</a><br><a href="https://thailandtreks.com/tour/chiang-mai-trek-3days/" target="_blank">Thailand Treks</a></td></tr>
+
+      <tr><td data-l="Dátum">10. 2.</td><td data-l="Aktivita"><strong>Doi Inthanon + Kew Mae Pan — PRIVÁTNY výlet</strong><br><span class="small">V cene doprava, sprievodca, obed, park fee (300 THB) aj pagody (100 THB). <strong>Musí byť privátny</strong>, aby ste mali istý dovoz na vlakovú stanicu do 17:45 — skupinové tury sa vracajú 17:30–19:00 a vlak o 18:20 by ste mohli zmeškať. Skupinová verzia stojí ~49 €/os., ak by ste nakoniec leteli.</span></td><td class="num price" data-l="Cena / os.">~54 €</td><td class="num price" data-l="Spolu (2 os.)">~108 €</td><td data-l="Booking"><a href="https://www.getyourguide.com/chiang-mai-l271/chiang-mai-kew-mae-pan-nature-trail-doi-inthanon-day-trip-t536292/" target="_blank">GetYourGuide (skupinový)</a><br><span class="small">privátny dohodnúť priamo s operátorom</span></td></tr>
+
+      <tr><td data-l="Dátum">13. 2.</td><td data-l="Aktivita"><strong>Snorkel trip Koh Tao + Koh Nang Yuan</strong> speedboatom (7,5 h) — pickup, raňajky + obed, výstroj v cene. +250 THB/os. vstup Nang Yuan (cash).</td><td class="num price" data-l="Cena / os.">51–68 € (+7 €)</td><td class="num price" data-l="Spolu (2 os.)">~122 €</td><td data-l="Booking"><a href="https://www.getyourguide.com/ko-phangan-l5038/koh-nangyuan-koh-tao-by-speed-boat-from-koh-phangan-t672990/" target="_blank">GetYourGuide</a> · <a href="https://www.click2gothailand.com/tours/00537" target="_blank">lacnejší agent</a></td></tr>
+
+      <tr><td data-l="Dátum">14. 2.</td><td data-l="Aktivita"><strong>Vodopády Koh Phangan</strong> — Than Sadet (100 THB NP) + Phaeng/Domsila (100 THB) + príp. Paradise (30 THB). Na skútri, vlastným tempom.</td><td class="num price" data-l="Cena / os.">~6 €</td><td class="num price" data-l="Spolu (2 os.)">~12 €</td><td class="small" data-l="Booking">na mieste, hotovosť</td></tr>
+
+      <tr><td data-l="Dátum">16. 2.</td><td data-l="Aktivita"><strong>ATV / štvorkolky Samui</strong> — 1 h džungľa + viewpoint, pickup v cene. (Lokálne požičovne od ~1 200 THB.)<br><span class="small">+ vodopády Na Muang 1 &amp; 2 — vstup zdarma, parkovné 20 THB.</span></td><td class="num price" data-l="Cena / os.">41–51 €</td><td class="num price" data-l="Spolu (2 os.)">~90 €</td><td data-l="Booking"><a href="https://www.getyourguide.com/koh-samui-l898/koh-samui-quad-bike-safari-tour-t245437/" target="_blank">GetYourGuide</a> · <a href="https://kohtour.com/tours/atv-quad-tour-koh-samui/" target="_blank">lokálny operátor</a></td></tr>
+
+      <tr><td data-l="Dátum">18. 2.</td><td data-l="Aktivita"><strong>Phi Phi / 4-island tour speedboatom</strong> z Ao Nang — celý deň, šnorchlovanie, obed. +400 THB/os. park fee cash. <span class="small">(Úsporná alternatíva: 4-island longtailom od 16 €/os. Vodopádová alternatíva: horúci vodopád + Emerald Pool, ~600 THB/os. na vstupoch.)</span></td><td class="num price" data-l="Cena / os.">38–60 € (+11 €)</td><td class="num price" data-l="Spolu (2 os.)">~119 €</td><td data-l="Booking"><a href="https://bigtourkrabi.com/en/thailand/ao-nang/tours/4-islands-by-speedboat/" target="_blank">Big Tour Krabi</a></td></tr>
+
+      <tr><td data-l="Dátum">19. 2.</td><td data-l="Aktivita"><strong>Thai cooking class</strong> (Ya's Cookery, 4 h ráno) — transfer z Ao Nang, suroviny, recepty, jedlo v cene.</td><td class="num price" data-l="Cena / os.">41–51 €</td><td class="num price" data-l="Spolu (2 os.)">~86 €</td><td data-l="Booking"><a href="https://www.getyourguide.com/ao-nang-l89867/krabi-authentic-thai-cooking-class-at-ya-s-cookery-school-t366985/" target="_blank">GetYourGuide</a></td></tr>
+
+      <tr><td data-l="Dátum">19. 2.</td><td data-l="Aktivita"><strong>Muay Thai couple training</strong> — 90 min lekcia s výstrojom (GYG ~46 €/os.) alebo drop-in v lokálnom gyme (~10–14 €/os.). <span class="tag rec">TIP: lokálny gym = autentickejšie aj lacnejšie</span></td><td class="num price" data-l="Cena / os.">10–46 €</td><td class="num price" data-l="Spolu (2 os.)">~54 €</td><td data-l="Booking"><a href="https://overthetopkrabi.com/" target="_blank">Over The Top Krabi</a> · <a href="https://theabroadguide.com/ao-nang-krabi-90-minute-muay-thai-lesson/" target="_blank">GYG lekcia</a></td></tr>
+
+      <tr><td data-l="Dátum">—</td><td data-l="Aktivita"><strong>Vstupy do chrámov:</strong> Wat Rong Khun 200 · Baan Dam 80 · Grand Palace 500 · Wat Pho 300 THB</td><td class="num price" data-l="Cena / os.">~30 €</td><td class="num price" data-l="Spolu (2 os.)">~59 €</td><td class="small" data-l="Booking">na mieste, hotovosť</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="3">Aktivity spolu (2 osoby)</td><td class="num">≈ 770 €</td><td></td></tr></tfoot>
+  </table></div>
+</section>
+
+<!-- ============ POZNAMKY ============ -->
+<section id="poznamky">
+  <h2>📌 Praktické poznámky &amp; checklist</h2>
+
+  <h3 id="odchylky">📐 Prečo sa plán odlišuje od kamarátovho — a čo bolo vynútené</h3>
+
+  <div class="card">
+    <strong>Krátka verzia: kamarátov plán potrebuje 17 nocí na zemi, letenky dávajú 16. Chýba teda jedna noc programu — a je to Doi Mae Salong trek z Chiang Rai.</strong> Po zmene trasy na priamy let do Surat Thani sa všetko ostatné podarilo zachovať, vrátane 2 nocí v Bangkoku a plných troch dní v Krabi.
+    <div class="tbl-scroll"><table style="margin-top:10px">
+      <thead><tr><th>Etapa</th><th>Kamarátov plán</th><th>Tu</th><th>Prečo</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Etapa">Chiang Rai</td><td data-l="Kamarátov plán">3 noci (vrátane Mae Salong treku)</td><td data-l="Tu"><strong>2 noci</strong></td><td data-l="Prečo"><span class="tag warn">MOJA VOĽBA</span> Tu som ubral — vypadol Doi Mae Salong trek.</td></tr>
+        <tr><td data-l="Etapa">Chiang Mai</td><td data-l="Kamarátov plán">4 noci (vrátane 3D/2N treku)</td><td data-l="Tu">4 noci</td><td data-l="Prečo">Bez zmeny ✓</td></tr>
+        <tr><td data-l="Etapa">Bangkok</td><td data-l="Kamarátov plán">2 noci</td><td data-l="Tu"><strong>2 noci</strong></td><td data-l="Prečo"><span class="tag rec">SPLNENÉ</span> Vďaka priamemu letu Chiang Mai → Surat Thani sa Bangkok vrátil na 2 noci — a obe sú v meste na konci, nie jedna narýchlo v strede a jedna pri letisku.</td></tr>
+        <tr><td data-l="Etapa">Koh Phangan</td><td data-l="Kamarátov plán">3 noci</td><td data-l="Tu">3 noci</td><td data-l="Prečo">Bez zmeny ✓</td></tr>
+        <tr><td data-l="Etapa">Koh Samui</td><td data-l="Kamarátov plán">2 noci</td><td data-l="Tu">2 noci</td><td data-l="Prečo">Bez zmeny ✓</td></tr>
+        <tr><td data-l="Etapa">Krabi</td><td data-l="Kamarátov plán">3 noci</td><td data-l="Tu"><strong>2 noci</strong></td><td data-l="Prečo"><span class="tag warn">MOJA VOĽBA</span> Získaný deň šiel do Bangkoku, nie do Krabi — tak si to zadal. Krabi má aj tak 3 dni programu (príchod + Phi Phi + cooking/Muay Thai).</td></tr>
+        <tr><td data-l="Etapa">Nočný vlak CM → BKK</td><td data-l="Kamarátov plán">—</td><td data-l="Tu">—</td><td data-l="Prečo"><span class="tag rec">VYPADOL</span> Nahradil ho priamy let Chiang Mai → Surat Thani. S ním vypadla aj noc v hoteli pri letisku BKK a budíček o 5:00.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card amber">
+    <strong>Čo bolo naozaj nesplniteľné (a nedá sa to obísť):</strong>
+    <ol class="clean" style="list-style:decimal">
+      <li><strong>„Z BKK asap priamo letom do CEI"</strong> — prílet je o 11:35 a najbližší dosiahnuteľný let do Chiang Rai je o 16:50. Medzi 13:25 a 16:50 nič neletí a ten o 13:25 sa nedá stihnúť. <a href="#prestup">Rozpísané nižšie.</a></li>
+      <li><strong>„Then fly to BKK and take plane home"</strong> — pri odlete o 10:20 to v jeden deň nejde, do Bangkoku sa musí prísť už večer predtým. Teraz to ale nie je strata: z Bangkoku sa stal poriadny dvojnočný finiš namiesto prespania pri letisku.</li>
+      <li><strong>Prílet o deň neskôr</strong> — kamarát počítal s odletom 2. 2. a príletom 3. 2. Reálne letíte 3. 2. a v Thajsku ste až 4. 2. To je tá druhá stratená noc.</li>
+    </ol>
+    Všetko ostatné z jeho zoznamu <strong>v pláne je</strong>: chrámy aj autentické mesto na skútri v Chiang Rai, 3D/2N Karen trek, Doi Suthep, Doi Inthanon, island tour aj Koh Tao na Phangane, island tour aj štvorkolky na Samui, Phi Phi, 3-island tour, thai box pre pár, cooking class aj večerné prechádzky po pláži v Krabi.
+  </div>
+
+  <div class="card green">
+    <strong>Tá jedna diskrečná voľba: prečo padol práve Mae Salong trek</strong><br>
+    Niečo obetovať som musel a Mae Salong trek bol najlacnejšia strata, pretože sa <strong>najviac prekrýva</strong> s trekom z Chiang Mai — oba sú hill-tribe trek s nocľahom v dedine. Ten z Chiang Mai navyše pridáva vodopády, slony a rafting a je lacnejší na deň. Zo Chiang Rai tak ostal plný deň na Biely a Modrý chrám a mesto na skútri, presne ako kamarát chcel — a <strong>Doi Mae Salong je v pláne ako alternatíva na 5. 2.</strong>, keby ste dali prednosť čajovým plantážam pred chrámami.<br><br>
+    <strong>Ak by ste ten trek chceli späť, dá sa — ale za cenu:</strong>
+    <ul class="clean">
+      <li><strong>Obetovať jednu noc v Bangkoku na konci</strong> (z 2 na 1). To je teraz najčistejšia výmena — Mae Salong trek za jeden bangkokský deň. Sever by šiel takto: 4. 2. prílet, 5. 2. chrámy, 6.–7. 2. Mae Salong trek, 7. 2. večer bus do Chiang Mai, 8.–10. 2. trojdňový trek, 11. 2. Doi Inthanon, 12. 2. let na juh. Nevýhoda: dva treky takmer bez pauzy a Doi Inthanon hneď po trojdňovom treku, pred čím kamarát sám varoval.</li>
+      <li><strong>Obetovať Doi Inthanon</strong> — neodporúčam. Kew Mae Pan je vo februári jedna z mála vecí, ktorá je práve v sezóne, a kamarát ju zvlášť vypichol.</li>
+      <li><strong>Obetovať ďalšiu noc v Krabi</strong> — vtedy tam ostane jediná noc a nestihnete Phi Phi ani cooking class s thai boxom. Najhorší z variantov.</li>
+    </ul>
+    Povedz, ktorý variant chceš, a prepracujem to. Moje poradie: nechať tak → obetovať noc na Samui → čokoľvek iné.
+  </div>
+
+  <div class="card">
+    <strong>Jedna cesta, ako získať tú noc v Krabi späť</strong><br>
+    Keby ste dali let Krabi → Bangkok <strong>na turkishovskú letenku</strong> (Star Alliance), mohli by ste letieť ráno 20. 2. — chránený prestup, a pri meškaní vás musia prebookovať. Ale prílet do BKK okolo 8:20 a medzinárodný odlet 10:20 znamená <strong>dve hodiny na prestup</strong>, čo je presne na hranici minima. Na svadobnej ceste s 14-hodinovou cestou domov by som na to nestavil — je to však jediná možnosť, ako tú noc v Krabi zachrániť, tak nech o nej vieš.
+  </div>
+
+  <h3 id="prestup">✈️ Prestup v Bangkoku 4. 2. — prečo 5,5 hodiny a nie menej</h3>
+
+  <div class="card red">
+    <strong>Kľúčová vec, ktorú si treba uvedomiť: toto nie je prestup, ale dva samostatné lístky.</strong><br>
+    Turkish vás dopraví do Bangkoku, vnútroštátny let si kupujete zvlášť. Ak Turkish mešká a vy zmeškáte vnútroštátny let, <strong>nikto vám nič nedlží</strong> — letenka propadne a kupujete novú za plnú cenu na priehradke. Preto sa pri samostatných lístkoch nepočíta minimálny prestupový čas, ale rezerva na to najhoršie.
+  </div>
+
+  <div class="tbl-scroll"><table>
+    <thead><tr><th>Situácia</th><th>Doporučená rezerva medzi letmi</th></tr></thead>
+    <tbody>
+      <tr><td data-l="Situácia">Jeden lístok, medzinárodný → vnútroštátny (oficiálne MCT letiska BKK)</td><td data-l="Doporučená rezerva medzi letmi">2 h 00 min</td></tr>
+      <tr><td data-l="Situácia">Jeden lístok, reálne odporúčanie v špičke</td><td data-l="Doporučená rezerva medzi letmi">2,5–3,5 h</td></tr>
+      <tr><td data-l="Situácia"><strong>Dva samostatné lístky (váš prípad)</strong></td><td data-l="Doporučená rezerva medzi letmi"><strong>minimum 4 h, odporúčané 4–5 h</strong></td></tr>
+    </tbody>
+  </table></div>
+
+  <h4 style="margin-top:18px">„A čo keď je to ten istý terminál?"</h4>
+  <div class="card red">
+    <strong>Suvarnabhumi má naozaj len jeden terminál — a aj tak to nepomôže.</strong> Terminál nie je ten problém. Problém je imigračná kontrola, a tú <strong>nemáte ako obísť</strong>.<br><br>
+    Vnútroštátne lety v Thajsku odlietajú zo <strong>vnútrozemskej (landside) časti</strong> letiska — z Concourse A. Aby ste sa tam dostali, musíte:
+    <ol class="clean" style="list-style:decimal">
+      <li><strong>Prejsť pasovou kontrolou a oficiálne vstúpiť do Thajska</strong> — pri prílete z Európy s pokračovaním na vnútroštátny let neexistuje žiadny „transit" režim. Vstupujete do krajiny, bodka.</li>
+      <li>Prejsť colnicou a vyjsť do príletovej haly (Level 2).</li>
+      <li>Vyjsť na Level 4 na vnútroštátne odbavenie, prejsť <strong>znovu bezpečnostnou kontrolou</strong> a nastúpiť z Concourse A.</li>
+    </ol>
+    Imigračke by ste sa vyhli len pri prestupe <strong>medzinárodný → medzinárodný</strong>, keď zostanete v tranzitnej zóne. Chiang Rai je vnútroštátny let, takže to na vás neplatí — a nepomôže ani to, keby ste mali oba lety na jednom lístku.<br><br>
+    <strong>Čo „ten istý terminál" naozaj šetrí:</strong> nemusíte prechádzať na Don Mueang (to by bolo +60–90 min plus shuttle/taxík). To je dobrá správa — ale prechod imigračkou a nové odbavenie ostávajú, a práve tie zaberú ten čas.
+  </div>
+
+  <h4 style="margin-top:18px">Prečo sa lety o 12:25 a 13:25 nedajú stihnúť</h4>
+  <div class="card amber">
+    V rozpise sú dva lety, ktoré vyzerajú lákavo — <strong>Thai o 12:25</strong> a <strong>VietJet o 13:25</strong>. Ten o 12:25 zabudnite úplne (50 minút po pristátí, nemáte šancu ani opustiť letadlo a prejsť pasovou kontrolou). A ten o <strong>13:25</strong> tiež nevyjde: aj v <strong>optimistickom scenári</strong> (presné pristátie, gate v hlavnom terminále, vopred podaný TDAC, mobilná palubka, bez batožiny, pasová kontrola len 25 min) ste pri gate okolo <strong>13:10</strong> — a VietJet zatvára gate <strong>15 minút pred odletom, teda 13:10</strong>. Nula rezervy, a to je najlepší možný priebeh.<br><br>
+    <div class="tbl-scroll"><table style="margin:12px 0">
+      <thead><tr><th>Krok</th><th>Čas</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Krok">Pristátie (podľa rozpisu)</td><td data-l="Čas">11:35</td></tr>
+        <tr><td data-l="Krok">Rolovanie ku gate (BKK je obrovské, 8–15 min)</td><td data-l="Čas">~11:47</td></tr>
+        <tr><td data-l="Krok">Výstup z lietadla (wide-body, podľa miesta v kabíne)</td><td data-l="Čas">~11:55</td></tr>
+        <tr><td data-l="Krok">Chôdza k pasovej kontrole <span class="small">(ak Turkish parkuje v satelite SAT-1, pripočítajte APM vláčik +10 min)</span></td><td data-l="Čas">~12:10</td></tr>
+        <tr><td data-l="Krok"><strong>Pasová kontrola — najlepší realistický prípad 25 min</strong></td><td data-l="Čas">~12:35</td></tr>
+        <tr><td data-l="Krok">Colnica + výstup do príletovej haly (bez batožiny)</td><td data-l="Čas">~12:40</td></tr>
+        <tr><td data-l="Krok">Level 2 → Level 4, vnútroštátna časť</td><td data-l="Čas">~12:55</td></tr>
+        <tr><td data-l="Krok">Vnútroštátna bezpečnostná kontrola</td><td data-l="Čas">~13:10</td></tr>
+        <tr><td data-l="Krok">Chôdza ku gate, Concourse A</td><td data-l="Čas"><strong>~13:15–13:20</strong></td></tr>
+      </tbody>
+      <tfoot><tr><td>VietJet zatvára gate 15 min pred odletom</td><td><strong>13:10 — už zatvorené</strong></td></tr></tfoot>
+    </table></div>
+    A tie predpoklady sú v skutočnosti optimistické až naivné:
+    <ul class="clean">
+      <li><strong>Pasová kontrola na Suvarnabhumi je v roku 2026 problém.</strong> Letisko samo priznáva, že najviac zaťažené okno je <strong>13:00–17:00, keď halou prechádza 5 000–6 000 ľudí za hodinu</strong>. Imigračný úrad tvrdí štandard 30 minút, ale z júla 2026 sú hlásené <strong>2–3 hodinové rady</strong>. Vy vstupujete do haly presne na hrane tohto okna.</li>
+      <li><strong>Február = špička</strong> (Nov–marec) a <strong>4. 2. 2027 je pár dní pred čínskym Novým rokom</strong> — dokumentovane najhoršie obdobie.</li>
+      <li><strong>Automatické e-gates vám nepomôžu.</strong> V auguste 2026 boli otvorené len pre Thajcov, Singapurcov a Hongkong. Rozšírenie na ďalších 31 národností sa pripravuje, ale aj potom platí, že <strong>e-gate vyžaduje predchádzajúcu návštevu Thajska s odobranou biometriou</strong> — pri prvej návšteve idete na manuálnu priehradku tak či tak.</li>
+      <li><strong>Turkish TK52 mešká len v ~10 % prípadov, ale keď mešká, tak v priemere o 2 hodiny.</strong> To by zlikvidovalo akúkoľvek rezervu kratšiu než 5 hodín.</li>
+    </ul>
+  </div>
+
+  <h4>Takže sa dá letieť skôr?</h4>
+  <div class="card">
+    <strong>Nie — a nie je to moja opatrnosť, je to letový rozpis.</strong> Z Bangkoku do Chiang Rai letí denne 6 spojov, ale medzi <strong>13:25 a 16:50 je trojhodinová diera</strong>. Neexistuje žiadny let o 15:00 ani 16:00 (v prvej verzii tohto dokumentu som takýto let omylom predpokladal — mýlil som sa, opravené).<br><br>
+    <strong>A čo Don Mueang?</strong> Nepomôže. Po prílete o 11:35 plus hodinový presun medzi letiskami stihnete z DMK len spoje o 18:30 a 19:10 — <strong>neskôr</strong> než Thai o 16:50 zo Suvarnabhumi. Piatkovo-nedeľný FD3207 o 15:55 by teoreticky pomohol, ale 4. 2. 2027 je štvrtok.<br><br>
+    <strong>Výsledok:</strong> Thai o 16:50 <em>je</em> najskorší rozumný let. Rezerva 5 h 15 min naň nie je luxus — presne pokryje aj 2–3 h radu na pasovej kontrole, aj 2 h meškanie Turkishu. A cenovo na tom netratíte: Thai 16:50 stojí £53, VietJet 13:25 £52 — <strong>rozdiel je jedna libra</strong>.
+  </div>
+
+  <h4>Varianta B — letieť namiesto Chiang Rai do Chiang Mai a obrátiť sever</h4>
+  <div class="card">
+    <strong>BKK → Chiang Mai (CNX) je úplne iná liga — letí sa každú hodinu.</strong> Reálne ceny a časy z vyhľadávania: VietJet 12:10 (£56) · Bangkok Airways 12:25 (£59) · Thai 13:25 (£72) · VietJet 13:50 (£56) · <strong>Thai 15:05 (£65)</strong> · <strong>VietJet 15:15 (£56)</strong> · AirAsia 16:25 (£66) · VietJet 17:35 (£51).<br>
+    Let o <strong>15:05 alebo 15:15</strong> dáva rezervu <strong>3,5 h</strong> namiesto 5,5 h. Ak by ste teda leteli do Chiang Mai, sever by sa musel obrátiť:
+    <ul class="clean">
+      <li>4. 2. prílet CNX ~16:40 → noc Chiang Mai</li>
+      <li>5. 2. Chiang Mai Old Town, chrámy, skúter</li>
+      <li>6.–8. 2. 3D/2N jungle trek</li>
+      <li>9. 2. Doi Inthanon</li>
+      <li>10. 2. Greenbus do Chiang Rai + poobede White Temple a Blue Temple → noc Chiang Rai</li>
+      <li>11. 2. ranný let Chiang Rai → Bangkok → Grand Palace, Wat Pho, Chinatown</li>
+    </ul>
+    <strong>Čo za to zaplatíte:</strong> Chiang Rai spadne z celého dňa na pol dňa, a <strong>prídete o nočný vlak</strong> (ten ide z Chiang Mai, nie z Chiang Rai) — teda aj o ušetrenú noc v hoteli a o ten zážitok. Navyše 11. 2. vstávate na ranný let namiesto pohodového príchodu vlakom.<br>
+    <strong>Môj názor:</strong> tie dve hodiny ušetreného prestoja to nevyvážia. Ale ak je pre vás sedenie na letisku neznesiteľné, je to legitímna alternatíva a funguje.
+  </div>
+
+  <div class="card green">
+    <strong>💡 Najlepšie riešenie, ak vám ten prestoj vadí: dajte vnútroštátny let na ten istý lístok.</strong><br>
+    <strong>Turkish Airlines a Thai Airways sú obe v Star Alliance</strong>, takže sa dá vystaviť <strong>jedna letenka Praha–Istanbul–Bangkok–Chiang Rai</strong>. Tým sa všetko mení:
+    <ul class="clean">
+      <li>Prestup je <strong>chránený</strong> — platí oficiálne MCT 2 hodiny, nie 4–5 h vlastnej rezervy.</li>
+      <li>Otvorí sa vám aj <strong>Thai o 13:25... teda skôr o 12:25 a 13:25 stále nie</strong> (MCT je 2 h), ale hlavne: <strong>pri meškaní vás Turkish musí prebookovať na svoje náklady</strong> a batožinu (ak by ste ju mali) prepošlú.</li>
+      <li>Ak Turkish mešká, <strong>nekupujete novú letenku</strong>.</li>
+    </ul>
+    Zavolajte Turkishu a spýtajte sa na pridanie segmentu BKK–CEI k existujúcej rezervácii (počítajte s doplatkom tarify a poplatkom za prepis). <strong>Toto je jednoznačne najväčšia redukcia rizika, ktorá je k dispozícii</strong> — a možno vďaka nej stihnete aj skorší let.
+  </div>
+
+  <div class="card amber">
+    <strong>📋 Dve veci urobiť pred odletom, aby prestup nešpatlo:</strong>
+    <ol class="clean" style="list-style:decimal">
+      <li><strong>TDAC (Thailand Digital Arrival Card)</strong> — povinná online prihláška pred príletom. Vyplňte ju <strong>presne podľa pasu</strong> (meno, číslo pasu, dátum narodenia) — nesúlad vás pošle na manuálnu priehradku a do dlhšieho radu. <a href="https://www.tourismthailand.org/Articles/tdac" target="_blank">Info</a></li>
+      <li><strong>Online check-in na vnútroštátny let</strong> + mobilná palubka. Bez batožiny na odbavenie tak úplne obídete priehradku (TG aj VZ ju zatvárajú 40 min pred odletom) a idete priamo na vnútroštátnu bezpečnostnú kontrolu, Concourse A.</li>
+      <li><span class="small">Fast track na pasovej kontrole existuje (~1 000–1 700 THB/os., ušetrí 30–75 min v špičke, kupovať vopred cez Klook/GYG — na letisku sa nedá). Pri rezerve 5,5 h ho <strong>nepotrebujete</strong>. Zmienka len pre prípad, že by ste išli variantou s jedným lístkom a tesnejším prestupom.</span></li>
+    </ol>
+  </div>
+
+  <h3 id="vlak">🚂 Nočný vlak Chiang Mai → Bangkok — prečo už v pláne nie je</h3>
+  <div class="card">
+    Vo verzii 2 bol v pláne <strong>nočný vlak č. 10</strong> (Chiang Mai 18:20 → Krung Thep Aphiwat 06:30, 1. trieda privátne kupé, 3 106 THB za oboch). Bola to elegantná vec — ušetril noc v hoteli aj letenku a bol to najromantickejší presun výletu.<br><br>
+    <strong>Priamy let Chiang Mai → Surat Thani ho ale prekonal.</strong> Vlak vás doviezol do Bangkoku, odkiaľ ste na ostrovy museli na druhý deň znova letieť — to je jeden celý presunový deň. Priamy let vás dostane z Chiang Mai na Phangan za jediný deň. K tomu vypadla podmienka, že Doi Inthanon musí byť privátny výlet s dovozom na stanicu do 17:45, a nemusíte vstávať o 5:00 na Grab na Don Mueang.<br><br>
+    <span class="small">Ak by ste sa k vlaku niekedy vrátili: predpredaj sa otvára <strong>90 dní vopred, o 08:30 thajského času</strong> (SRT skrátil okno zo 180 dní v apríli 2026) a kupé 1. triedy sa vypredávajú za hodiny. Kupovať na <a href="https://dticket.railway.co.th/DTicketPublicWeb/home/Home" target="_blank">dticket.railway.co.th</a>, pri zlyhaní karty <a href="https://12go.asia/" target="_blank">12go</a> alebo <a href="https://www.baolau.com/en/transportation/thailand/trains/" target="_blank">Baolau</a>.</span>
+  </div>
+
+  <h3>🩺 Očkovanie — nutnosť pred cestou</h3>
+  <div class="card amber">
+    Thajsko nevyžaduje pre turistov z EÚ povinné očkovanie (výnimka: žltá zimnica pri prílete z rizikovej krajiny — z Prahy neplatí). Odporúčané pred cestou do juhovýchodnej Ázie:
+    <ul class="clean">
+      <li><strong>Hepatitída A</strong> — odporúčané pre všetkých, prenos jedlom a vodou.</li>
+      <li><strong>Hepatitída B</strong> — pri dlhšom pobyte / rizikovejších aktivitách.</li>
+      <li><strong>Tetanus + záškrt (preočkovanie)</strong> — skontrolovať platnosť, malo by byť do 10 rokov.</li>
+      <li><strong>Brušný týfus</strong> — zvážiť, najmä pri jedení mimo turistických reštaurácií a pri treku po dedinách (presne váš prípad).</li>
+      <li><strong>Japonská encefalitída</strong> — zvážiť pri treku a pobyte na vidieku v severnom Thajsku.</li>
+      <li><strong>Besnota</strong> — zvážiť, keďže plánujete trek cez dediny a kontakt s túlavými psami je tam bežný.</li>
+    </ul>
+    <strong>Termín:</strong> viaceré vakcíny potrebujú 2–3 dávky v odstupe týždňov — objednať sa na cestovnú/očkovaciu ambulanciu <strong>min. 6–8 týždňov pred odletom</strong>, teda ideálne do <strong>polovice decembra 2026</strong>. Antimalariká sa pre mestá, ostrovy ani hlavné trekové oblasti bežne neodporúčajú, ale spomeňte lekárovi trek v pohraničí.
+    <div class="small" style="margin-top:8px">Orientačný prehľad, nie lekárske odporúčanie — záväzné informácie a predpis konzultujte s cestovnou ambulanciou.</div>
+  </div>
+
+  <h3>Rezervovať vopred (podľa priority)</h3>
+  <ul class="clean">
+    <li>☐ <strong>Priamy let Chiang Mai → Surat Thani</strong> (11. 2., AirAsia 08:10 → 10:05) + naväzujúci Lomprayah 12:30. Musí to byť ranný spoj!</li>
+    <li>☐ <strong>Ubytovanie na ostrovoch a v Ao Nang</strong> — február = špička, malé pekné miesta sú plné 2–4 mesiace vopred. Rezervovať s bezplatným stornom.</li>
+    <li>☐ <strong>Zavolať Turkish Airlines</strong> — dá sa pridať segment BKK→Chiang Rai na existujúcu letenku? (Star Alliance, chránený prestup — <a href="#prestup">prečo to riešiť</a>)</li>
+    <li>☐ <strong>TDAC</strong> pre oboch vyplniť pred odletom, presne podľa pasu.</li>
+    <li>☐ <strong>Vnútroštátne letenky</strong> (BKK→CEI 4. 2. Thai 16:50, KBV→BKK <strong>18. 2.</strong> VZ345 20:35) — kúpiť hneď po otvorení predaja (~sep/okt 2026). Let 4. 2. je v CNY okne.</li>
+    <li>☐ <strong>Doi Inthanon + Kew Mae Pan</strong> celodenná tura (10. 2.) — skupinová stačí.</li>
+    <li>☐ 3D/2N jungle trek Chiang Mai (7.–9. 2.) + potvrdiť úschovu batožiny v hoteli.</li>
+    <li>☐ Hotel v centre Bangkoku na 18.–20. 2. (2 noci) + Grab na letisko na 20. 2. ~6:00.</li>
+    <li>☐ Transfer BKK → Phangan 12. 2. (AirAsia fly+ferry alebo 12go) + Grab na 5:00 dohodnúť večer predtým.</li>
+    <li>☐ Snorkel trip Koh Tao (13. 2.), ATV (15. 2.), Phi Phi tour (17. 2.), cooking class + Muay Thai (18. 2.).</li>
+    <li>☐ <strong>Valentínska večera vo Fisherman's Village na Samui (14. 2.)</strong> — stôl na pláži rezervovať vopred.</li>
+    <li>☐ Greenbus Chiang Rai → Chiang Mai (6. 2. = čínsky Nový rok).</li>
+  </ul>
+
+  <h3>Od kamaráta (ponechané z pôvodného itinerára)</h3>
+  <ul class="clean">
+    <li><strong>Burning season:</strong> začiatkom februára môže byť na severe mierny opar — začiatok mesiaca býva ešte OK, ale výhľady z Inthanonu môžu byť obmedzené.</li>
+    <li><strong>Kew Mae Pan</strong> je otvorený cca 1. 11. – 31. 5. a vyžaduje lokálneho sprievodcu — vo februári ideálne.</li>
+    <li><strong>Skútre:</strong> medzinárodný vodičák so sebou (kategória A na skúter — inak poisťovňa nemusí plniť). Prilba vždy.</li>
+  </ul>
+
+  <h3>Doplnené z researchu</h3>
+  <ul class="clean">
+    <li><strong>Čínsky Nový rok 6. 2. 2027</strong> — vlna 5.–8. 2. zdvihne ceny letov a obsadenosť na severe. Netreba meniť plán, len rezervovať skôr.</li>
+    <li><strong>Vodopády vo februári — realistické očakávania:</strong> na oboch ostrovoch v zálive je posledný poriadny dážď 6–10 týždňov za vami. Počítajte s „prechádzka džungľou k bazéniku na kúpanie", nie s burácajúcim vodopádom. Výnimka sú <strong>krabijské atrakcie</strong> (horúci vodopád a Emerald Pool) — sú geotermálne a pramenité, takže vo februári sú naopak v najlepšej forme.</li>
+    <li><strong>Hotovosť:</strong> park fees (Nang Yuan 250, Phi Phi 400 THB/os.), vstupy do NP pri vodopádoch a chrámy sa platia cash. Vyberať väčšie sumy naraz (fix poplatok ~220 THB/výber).</li>
+    <li><strong>Jedlo:</strong> počas treku (7.–9. 2.) je jedlo v cene. Ostrovy sú ~20–30 % drahšie než sever.</li>
+    <li><strong>Grab</strong> funguje v Bangkoku, Chiang Mai, na Samui aj v Krabi; na Phangane skôr taxíky/songthaew — dohodnúť cenu vopred.</li>
+  </ul>
+
+  <div class="card amber">
+    <strong>🔎 Stav dát (v2):</strong> Medzinárodné lety sú potvrdené z vašich leteniek. Ceny vnútroštátnych leteniek na február 2027 sú odhady z high-season štatistík — predaj sa otvára ~6 mesiacov vopred. Ceny vlaku sú oficiálne tarify SRT. Hotelové ceny sú z aktuálnych cenníkov a recenzií; presné februárové ceny overíte po kliknutí na linky (dátumy sú predvyplnené).
+  </div>
+</section>
+
+<footer>
+  Thajsko Honeymoon · Milan &amp; Terka · <strong>verzia 4.0</strong> — prepracované podľa reálnych leteniek + priamy let Chiang Mai → Surat Thani (v4.0)<br>
+  3.–20. február 2027 · 16 dní v Thajsku · Rozpočet 3 500 € / 2 os. (bez PRG–BKK–PRG) · Kurz 1 € ≈ 37 THB<br>
+  Zdroje: Trip.com, 12go.asia, seat61.com, thaitrainguide.com, Lomprayah, Greenbus, GetYourGuide, Booking/Tripadvisor prehľady, oficiálne stránky (Grand Palace, Wat Pho, SRT).
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var tip=document.createElement("div"); tip.id="chgTip"; document.body.appendChild(tip);
+  var cur=null, pinned=false;
+  function place(el){
+    var r=el.getBoundingClientRect();
+    tip.style.left="0px"; tip.style.top="0px";
+    var t=tip.getBoundingClientRect(), pad=10;
+    var x=r.left+r.width/2-t.width/2;
+    x=Math.max(pad, Math.min(x, window.innerWidth-t.width-pad));
+    var y=r.top-t.height-9;
+    if(y<pad) y=r.bottom+9;                       // nezmestí sa nad -> pod
+    tip.style.left=Math.round(x)+"px";
+    tip.style.top=Math.round(y)+"px";
+  }
+  function show(el){
+    if(cur) cur.classList.remove("on");
+    cur=el; el.classList.add("on");
+    tip.textContent=el.getAttribute("data-prev")||"";
+    tip.classList.add("show"); place(el);
+  }
+  function hide(){
+    tip.classList.remove("show");
+    if(cur){ cur.classList.remove("on"); cur=null; }
+  }
+  document.addEventListener("mouseover",function(e){
+    if(pinned) return;
+    var el=e.target.closest && e.target.closest(".chg");
+    if(el) show(el);
+  });
+  document.addEventListener("mouseout",function(e){
+    if(pinned) return;
+    var el=e.target.closest && e.target.closest(".chg");
+    if(el && cur===el) hide();
+  });
+  document.addEventListener("click",function(e){
+    var el=e.target.closest && e.target.closest(".chg");
+    if(el){
+      e.preventDefault(); e.stopPropagation();
+      if(pinned && cur===el){ pinned=false; hide(); }
+      else { pinned=true; show(el); }
+      return;
+    }
+    pinned=false; hide();
+  });
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape"){ pinned=false; hide(); } });
+  window.addEventListener("scroll",function(){ if(cur) place(cur); }, {passive:true});
+  window.addEventListener("resize",hide);
+})();
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var KEY = "thajsko-honeymoon-checklist-v1";
+  var SEED = [
+    { id:"pre", date:"Do konca 2026", where:"Vybaviť z Prahy — bez konkrétneho dátumu", items:[
+      {t:"Očkovania — objednať sa na cestovnú ambulanciu (hepatitída A/B, tetanus, týfus, príp. japonská encefalitída a besnota). <b>Deadline ~polovica decembra 2026</b>, niektoré vakcíny sú na 2–3 dávky.", u:""},
+      {t:"Cestovné poistenie na 3.–20. 2. 2027 pre oboch — <b>skontrolovať krytie skútra a trekingu</b>", u:""},
+      {t:"Medzinárodný vodičák pre oboch, <b>kategória A</b> (bez nej poisťovňa pri skútri nemusí plniť)", u:""},
+      {t:"eSIM na Thajsko pre oboch (kúpiť vopred, aktivovať po pristátí)", u:""},
+      {t:"Overiť karty — cezhraničné poplatky, denný limit na výbery, nahlásiť cestu banke", u:""},
+      {t:"Kópie pasov, letenky a rezervácie stiahnuté offline do telefónu", u:""}
+    ]},
+    { id:"d0302", date:"3. 2.", where:"Odlet Praha → Bangkok", items:[
+      {t:"<b>Letenka Praha→Bangkok</b> TK1772 + TK52, odlet 14:45", u:"https://www.turkishairlines.com/", s:2},
+      {t:"Online check-in Turkish (otvára sa 24 h pred odletom)", u:"https://www.turkishairlines.com/"},
+      {t:"<b>TDAC</b> — Thailand Digital Arrival Card pre oboch, vyplniť presne podľa pasu", u:"https://www.tourismthailand.org/Articles/tdac"}
+    ]},
+    { id:"d0402", date:"4. 2.", where:"Prílet BKK → let do Chiang Rai", items:[
+      {t:"<b>Kúpiť letenku BKK→Chiang Rai</b> — Thai 16:50→18:20, ~£53/os. (predaj sa otvára ~sep/okt 2026)", u:"https://www.google.com/travel/flights?q=flights%20from%20BKK%20to%20CEI%20on%202027-02-04%20one%20way", s:1},
+      {t:"<b>Zavolať Turkish</b> — dá sa pridať segment BKK→CEI na existujúcu letenku? (Star Alliance = chránený prestup)", u:"https://www.turkishairlines.com/"},
+      {t:"Rezervovať <b>ubytko Chiang Rai, 4.–6. 2. (2 noci)</b> — Baan Norn Plearn", u:"https://www.booking.com/hotel/th/po-baan-norn-plearn.html", s:1}
+    ]},
+    { id:"d0502", date:"5. 2.", where:"Chiang Rai — chrámy a mesto", items:[
+      {t:"Rozhodnúť sa: <b>chrámy + mesto</b>, alebo celodenný výlet na <b>Doi Mae Salong</b> (nedá sa stihnúť oboje)", u:""}
+    ]},
+    { id:"d0602", date:"6. 2.", where:"Bus do Chiang Mai", items:[
+      {t:"<b>Kúpiť Greenbus</b> Chiang Rai → Chiang Mai online — <b>6. 2. je čínsky Nový rok</b>, sedadlá sa míňajú", u:"https://www.greenbusthailand.com/website/", s:1},
+      {t:"Rezervovať <b>ubytko Chiang Mai, 6.–7. 2. (1 noc)</b> — Yi's Garden Villa", u:"https://www.booking.com/searchresults.html?ss=Yi%27s+Garden+Villa+Chiang+Mai&checkin=2027-02-06&checkout=2027-02-07&group_adults=2", s:1},
+      {t:"Potvrdiť s hotelom, že <b>uschová batohy</b> počas trojdňového treku", u:""}
+    ]},
+    { id:"d0702", date:"7.–9. 2.", where:"3D/2N jungle trek", items:[
+      {t:"<b>Rezervovať 3D/2N jungle trek</b> — CM Local Tours 2 500 THB/os. alebo Thailand Treks 3 400 THB/os.", u:"https://www.chiangmailocaltours.com/package/tour-detail.php?id=49", s:1},
+      {t:"Potvrdiť <b>čas a miesto pickupu</b> (~9:30) a čo je v cene (jedlá, spacák, poistenie)", u:"https://thailandtreks.com/tour/chiang-mai-trek-3days/"}
+    ]},
+    { id:"d0902", date:"9. 2.", where:"Návrat z treku do Chiang Mai", items:[
+      {t:"Rezervovať <b>ubytko Chiang Mai, 9.–10. 2. (1 noc)</b> — druhá rezervácia, môže byť ten istý hotel", u:"https://www.booking.com/searchresults.html?ss=Yi%27s+Garden+Villa+Chiang+Mai&checkin=2027-02-09&checkout=2027-02-10&group_adults=2", s:1}
+    ]},
+    { id:"d1002", date:"10. 2.", where:"Doi Inthanon (Chiang Mai)", items:[
+      {t:"<b>Rezervovať Doi Inthanon + Kew Mae Pan</b> celodennú turu — skupinová stačí, nočný vlak vypadol z plánu", u:"https://www.getyourguide.com/chiang-mai-l271/chiang-mai-kew-mae-pan-nature-trail-doi-inthanon-day-trip-t536292/", s:1},
+      {t:"Rezervovať <b>ubytko Chiang Mai, 9.–11. 2. (2 noci)</b> — druhá rezervácia po treku, môže byť ten istý hotel", u:"https://www.booking.com/searchresults.html?ss=Yi%27s+Garden+Villa+Chiang+Mai&checkin=2027-02-09&checkout=2027-02-11&group_adults=2", s:1}
+    ]},
+    { id:"d1102", date:"11. 2.", where:"Chiang Mai → Koh Phangan (nová trasa)", items:[
+      {t:"🚨 <b>Kúpiť priamy let Chiang Mai → Surat Thani</b> — Thai AirAsia <b>08:10 → 10:05</b>, £82/os. <b>Musí byť ranný spoj</b> — ten o 17:30 pristáva po poslednom trajekte a museli by ste nocovať v Surat Thani.", u:"https://www.skyscanner.net/transport/flights/cnx/urt/270211/", s:1},
+      {t:"Kúpiť <b>Lomprayah bus + katamarán</b> z letiska URT 12:30 → Thong Sala 16:30 (~26 €/os.)", u:"https://12go.asia/en/travel/surat-thani-airport/koh-phangan?date=2027-02-11", s:1},
+      {t:"Rezervovať <b>ubytko Koh Phangan, 11.–14. 2. (3 noci)</b> — Sunset Cove Resort. <b>Február = špička, rezervovať 2–4 mes. vopred</b>", u:"https://www.booking.com/searchresults.html?ss=Sunset+Cove+Resort+Koh+Phangan&checkin=2027-02-11&checkout=2027-02-14&group_adults=2", s:1}
+    ]},
+    { id:"d1302", date:"13. 2.", where:"Koh Tao — šnorchlovanie", items:[
+      {t:"<b>Rezervovať snorkel trip</b> Koh Tao + Koh Nang Yuan speedboatom (7,5 h, s obedom)", u:"https://www.getyourguide.com/ko-phangan-l5038/koh-nangyuan-koh-tao-by-speed-boat-from-koh-phangan-t672990/", s:1}
+    ]},
+    { id:"d1402", date:"14. 2.", where:"Presun na Samui + Valentín 💝", items:[
+      {t:"Kúpiť <b>ferry Seatran</b> Thong Sala → <b>Bangrak</b> (nie Nathon — Bangrak je bližšie k Fisherman's Village)", u:"https://12go.asia/en/travel/koh-phangan/samui?date=2027-02-14", s:1},
+      {t:"Rezervovať <b>ubytko Koh Samui, 14.–16. 2. (2 noci)</b> — Baan Bophut Beach Hotel, <b>rezervovať veľmi skoro</b>", u:"https://www.booking.com/searchresults.html?ss=Baan+Bophut+Beach+Hotel+Samui&checkin=2027-02-14&checkout=2027-02-16&group_adults=2", s:1},
+      {t:"<b>Rezervovať valentínsku večeru</b> v Fisherman's Village v Bophute — 14. 2. sa stoly na pláži míňajú", u:"", s:0}
+    ]},
+    { id:"d1502", date:"15. 2.", where:"Koh Samui — štvorkolky", items:[
+      {t:"<b>Rezervovať ATV / štvorkolky</b> v horách (1 h, s pickupom z hotela)", u:"https://www.getyourguide.com/koh-samui-l898/koh-samui-quad-bike-safari-tour-t245437/", s:1}
+    ]},
+    { id:"d1602", date:"16. 2.", where:"Samui → Krabi / Ao Nang", items:[
+      {t:"Kúpiť <b>Lomprayah ferry + bus</b>, Nathon 08:30 → Krabi 12:30. <b>Zvoliť cieľ „Ao Nang\"</b>, inak končíte v Krabi town.", u:"https://12go.asia/en/travel/samui/ao-nang?date=2027-02-16", s:1},
+      {t:"Rezervovať <b>ubytko Krabi / Ao Nang, 16.–18. 2. (2 noci)</b> — Sugar Marina Cliffhanger", u:"https://www.booking.com/searchresults.html?ss=Sugar+Marina+Cliffhanger+Aonang&checkin=2027-02-16&checkout=2027-02-18&group_adults=2", s:1}
+    ]},
+    { id:"d1702", date:"17. 2.", where:"Phi Phi / 4-island tour", items:[
+      {t:"<b>Rezervovať Phi Phi / 4-island tour</b> speedboatom z Ao Nang (celý deň, s obedom)", u:"https://bigtourkrabi.com/en/thailand/ao-nang/tours/4-islands-by-speedboat/", s:1}
+    ]},
+    { id:"d1802", date:"18. 2.", where:"Krabi → Bangkok", items:[
+      {t:"<b>Rezervovať thai cooking class</b> na doobedie (Ya's Cookery, 4 h, s transferom z hotela)", u:"https://www.getyourguide.com/ao-nang-l89867/krabi-authentic-thai-cooking-class-at-ya-s-cookery-school-t366985/", s:1},
+      {t:"<b>Rezervovať Muay Thai couple training</b> na poobedie — lokálny gym (~10–14 €/os.) alebo GYG lekcia", u:"https://overthetopkrabi.com/", s:1},
+      {t:"<b>Kúpiť letenku Krabi→Bangkok</b> — VietJet VZ345 20:35 → <b>BKK</b> 22:05 (nie DMK!)", u:"https://www.google.com/travel/flights?q=flights%20from%20KBV%20to%20BKK%20on%202027-02-18%20one%20way", s:1},
+      {t:"Rezervovať <b>ubytko Bangkok — mesto, 18.–20. 2. (2 noci)</b> — Casa Vimaya Riverside pri Grand Palace", u:"https://www.booking.com/searchresults.html?ss=Casa+Vimaya+Riverside+Bangkok&checkin=2027-02-18&checkout=2027-02-20&group_adults=2", s:1}
+    ]},
+    { id:"d1902", date:"19. 2.", where:"Celý deň Bangkok (získaný deň)", items:[
+      {t:"Nič netreba rezervovať vopred — Grand Palace ani Wat Pho sa nerezervujú. Len si <b>dohodnúť Grab na 20. 2. ~6:00</b> na letisko (na recepcii večer predtým).", u:"", s:0},
+      {t:"Online check-in Turkish na spiatočný let (otvára sa 24 h vopred, teda 19. 2.)", u:"https://www.turkishairlines.com/", s:0}
+    ]},
+    { id:"d2002", date:"20. 2.", where:"Bangkok → Praha", items:[
+      {t:"<b>Letenka Bangkok→Praha</b> TK65 + TK1769, odlet 10:20, prílet Praha 18:25", u:"https://www.turkishairlines.com/", s:2}
+    ]}
+  ];
+
+  function seedState(){
+    return SEED.map(function(d){
+      return { id:d.id, date:d.date, where:d.where, items:d.items.map(function(it,i){
+        return { id:d.id+"-"+i, t:it.t, u:it.u||"", s:(typeof it.s==="number"?it.s:(it.done?2:0)) };
+      })};
+    });
+  }
+  var state;
+  try { var raw = localStorage.getItem(KEY); state = raw ? JSON.parse(raw) : seedState(); }
+  catch(e){ state = seedState(); }
+  if(!Array.isArray(state) || !state.length) state = seedState();
+
+  var panel = null;      // {id:"...", mode:"menu"|"edit"}
+  var pendingDel = null;
+
+  // --- migrácia starých dát: done:true/false -> s:2/0 ---
+  state.forEach(function(d){
+    (d.items||[]).forEach(function(it){
+      if(typeof it.s !== "number") it.s = it.done ? 2 : 0;
+      if(it.s < 0 || it.s > 2) it.s = 0;
+    });
+  });
+
+  var LBL = ["nemáme nič", "vybraté, ešte nie dorobené", "hotové na 100 %"];
+
+  var storageOK = true;
+  function save(){
+    try { localStorage.setItem(KEY, JSON.stringify(state)); }
+    catch(e){
+      if(storageOK){ storageOK=false; note("⚠️ Tento prehliadač neukladá stav (súkromné okno alebo blokované dáta). Použi Export pred zatvorením.", true); }
+    }
+  }
+  var noteEl = document.getElementById("ckNote"), noteT;
+  function note(msg, sticky){
+    noteEl.textContent = msg;
+    noteEl.style.color = sticky ? "var(--amber)" : "var(--green)";
+    clearTimeout(noteT);
+    if(!sticky) noteT = setTimeout(function(){ noteEl.textContent=""; }, 3000);
+  }
+
+  var root = document.getElementById("ckRoot");
+  var progIn = document.getElementById("ckProgIn"), progPart = document.getElementById("ckProgPart"), progTxt = document.getElementById("ckProgTxt");
+
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  function safe(html){ return esc(html).replace(/&lt;(\/?)(b|i)&gt;/g, "<$1$2>"); }
+  function cssq(v){ return String(v).replace(/"/g,'\\"'); }
+
+  function render(){
+    var tAll=0, dAll=0, pAll=0, html="";
+    state.forEach(function(d){
+      var dn=0, pt=0;
+      d.items.forEach(function(i){ if(i.s===2) dn++; else if(i.s===1) pt++; });
+      tAll += d.items.length; dAll += dn; pAll += pt;
+      var allDone = d.items.length>0 && dn===d.items.length;
+      html += '<div class="ck-day'+(allDone?" ck-done":"")+'" data-d="'+esc(d.id)+'">'
+        + '<div class="ck-head"><span class="ck-date">'+safe(d.date)+'</span>'
+        + '<span class="ck-where">'+safe(d.where)+'</span>'
+        + (pt ? '<span class="ck-count ck-count-part"><i class="ck-box-d" data-s="1"></i>'+pt+'</span>' : "")
+        + '<span class="ck-count">'+dn+" / "+d.items.length+(allDone?" ✓":"")+'</span></div><ul class="ck-items">';
+      d.items.forEach(function(it){
+        var hasU = !!it.u;
+        var open = panel && panel.id===it.id;
+        html += '<li class="ck-item s'+it.s+'" data-i="'+esc(it.id)+'">'
+          + '<div class="ck-row">'
+          + '<button type="button" class="ck-box" data-s="'+it.s+'" title="'+esc(LBL[it.s])+' — klikni na zmenu" aria-label="'+esc(LBL[it.s])+'">'+(it.s===2?"✓":"")+'</button>'
+          + '<span class="ck-text" contenteditable="true" spellcheck="false">'+safe(it.t)+'</span>'
+          + '<span class="ck-tools">'
+          + '<button type="button" class="ck-ico link '+(hasU?"set":"unset")+(open?" on":"")+'" title="'+(hasU?"Odkaz — otvoriť, kopírovať, zmeniť":"Pridať odkaz")+'">🔗</button>'
+          + '<button type="button" class="ck-ico del'+(pendingDel===it.id?" on":"")+'" title="Zmazať položku">✕</button>'
+          + '</span></div>';
+
+        if(open && panel.mode==="menu"){
+          html += '<div class="ck-panel">'
+            + '<label class="ck-panel-l">Odkaz</label>'
+            + '<input type="text" class="ck-urlview" value="'+esc(it.u)+'" readonly spellcheck="false">'
+            + '<div class="ck-panel-row" style="margin-top:7px">'
+            + '<a class="ck-btn ck-primary" href="'+esc(it.u)+'" target="_blank" rel="noopener">↗ Otvoriť</a>'
+            + '<button type="button" class="ck-btn ck-copy">⧉ Kopírovať</button>'
+            + '<button type="button" class="ck-btn ck-toedit">✎ Zmeniť</button>'
+            + '<button type="button" class="ck-btn ck-ghost ck-cancel">Zavrieť</button>'
+            + '</div></div>';
+        }
+        if(open && panel.mode==="edit"){
+          html += '<div class="ck-panel">'
+            + '<label class="ck-panel-l">'+(hasU?"Zmeniť URL":"Pridať URL")+'</label>'
+            + '<input type="text" class="ck-url" value="'+esc(it.u)+'" placeholder="napr. booking.com/…" autocomplete="off" spellcheck="false">'
+            + '<div class="ck-panel-row" style="margin-top:7px">'
+            + '<button type="button" class="ck-btn ck-primary ck-save">Uložiť</button>'
+            + (hasU ? '<button type="button" class="ck-btn ck-btn-warn ck-clear">Odstrániť odkaz</button>' : "")
+            + '<button type="button" class="ck-btn ck-ghost ck-cancel">Zrušiť</button>'
+            + '</div></div>';
+        }
+        if(pendingDel === it.id){
+          html += '<div class="ck-panel ck-panel-del">'
+            + '<span class="ck-panel-l">Naozaj zmazať túto položku?</span>'
+            + '<div class="ck-panel-row">'
+            + '<button type="button" class="ck-btn ck-btn-danger ck-yes">Áno, zmazať</button>'
+            + '<button type="button" class="ck-btn ck-ghost ck-no">Nie</button>'
+            + '</div></div>';
+        }
+        html += '</li>';
+      });
+      html += '</ul><button type="button" class="ck-add" data-add="'+esc(d.id)+'">+ Pridať položku</button></div>';
+    });
+    root.innerHTML = html;
+    progTxt.innerHTML = '<span class="pg-d">'+dAll+' ✓</span>'
+      +(pAll?' <span class="pg-p"><i class="ck-box-d" data-s="1"></i>'+pAll+'</span>':'')
+      +' <span class="pg-t">/ '+tAll+'</span>';
+    progIn.style.width   = tAll ? (dAll/tAll*100)+"%" : "0%";
+    progPart.style.width = tAll ? (pAll/tAll*100)+"%" : "0%";
+    if(panel && panel.mode==="edit"){
+      var inp = root.querySelector('[data-i="'+cssq(panel.id)+'"] .ck-url');
+      if(inp){ inp.focus(); try{ inp.setSelectionRange(inp.value.length, inp.value.length); }catch(e){} }
+    }
+  }
+
+  function findItem(iid){
+    for(var a=0;a<state.length;a++){
+      for(var b=0;b<state[a].items.length;b++){
+        if(state[a].items[b].id===iid) return {d:state[a], i:state[a].items[b], di:a, ii:b};
+      }
+    }
+    return null;
+  }
+  function normUrl(v){
+    v = (v||"").trim();
+    if(!v) return "";
+    if(!/^(https?:\/\/|mailto:|tel:)/i.test(v)) v = "https://"+v;
+    return v;
+  }
+  function copyUrl(u){
+    function ok(){ note("Odkaz skopírovaný do schránky."); }
+    function manual(){
+      var v = root.querySelector('.ck-urlview');
+      if(v){ v.focus(); v.select(); note("Kopírovanie je tu blokované — text je označený, stlač Cmd+C.", true); }
+      else note("⚠️ Kopírovanie tu nie je povolené.", true);
+    }
+    function fb(){
+      try{
+        var ta=document.createElement("textarea"); ta.value=u;
+        ta.style.position="fixed"; ta.style.top="0"; ta.style.opacity="0";
+        document.body.appendChild(ta); ta.focus(); ta.select();
+        var done=document.execCommand("copy"); ta.remove();
+        done ? ok() : manual();
+      }catch(e){ manual(); }
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(u).then(ok, fb);
+    } else fb();
+  }
+
+  root.addEventListener("click", function(e){
+    // trojstavový prepínač
+    var box = e.target.closest(".ck-box");
+    if(box){
+      var fb2 = findItem(box.closest(".ck-item").dataset.i); if(!fb2) return;
+      fb2.i.s = (fb2.i.s + 1) % 3;
+      save(); render(); return;
+    }
+    var addBtn = e.target.closest(".ck-add");
+    if(addBtn){
+      var d = state.filter(function(x){return x.id===addBtn.dataset.add;})[0];
+      if(!d) return;
+      var nid = d.id+"-n"+Date.now();
+      d.items.push({id:nid, t:"Nová položka", u:"", s:0});
+      panel=null; pendingDel=null; save(); render();
+      var el = root.querySelector('[data-i="'+cssq(nid)+'"] .ck-text');
+      if(el){
+        el.focus();
+        try{ var r=document.createRange(); r.selectNodeContents(el); var sel=window.getSelection(); sel.removeAllRanges(); sel.addRange(r); }catch(err){}
+      }
+      return;
+    }
+    var li = e.target.closest(".ck-item"); if(!li) return;
+    var f = findItem(li.dataset.i); if(!f) return;
+
+    if(e.target.closest(".ck-ico.link")){
+      if(panel && panel.id===f.i.id) panel=null;
+      else panel = {id:f.i.id, mode: f.i.u ? "menu" : "edit"};
+      pendingDel=null; render(); return;
+    }
+    if(e.target.closest(".ck-toedit")){ panel={id:f.i.id, mode:"edit"}; render(); return; }
+    if(e.target.closest(".ck-copy")){ copyUrl(f.i.u); return; }
+    if(e.target.closest(".ck-save")){
+      var inp = li.querySelector(".ck-url");
+      f.i.u = normUrl(inp ? inp.value : "");
+      panel = f.i.u ? {id:f.i.id, mode:"menu"} : null;
+      save(); render(); note(f.i.u ? "Odkaz uložený." : "Odkaz odstránený."); return;
+    }
+    if(e.target.closest(".ck-clear")){ f.i.u=""; panel=null; save(); render(); note("Odkaz odstránený."); return; }
+    if(e.target.closest(".ck-cancel")){ panel=null; render(); return; }
+    if(e.target.closest(".ck-ico.del")){ pendingDel = (pendingDel===f.i.id) ? null : f.i.id; panel=null; render(); return; }
+    if(e.target.closest(".ck-yes")){ f.d.items.splice(f.ii,1); pendingDel=null; save(); render(); note("Zmazané."); return; }
+    if(e.target.closest(".ck-no")){ pendingDel=null; render(); return; }
+  });
+
+  root.addEventListener("keydown", function(e){
+    if(e.target.classList && e.target.classList.contains("ck-url")){
+      if(e.key==="Enter"){ e.preventDefault(); var b=e.target.closest(".ck-item").querySelector(".ck-save"); if(b) b.click(); }
+      if(e.key==="Escape"){ e.preventDefault(); panel=null; render(); }
+      return;
+    }
+    if(e.key==="Enter" && e.target.classList && e.target.classList.contains("ck-text")){ e.preventDefault(); e.target.blur(); }
+  });
+  root.addEventListener("focus", function(e){
+    if(e.target.classList && e.target.classList.contains("ck-urlview")) e.target.select();
+  }, true);
+
+  root.addEventListener("blur", function(e){
+    if(!e.target.classList || !e.target.classList.contains("ck-text")) return;
+    var li = e.target.closest(".ck-item"); if(!li) return;
+    var f = findItem(li.dataset.i); if(!f) return;
+    var txt = e.target.innerHTML.replace(/<div>|<br\s*\/?>/gi," ").replace(/<(?!\/?(b|i)\b)[^>]*>/gi,"").replace(/\s+/g," ").trim();
+    if(txt !== f.i.t){ f.i.t = txt; save(); note("Uložené."); }
+  }, true);
+
+  document.getElementById("ckExport").addEventListener("click", function(){
+    try{
+      var blob = new Blob([JSON.stringify(state,null,2)], {type:"application/json"});
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "thajsko-checklist.json";
+      document.body.appendChild(a); a.click(); a.remove();
+      note("Exportované do thajsko-checklist.json");
+    }catch(err){ note("⚠️ Sťahovanie tu nefunguje — otvor stránku priamo v prehliadači.", true); }
+  });
+  document.getElementById("ckImport").addEventListener("click", function(){ document.getElementById("ckFile").click(); });
+  document.getElementById("ckFile").addEventListener("change", function(e){
+    var f = e.target.files[0]; if(!f) return;
+    var r = new FileReader();
+    r.onload = function(){
+      try{
+        var d = JSON.parse(r.result);
+        if(!Array.isArray(d) || !d.length) throw 0;
+        d.forEach(function(x){ (x.items||[]).forEach(function(it){ if(typeof it.s!=="number") it.s = it.done?2:0; }); });
+        state = d; panel=null; pendingDel=null; save(); render(); note("Importované.");
+      }catch(err){ note("⚠️ Súbor sa nepodarilo prečítať.", true); }
+    };
+    r.readAsText(f); e.target.value="";
+  });
+
+  var resetArmed=false, resetBtn=document.getElementById("ckReset");
+  resetBtn.addEventListener("click", function(){
+    if(!resetArmed){
+      resetArmed=true; resetBtn.textContent="↺ Naozaj? Klikni znova";
+      setTimeout(function(){ if(resetArmed){ resetArmed=false; resetBtn.textContent="↺ Reset"; } }, 4000);
+      return;
+    }
+    resetArmed=false; resetBtn.textContent="↺ Reset";
+    state = seedState(); panel=null; pendingDel=null; save(); render(); note("Reset hotový.");
+  });
+
+  window.__ckReload=function(){
+    try{ var raw=localStorage.getItem(KEY); if(raw){ state=JSON.parse(raw); } }catch(e){}
+    state.forEach(function(d){ (d.items||[]).forEach(function(it){ if(typeof it.s!=="number") it.s = it.done?2:0; }); });
+    panel=null; pendingDel=null; render();
+  };
+  render();
+})();
+</script>
+
+
+
+<script>
+/* ---------- SPOLOČNÁ SYNCHRONIZÁCIA CEZ GITHUB ----------
+   V tomto súbore NIE JE ŽIADNY TOKEN. Token si každý vloží sám vo svojom
+   prehliadači a uloží sa len tam (localStorage), nikdy nie do stránky. */
+(function(){
+  "use strict";
+  var OWNER="MilanKubackaM", REPO="thailandPlanner", BRANCH="main", PATH="data/checklist.json";
+  var API="https://api.github.com/repos/"+OWNER+"/"+REPO+"/contents/"+PATH;
+  var RAW="https://raw.githubusercontent.com/"+OWNER+"/"+REPO+"/"+BRANCH+"/"+PATH;
+  var K_STATE="thajsko-honeymoon-checklist-v1", K_TOK="thajsko-gh-token", K_WHO="thajsko-kto", K_SHA="thajsko-gh-sha";
+
+  var elStatus=document.getElementById("syncStatus");
+  var elLoad=document.getElementById("syncLoad"), elSave=document.getElementById("syncSave");
+  var elWho=document.getElementById("syncWho"), elPanel=document.getElementById("syncPanel");
+  if(!elStatus) return;
+
+  function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); if(v===null) localStorage.removeItem(k); else localStorage.setItem(k,v); }catch(e){ return null; } }
+  function b64(str){ var by=new TextEncoder().encode(str), s=""; by.forEach(function(b){ s+=String.fromCharCode(b); }); return btoa(s); }
+  function unb64(s){ var bin=atob(String(s).replace(/\s/g,"")), by=new Uint8Array(bin.length); for(var i=0;i<bin.length;i++) by[i]=bin.charCodeAt(i); return new TextDecoder().decode(by); }
+  function st(msg,kind){ elStatus.textContent=msg; elStatus.className="sync-status "+(kind||""); }
+  function fmt(iso){ try{ var d=new Date(iso); return d.toLocaleString("sk-SK",{day:"numeric",month:"numeric",hour:"2-digit",minute:"2-digit"}); }catch(e){ return iso; } }
+
+  function readState(){ try{ return JSON.parse(ls(K_STATE)||"null"); }catch(e){ return null; } }
+  function writeState(days){
+    ls(K_STATE, JSON.stringify(days));
+    if(window.__ckReload) window.__ckReload();   // prekreslí checklist
+  }
+
+  // --- meno (kto ukladá) ---
+  if(elWho){
+    elWho.value = ls(K_WHO)||"";
+    elWho.addEventListener("change",function(){ ls(K_WHO, elWho.value.trim()); });
+  }
+
+  // --- panel na token ---
+  function togglePanel(show){
+    elPanel.style.display = show ? "block" : "none";
+    if(show){ var i=elPanel.querySelector(".sync-tok"); if(i){ i.value=ls(K_TOK)||""; i.focus(); } }
+  }
+  elPanel.querySelector(".sync-tok-save").addEventListener("click",function(){
+    var v=elPanel.querySelector(".sync-tok").value.trim();
+    if(v){ ls(K_TOK,v); st("Token uložený v tomto prehliadači.","ok"); togglePanel(false); }
+    else { ls(K_TOK,null); st("Token odstránený.","ok"); }
+  });
+  elPanel.querySelector(".sync-tok-clear").addEventListener("click",function(){
+    ls(K_TOK,null); elPanel.querySelector(".sync-tok").value=""; st("Token odstránený z tohto prehliadača.","ok");
+  });
+  elPanel.querySelector(".sync-tok-cancel").addEventListener("click",function(){ togglePanel(false); });
+
+  // --- NAČÍTAŤ SPOLOČNÉ ---
+  function load(silent){
+    st("Načítavam spoločnú verziu…");
+    return fetch(RAW+"?t="+Date.now(),{cache:"no-store"})
+      .then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+      .catch(function(){
+        var tok=ls(K_TOK); if(!tok) throw new Error("nedostupné");
+        return fetch(API+"?ref="+BRANCH,{headers:{Authorization:"Bearer "+tok,Accept:"application/vnd.github+json"}})
+          .then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+          .then(function(j){ ls(K_SHA,j.sha); return JSON.parse(unb64(j.content)); });
+      })
+      .then(function(j){
+        if(!j || !Array.isArray(j.days)) throw new Error("zlý formát");
+        writeState(j.days);
+        st("Načítané: "+(j.by?j.by+", ":"")+fmt(j.savedAt),"ok");
+      })
+      .catch(function(e){
+        if(silent){ st("Spoločná verzia zatiaľ neexistuje — pracuješ lokálne."); return; }
+        st("⚠️ Nepodarilo sa načítať ("+e.message+"). Skús to znova alebo skontroluj pripojenie.","err");
+      });
+  }
+
+  // --- ULOŽIŤ DO SPOLOČNÉHO ---
+  function save(force){
+    var tok=ls(K_TOK);
+    if(!tok){ st("Na uloženie treba prístupový token — vlož ho nižšie.","err"); togglePanel(true); return; }
+    var days=readState();
+    if(!days){ st("Niet čo uložiť.","err"); return; }
+    var who=(ls(K_WHO)||"").trim();
+    st("Ukladám…");
+    var H={Authorization:"Bearer "+tok, Accept:"application/vnd.github+json", "Content-Type":"application/json"};
+    fetch(API+"?ref="+BRANCH+"&t="+Date.now(),{headers:H,cache:"no-store"})
+      .then(function(r){ return r.status===404 ? {sha:null} : r.json(); })
+      .then(function(meta){
+        var remote=meta.sha||null, mine=ls(K_SHA);
+        if(!force && remote && mine && remote!==mine){
+          st("⚠️ Niekto medzitým uložil zmeny. Daj najprv Načítať spoločné, alebo klikni na Uložiť znova a prepíšeš to.","err");
+          elSave.dataset.force="1";
+          setTimeout(function(){ delete elSave.dataset.force; },10000);
+          throw new Error("__conflict__");
+        }
+        var body={ message:"Checklist"+(who?" — "+who:"")+" "+new Date().toISOString().slice(0,16).replace("T"," "),
+                   content:b64(JSON.stringify({savedAt:new Date().toISOString(), by:who||"neznámy", days:days},null,2)),
+                   branch:BRANCH };
+        if(remote) body.sha=remote;
+        return fetch(API,{method:"PUT",headers:H,body:JSON.stringify(body)});
+      })
+      .then(function(r){ return r.json().then(function(j){ if(!r.ok) throw new Error(j.message||("HTTP "+r.status)); return j; }); })
+      .then(function(j){
+        if(j.content && j.content.sha) ls(K_SHA,j.content.sha);
+        st("✅ Uložené do spoločného"+(who?" ako "+who:"")+" — "+fmt(new Date().toISOString()),"ok");
+      })
+      .catch(function(e){
+        if(e.message==="__conflict__") return;
+        if(/401|Bad credentials/i.test(e.message)){ st("⚠️ Token je neplatný alebo vypršal. Vlož nový nižšie.","err"); togglePanel(true); }
+        else if(/403|404/.test(e.message)){ st("⚠️ Token nemá právo zapisovať do repozitára (treba Contents: Read and write).","err"); }
+        else { st("⚠️ Uloženie zlyhalo: "+e.message,"err"); }
+      });
+  }
+
+  elLoad.addEventListener("click",function(){ load(false); });
+  elSave.addEventListener("click",function(){ save(elSave.dataset.force==="1"); });
+  document.getElementById("syncToken").addEventListener("click",function(){ togglePanel(elPanel.style.display==="none"); });
+
+  // pri prvej návšteve (žiadny lokálny stav) stiahni spoločnú verziu
+  if(!readState()) load(true); else st("Pracuješ na svojej lokálnej kópii. Spoločnú verziu načítaš tlačidlom vľavo.");
+})();
+</script>
+
+</body>
+</html>

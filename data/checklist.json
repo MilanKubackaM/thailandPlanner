@@ -1,0 +1,359 @@
+{
+  "savedAt": "2026-08-22T18:00:00.000Z",
+  "by": "Milan (úvodný stav)",
+  "days": [
+    {
+      "id": "pre",
+      "date": "Do konca 2026",
+      "where": "Vybaviť z Prahy — bez konkrétneho dátumu",
+      "items": [
+        {
+          "id": "pre-0",
+          "t": "Očkovania — objednať sa na cestovnú ambulanciu (hepatitída A/B, tetanus, týfus, príp. japonská encefalitída a besnota). <b>Deadline ~polovica decembra 2026</b>, niektoré vakcíny sú na 2–3 dávky.",
+          "u": "",
+          "s": 0
+        },
+        {
+          "id": "pre-1",
+          "t": "Cestovné poistenie na 3.–20. 2. 2027 pre oboch — <b>skontrolovať krytie skútra a trekingu</b>",
+          "u": "",
+          "s": 0
+        },
+        {
+          "id": "pre-2",
+          "t": "Medzinárodný vodičák pre oboch, <b>kategória A</b> (bez nej poisťovňa pri skútri nemusí plniť)",
+          "u": "",
+          "s": 0
+        },
+        {
+          "id": "pre-3",
+          "t": "eSIM na Thajsko pre oboch (kúpiť vopred, aktivovať po pristátí)",
+          "u": "",
+          "s": 0
+        },
+        {
+          "id": "pre-4",
+          "t": "Overiť karty — cezhraničné poplatky, denný limit na výbery, nahlásiť cestu banke",
+          "u": "",
+          "s": 0
+        },
+        {
+          "id": "pre-5",
+          "t": "Kópie pasov, letenky a rezervácie stiahnuté offline do telefónu",
+          "u": "",
+          "s": 0
+        }
+      ]
+    },
+    {
+      "id": "d0302",
+      "date": "3. 2.",
+      "where": "Odlet Praha → Bangkok",
+      "items": [
+        {
+          "id": "d0302-0",
+          "t": "<b>Letenka Praha→Bangkok</b> TK1772 + TK52, odlet 14:45",
+          "u": "https://www.turkishairlines.com/",
+          "s": 2
+        },
+        {
+          "id": "d0302-1",
+          "t": "Online check-in Turkish (otvára sa 24 h pred odletom)",
+          "u": "https://www.turkishairlines.com/",
+          "s": 0
+        },
+        {
+          "id": "d0302-2",
+          "t": "<b>TDAC</b> — Thailand Digital Arrival Card pre oboch, vyplniť presne podľa pasu",
+          "u": "https://www.tourismthailand.org/Articles/tdac",
+          "s": 0
+        }
+      ]
+    },
+    {
+      "id": "d0402",
+      "date": "4. 2.",
+      "where": "Prílet BKK → let do Chiang Rai",
+      "items": [
+        {
+          "id": "d0402-0",
+          "t": "<b>Kúpiť letenku BKK→Chiang Rai</b> — Thai 16:50→18:20, ~£53/os. (predaj sa otvára ~sep/okt 2026)",
+          "u": "https://www.google.com/travel/flights?q=flights%20from%20BKK%20to%20CEI%20on%202027-02-04%20one%20way",
+          "s": 1
+        },
+        {
+          "id": "d0402-1",
+          "t": "<b>Zavolať Turkish</b> — dá sa pridať segment BKK→CEI na existujúcu letenku? (Star Alliance = chránený prestup)",
+          "u": "https://www.turkishairlines.com/",
+          "s": 0
+        },
+        {
+          "id": "d0402-2",
+          "t": "Rezervovať <b>ubytko Chiang Rai, 4.–6. 2. (2 noci)</b> — Baan Norn Plearn",
+          "u": "https://www.booking.com/hotel/th/po-baan-norn-plearn.html",
+          "s": 1
+        }
+      ]
+    },
+    {
+      "id": "d0502",
+      "date": "5. 2.",
+      "where": "Chiang Rai — chrámy a mesto",
+      "items": [
+        {
+          "id": "d0502-0",
+          "t": "Rozhodnúť sa: <b>chrámy + mesto</b>, alebo celodenný výlet na <b>Doi Mae Salong</b> (nedá sa stihnúť oboje)",
+          "u": "",
+          "s": 0
+        }
+      ]
+    },
+    {
+      "id": "d0602",
+      "date": "6. 2.",
+      "where": "Bus do Chiang Mai",
+      "items": [
+        {
+          "id": "d0602-0",
+          "t": "<b>Kúpiť Greenbus</b> Chiang Rai → Chiang Mai online — <b>6. 2. je čínsky Nový rok</b>, sedadlá sa míňajú",
+          "u": "https://www.greenbusthailand.com/website/",
+          "s": 1
+        },
+        {
+          "id": "d0602-1",
+          "t": "Rezervovať <b>ubytko Chiang Mai, 6.–7. 2. (1 noc)</b> — Yi's Garden Villa",
+          "u": "https://www.booking.com/searchresults.html?ss=Yi%27s+Garden+Villa+Chiang+Mai&checkin=2027-02-06&checkout=2027-02-07&group_adults=2",
+          "s": 1
+        },
+        {
+          "id": "d0602-2",
+          "t": "Potvrdiť s hotelom, že <b>uschová batohy</b> počas trojdňového treku",
+          "u": "",
+          "s": 0
+        }
+      ]
+    },
+    {
+      "id": "d0702",
+      "date": "7.–9. 2.",
+      "where": "3D/2N jungle trek",
+      "items": [
+        {
+          "id": "d0702-0",
+          "t": "<b>Rezervovať 3D/2N jungle trek</b> — CM Local Tours 2 500 THB/os. alebo Thailand Treks 3 400 THB/os.",
+          "u": "https://www.chiangmailocaltours.com/package/tour-detail.php?id=49",
+          "s": 1
+        },
+        {
+          "id": "d0702-1",
+          "t": "Potvrdiť <b>čas a miesto pickupu</b> (~9:30) a čo je v cene (jedlá, spacák, poistenie)",
+          "u": "https://thailandtreks.com/tour/chiang-mai-trek-3days/",
+          "s": 0
+        }
+      ]
+    },
+    {
+      "id": "d0902",
+      "date": "9. 2.",
+      "where": "Návrat z treku do Chiang Mai",
+      "items": [
+        {
+          "id": "d0902-0",
+          "t": "Rezervovať <b>ubytko Chiang Mai, 9.–10. 2. (1 noc)</b> — druhá rezervácia, môže byť ten istý hotel",
+          "u": "https://www.booking.com/searchresults.html?ss=Yi%27s+Garden+Villa+Chiang+Mai&checkin=2027-02-09&checkout=2027-02-10&group_adults=2",
+          "s": 1
+        }
+      ]
+    },
+    {
+      "id": "d1002",
+      "date": "10. 2.",
+      "where": "Doi Inthanon (Chiang Mai)",
+      "items": [
+        {
+          "id": "d1002-0",
+          "t": "<b>Rezervovať Doi Inthanon + Kew Mae Pan</b> celodennú turu — skupinová stačí, nočný vlak vypadol z plánu",
+          "u": "https://www.getyourguide.com/chiang-mai-l271/chiang-mai-kew-mae-pan-nature-trail-doi-inthanon-day-trip-t536292/",
+          "s": 1
+        },
+        {
+          "id": "d1002-1",
+          "t": "Rezervovať <b>ubytko Chiang Mai, 9.–11. 2. (2 noci)</b> — druhá rezervácia po treku, môže byť ten istý hotel",
+          "u": "https://www.booking.com/searchresults.html?ss=Yi%27s+Garden+Villa+Chiang+Mai&checkin=2027-02-09&checkout=2027-02-11&group_adults=2",
+          "s": 1
+        }
+      ]
+    },
+    {
+      "id": "d1102",
+      "date": "11. 2.",
+      "where": "Chiang Mai → Koh Phangan (nová trasa)",
+      "items": [
+        {
+          "id": "d1102-0",
+          "t": "🚨 <b>Kúpiť priamy let Chiang Mai → Surat Thani</b> — Thai AirAsia <b>08:10 → 10:05</b>, £82/os. <b>Musí byť ranný spoj</b> — ten o 17:30 pristáva po poslednom trajekte a museli by ste nocovať v Surat Thani.",
+          "u": "https://www.skyscanner.net/transport/flights/cnx/urt/270211/",
+          "s": 1
+        },
+        {
+          "id": "d1102-1",
+          "t": "Kúpiť <b>Lomprayah bus + katamarán</b> z letiska URT 12:30 → Thong Sala 16:30 (~26 €/os.)",
+          "u": "https://12go.asia/en/travel/surat-thani-airport/koh-phangan?date=2027-02-11",
+          "s": 1
+        },
+        {
+          "id": "d1102-2",
+          "t": "Rezervovať <b>ubytko Koh Phangan, 11.–14. 2. (3 noci)</b> — Sunset Cove Resort. <b>Február = špička, rezervovať 2–4 mes. vopred</b>",
+          "u": "https://www.booking.com/searchresults.html?ss=Sunset+Cove+Resort+Koh+Phangan&checkin=2027-02-11&checkout=2027-02-14&group_adults=2",
+          "s": 1
+        }
+      ]
+    },
+    {
+      "id": "d1302",
+      "date": "13. 2.",
+      "where": "Koh Tao — šnorchlovanie",
+      "items": [
+        {
+          "id": "d1302-0",
+          "t": "<b>Rezervovať snorkel trip</b> Koh Tao + Koh Nang Yuan speedboatom (7,5 h, s obedom)",
+          "u": "https://www.getyourguide.com/ko-phangan-l5038/koh-nangyuan-koh-tao-by-speed-boat-from-koh-phangan-t672990/",
+          "s": 1
+        }
+      ]
+    },
+    {
+      "id": "d1402",
+      "date": "14. 2.",
+      "where": "Presun na Samui + Valentín 💝",
+      "items": [
+        {
+          "id": "d1402-0",
+          "t": "Kúpiť <b>ferry Seatran</b> Thong Sala → <b>Bangrak</b> (nie Nathon — Bangrak je bližšie k Fisherman's Village)",
+          "u": "https://12go.asia/en/travel/koh-phangan/samui?date=2027-02-14",
+          "s": 1
+        },
+        {
+          "id": "d1402-1",
+          "t": "Rezervovať <b>ubytko Koh Samui, 14.–16. 2. (2 noci)</b> — Baan Bophut Beach Hotel, <b>rezervovať veľmi skoro</b>",
+          "u": "https://www.booking.com/searchresults.html?ss=Baan+Bophut+Beach+Hotel+Samui&checkin=2027-02-14&checkout=2027-02-16&group_adults=2",
+          "s": 1
+        },
+        {
+          "id": "d1402-2",
+          "t": "<b>Rezervovať valentínsku večeru</b> v Fisherman's Village v Bophute — 14. 2. sa stoly na pláži míňajú",
+          "u": "",
+          "s": 0
+        }
+      ]
+    },
+    {
+      "id": "d1502",
+      "date": "15. 2.",
+      "where": "Koh Samui — štvorkolky",
+      "items": [
+        {
+          "id": "d1502-0",
+          "t": "<b>Rezervovať ATV / štvorkolky</b> v horách (1 h, s pickupom z hotela)",
+          "u": "https://www.getyourguide.com/koh-samui-l898/koh-samui-quad-bike-safari-tour-t245437/",
+          "s": 1
+        }
+      ]
+    },
+    {
+      "id": "d1602",
+      "date": "16. 2.",
+      "where": "Samui → Krabi / Ao Nang",
+      "items": [
+        {
+          "id": "d1602-0",
+          "t": "Kúpiť <b>Lomprayah ferry + bus</b>, Nathon 08:30 → Krabi 12:30. <b>Zvoliť cieľ „Ao Nang\"</b>, inak končíte v Krabi town.",
+          "u": "https://12go.asia/en/travel/samui/ao-nang?date=2027-02-16",
+          "s": 1
+        },
+        {
+          "id": "d1602-1",
+          "t": "Rezervovať <b>ubytko Krabi / Ao Nang, 16.–18. 2. (2 noci)</b> — Sugar Marina Cliffhanger",
+          "u": "https://www.booking.com/searchresults.html?ss=Sugar+Marina+Cliffhanger+Aonang&checkin=2027-02-16&checkout=2027-02-18&group_adults=2",
+          "s": 1
+        }
+      ]
+    },
+    {
+      "id": "d1702",
+      "date": "17. 2.",
+      "where": "Phi Phi / 4-island tour",
+      "items": [
+        {
+          "id": "d1702-0",
+          "t": "<b>Rezervovať Phi Phi / 4-island tour</b> speedboatom z Ao Nang (celý deň, s obedom)",
+          "u": "https://bigtourkrabi.com/en/thailand/ao-nang/tours/4-islands-by-speedboat/",
+          "s": 1
+        }
+      ]
+    },
+    {
+      "id": "d1802",
+      "date": "18. 2.",
+      "where": "Krabi → Bangkok",
+      "items": [
+        {
+          "id": "d1802-0",
+          "t": "<b>Rezervovať thai cooking class</b> na doobedie (Ya's Cookery, 4 h, s transferom z hotela)",
+          "u": "https://www.getyourguide.com/ao-nang-l89867/krabi-authentic-thai-cooking-class-at-ya-s-cookery-school-t366985/",
+          "s": 1
+        },
+        {
+          "id": "d1802-1",
+          "t": "<b>Rezervovať Muay Thai couple training</b> na poobedie — lokálny gym (~10–14 €/os.) alebo GYG lekcia",
+          "u": "https://overthetopkrabi.com/",
+          "s": 1
+        },
+        {
+          "id": "d1802-2",
+          "t": "<b>Kúpiť letenku Krabi→Bangkok</b> — VietJet VZ345 20:35 → <b>BKK</b> 22:05 (nie DMK!)",
+          "u": "https://www.google.com/travel/flights?q=flights%20from%20KBV%20to%20BKK%20on%202027-02-18%20one%20way",
+          "s": 1
+        },
+        {
+          "id": "d1802-3",
+          "t": "Rezervovať <b>ubytko Bangkok — mesto, 18.–20. 2. (2 noci)</b> — Casa Vimaya Riverside pri Grand Palace",
+          "u": "https://www.booking.com/searchresults.html?ss=Casa+Vimaya+Riverside+Bangkok&checkin=2027-02-18&checkout=2027-02-20&group_adults=2",
+          "s": 1
+        }
+      ]
+    },
+    {
+      "id": "d1902",
+      "date": "19. 2.",
+      "where": "Celý deň Bangkok (získaný deň)",
+      "items": [
+        {
+          "id": "d1902-0",
+          "t": "Nič netreba rezervovať vopred — Grand Palace ani Wat Pho sa nerezervujú. Len si <b>dohodnúť Grab na 20. 2. ~6:00</b> na letisko (na recepcii večer predtým).",
+          "u": "",
+          "s": 0
+        },
+        {
+          "id": "d1902-1",
+          "t": "Online check-in Turkish na spiatočný let (otvára sa 24 h vopred, teda 19. 2.)",
+          "u": "https://www.turkishairlines.com/",
+          "s": 0
+        }
+      ]
+    },
+    {
+      "id": "d2002",
+      "date": "20. 2.",
+      "where": "Bangkok → Praha",
+      "items": [
+        {
+          "id": "d2002-0",
+          "t": "<b>Letenka Bangkok→Praha</b> TK65 + TK1769, odlet 10:20, prílet Praha 18:25",
+          "u": "https://www.turkishairlines.com/",
+          "s": 2
+        }
+      ]
+    }
+  ]
+}
