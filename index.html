@@ -76,6 +76,64 @@
     .chg{width:21px;height:21px;min-width:21px;font-size:.85rem}
   }
 
+  /* ---------- FINANCIE ---------- */
+  .fin-top{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 14px;margin:14px 0 6px}
+  .fin-field{display:inline-flex;align-items:center;gap:7px;font-size:.88rem;color:var(--muted);font-weight:600}
+  .fin-field strong{color:var(--teal-dark);font-size:1rem}
+  .fin-inp{font:inherit;font-size:.92rem;padding:5px 8px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--ink);width:88px;text-align:right}
+  .fin-inp-l{width:110px;font-weight:700;color:var(--teal-dark)}
+  .fin-inp:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-light)}
+  .fin-inp.txt{text-align:left;width:100%;min-width:90px}
+  .fin-kpis{margin-top:14px}
+  .kpi.amber .v{color:var(--amber)}
+  .kpi.slate .v{color:#475569}
+  .kpi.teal .v{color:var(--teal)}
+  .kpi.red .v{color:var(--red)}
+  .kpi.red{border-color:#fca5a5;background:var(--red-bg)}
+  .kpi .sub-v{font-size:.78rem;color:var(--muted);margin-top:2px}
+  .fin-bar-wrap{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin:6px 0 18px}
+  .fin-bar{display:flex;height:14px;border-radius:999px;overflow:hidden;background:var(--border)}
+  .fin-bar .seg{height:100%;width:0;transition:width .3s}
+  .s-paid{background:var(--green)} .s-pend{background:#f59e0b} .s-open{background:#94a3b8} .s-daily{background:#5eead4} .s-over{background:var(--red)}
+  .fin-legend{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:.83rem;color:var(--muted);margin-top:9px}
+  .fin-legend span{display:inline-flex;align-items:center;gap:6px}
+  .fin-legend .sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+  .fin-legend-states{margin:0 0 10px;padding:9px 12px;background:var(--card);border:1px solid var(--border);border-radius:10px}
+  .fin-counts{margin-left:auto;font-weight:600;color:var(--ink)}
+  table.fin-items td,table.fin-daily td,table.fin-cat td{vertical-align:middle}
+  .fin-grp td{background:var(--teal-light)!important;color:var(--teal-dark);font-weight:700;padding:7px 12px}
+  .fin-grp .fin-add{margin-left:10px;font:inherit;font-size:.78rem;font-weight:600;color:var(--teal-dark);background:#fff;border:1px dashed var(--teal);border-radius:7px;padding:2px 9px;cursor:pointer}
+  .fin-grp .fin-add:hover{background:var(--teal)}
+  .fin-ed{display:block;min-width:60px;outline:none;border-radius:5px;padding:1px 4px;overflow-wrap:anywhere}
+  .fin-ed:empty::before{content:attr(data-ph);color:#94a3b8}
+  .fin-ed:focus{background:#fff;box-shadow:0 0 0 2px var(--teal-light)}
+  .fin-when{font-size:.85rem;color:var(--muted)}
+  .fin-eff{font-size:.75rem;color:var(--muted);white-space:nowrap}
+  .fin-items tr.s2 .fin-name{color:var(--muted)}
+  .fin-items tr.s2 .fin-name b{color:var(--muted)}
+  .fin-tools{display:flex;gap:2px;align-items:center;justify-content:flex-end}
+  .fin-tools .ck-ico{font-size:.9rem}
+  .fin-tools .ck-ico.arm{background:var(--red);color:#fff}
+  .fin-cat tfoot td,.fin-daily tfoot td,.fin-items tfoot td{font-weight:700}
+  .fin-cat td.num.pos{color:var(--green)} .fin-cat td.num.pend{color:var(--amber)}
+  .fin-linkrow td{background:#f8fafc!important;padding-top:4px!important}
+  .fin-linkrow .fin-inp{width:100%;text-align:left}
+  @media (max-width:820px){
+    .fin-top{gap:8px 12px}
+    .fin-field{width:100%;justify-content:space-between}
+    .fin-kpis{grid-template-columns:1fr 1fr}
+    .fin-counts{margin-left:0;width:100%}
+    .fin-inp{width:100px}
+    .fin-grp{padding:8px 14px!important}
+    .fin-grp td{padding:0!important}
+    td.num .fin-inp{width:120px}
+    .fin-tools{justify-content:flex-start}
+    .fin-items tr[data-id]{position:relative;padding-right:58px}
+    .fin-items td[data-l="Stav"]{position:absolute;top:10px;right:12px;padding:0!important;width:auto}
+    .fin-items td[data-l="Stav"]::before{display:none}
+  }
+  @media (max-width:420px){ .fin-kpis{grid-template-columns:1fr} }
+
   /* ---------- SYNC ---------- */
   .sync{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--teal);border-radius:12px;padding:12px 14px;margin:0 0 14px}
   .sync-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:9px}
@@ -243,7 +301,7 @@
 
 <nav class="toc">
   <div class="wrap">
-    <a href="#rozpocet">💰 Rozpočet</a>
+    <a href="#rozpocet">💰 Financie</a>
     <a href="#itinerar">🗓️ Denný itinerár</a>
     <a href="#checklist">✅ Checklist</a>
     <a href="#doprava">✈️ Letenky &amp; presuny</a>
@@ -259,35 +317,70 @@
 
 <!-- ============ ROZPOCET ============ -->
 <section id="rozpocet">
-  <h2>💰 Rozpočet — prehľad</h2>
-  <p class="sub">Všetky sumy sú pre 2 osoby spolu. Kurz: 1 € ≈ 37 THB. Ceny leteniek a hotelov na február 2027 sú kvalifikované odhady z high-season dát, priamy let CNX→URT je z reálneho vyhľadávania.</p>
+  <h2>💰 Financie — živý prehľad</h2>
+  <p class="sub">Všetko pre 2 osoby, v eurách. Každé číslo v tabuľkách sa dá prepísať a celý prehľad sa hneď prepočíta. Letenky Praha–Bangkok–Praha sú už kúpené a do rozpočtu 3 500 € sa nerátajú.</p>
 
-  <div class="kpis">
-    <div class="kpi"><div class="v">3 500 €</div><div class="l">Celkový rozpočet (2 os.)</div></div>
-    <div class="kpi"><div class="v">≈ 2 565 €</div><div class="l">Odhadované výdavky spolu</div></div>
-    <div class="kpi green"><div class="v">≈ 935 €</div><div class="l">Rezerva (~27 %)</div></div>
-    <div class="kpi"><div class="v">≈ 160 €/deň</div><div class="l">Priemer na deň (2 os.)</div></div>
+  <div class="fin-top">
+    <label class="fin-field"><span>Rozpočet (€)</span><input type="number" id="finBudget" class="fin-inp fin-inp-l" min="0" step="10" inputmode="decimal"></label>
+    <label class="fin-field"><span>Kurz: 1 € =</span><input type="number" id="finRate" class="fin-inp" min="1" step="0.1" inputmode="decimal"><span>THB</span></label>
+    <label class="fin-field fin-conv"><span>Prevod</span><input type="number" id="finThb" class="fin-inp" placeholder="THB" inputmode="decimal"><span>THB =</span><strong id="finThbOut">—</strong></label>
   </div>
 
-  <div class="tbl-scroll"><table>
-    <thead><tr><th>Kategória</th><th>Čo zahŕňa</th><th class="num">THB</th><th class="num">EUR</th></tr></thead>
-    <tbody>
-      <tr><td data-l="Kategória"><strong>Vnútroštátna doprava</strong></td><td data-l="Čo zahŕňa">3 vnútroštátne letenky (vrátane priameho CNX→Surat Thani), Greenbus, Lomprayah, ferry
-        <span class="chg" data-prev="PREDTÝM: 530 € — 2 letenky + nočný vlak 1. triedy (84 €) + let DMK→Surat Thani. Priamy let z Chiang Mai je drahší, ale nahradil vlak aj jeden presunový deň.">i</span></td><td class="num" data-l="THB">21 800</td><td class="num" data-l="EUR">590 €</td></tr>
-      <tr><td data-l="Kategória"><strong>Ubytovanie</strong></td><td data-l="Čo zahŕňa">14 platených nocí (2 noci v cene treku, 2 v lietadle)
-        <span class="chg" data-prev="PREDTÝM: 505 € / 13 nocí — z toho 1 noc vo vlaku a 1 v hoteli pri letisku BKK. Teraz o jednu noc viac (Chiang Mai 10.–11. 2.) a dve noci v centre Bangkoku namiesto letiskového hotela.">i</span></td><td class="num" data-l="THB">20 000</td><td class="num" data-l="EUR">540 €</td></tr>
-      <tr><td data-l="Kategória"><strong>Aktivity a vstupy</strong></td><td data-l="Čo zahŕňa">3D/2N trek, Doi Inthanon, snorkel Koh Tao, ATV, Phi Phi tour, cooking class, Muay Thai, vodopády, vstupy do chrámov
-        <span class="chg" data-prev="PREDTÝM: 780 € — Doi Inthanon musel byť privátny výlet (~54 €/os.) kvôli nočnému vlaku. Teraz stačí skupinová tura (~49 €/os.).">i</span></td><td class="num" data-l="THB">28 500</td><td class="num" data-l="EUR">770 €</td></tr>
-      <tr><td data-l="Kategória"><strong>Jedlo a pitie</strong></td><td data-l="Čo zahŕňa">16 dní, prevažne lokálne + občas lepšia reštika (~1 100 THB/deň pre dvoch; počas treku je jedlo v cene)</td><td class="num" data-l="THB">17 600</td><td class="num" data-l="EUR">475 €</td></tr>
-      <tr><td data-l="Kategória"><strong>Skútre + palivo</strong></td><td data-l="Čo zahŕňa">~8 dní prenájmu (Chiang Rai, Chiang Mai, Phangan, Samui)</td><td class="num" data-l="THB">2 900</td><td class="num" data-l="EUR">80 €</td></tr>
-      <tr><td data-l="Kategória"><strong>Miestna doprava</strong></td><td data-l="Čo zahŕňa">Grab/taxi Bangkok, songthaew, transfery na letiská a móla
-        <span class="chg" data-prev="PREDTÝM: 130 € — obsahovalo aj Grab o 5:00 z Bangkoku na Don Mueang a kyvadlovku pri letiskovom hoteli. Oboje vypadlo.">i</span></td><td class="num" data-l="THB">4 100</td><td class="num" data-l="EUR">110 €</td></tr>
-    </tbody>
-    <tfoot><tr><td colspan="2">Spolu odhad</td><td class="num">94 900</td><td class="num">≈ 2 565 €</td></tr></tfoot>
+  <div class="kpis fin-kpis">
+    <div class="kpi"><div class="v" id="kForecast">—</div><div class="l">Prognóza celkom</div></div>
+    <div class="kpi green"><div class="v" id="kPaid">—</div><div class="l">Zaplatené</div></div>
+    <div class="kpi amber"><div class="v" id="kPending">—</div><div class="l">Rezervované, čaká na platbu</div></div>
+    <div class="kpi slate"><div class="v" id="kOpen">—</div><div class="l">Ešte nezariadené</div></div>
+    <div class="kpi teal"><div class="v" id="kDaily">—</div><div class="l">Denné odhady (jedlo, skútre…)</div></div>
+    <div class="kpi" id="kReserveBox"><div class="v" id="kReserve">—</div><div class="l" id="kReserveL">Rezerva</div></div>
+  </div>
+
+  <div class="fin-bar-wrap">
+    <div class="fin-bar" id="finBar">
+      <div class="seg s-paid" title="Zaplatené"></div>
+      <div class="seg s-pend" title="Čaká na platbu"></div>
+      <div class="seg s-open" title="Nezariadené"></div>
+      <div class="seg s-daily" title="Denné odhady"></div>
+      <div class="seg s-over" title="Nad rozpočet"></div>
+    </div>
+    <div class="fin-legend">
+      <span><i class="sw s-paid"></i> zaplatené</span>
+      <span><i class="sw s-pend"></i> čaká na platbu</span>
+      <span><i class="sw s-open"></i> nezariadené</span>
+      <span><i class="sw s-daily"></i> denné odhady</span>
+      <span id="finOverLeg" hidden><i class="sw s-over"></i> nad rozpočet</span>
+      <span class="fin-counts" id="finCounts"></span>
+    </div>
+  </div>
+
+  <h3>Súhrn po kategóriách</h3>
+  <div class="tbl-scroll"><table class="fin-cat" id="finCatTable">
+    <thead><tr><th>Kategória</th><th class="num">Odhad</th><th class="num">Zaplatené / minuté</th><th class="num">Čaká na platbu</th><th class="num">Zostáva zariadiť</th><th class="num">Platby</th></tr></thead>
+    <tbody></tbody>
   </table></div>
 
-  <div class="card green">
-    <strong>✅ Verdikt:</strong> Nová trasa cez priamy let do Surat Thani zdvihla rozpočet len o <strong>~65 €</strong> (priamy let je drahší, ale ušetril nočný vlak, letiskový hotel aj transfery) a za to ste získali <strong>celý deň v Bangkoku, jednu noc v posteli namiesto vlaku a žiadny budíček o 5:00</strong>. Rezerva ostáva ~935 €, čo je stále pohodlný polštár na masáže, lepšie večere a nepredvídané veci.
+  <h3>Platby — presuny, ubytovanie, aktivity</h3>
+  <div class="fin-legend fin-legend-states">
+    <span><i class="ck-box-d" data-s="0"></i> nezariadené</span>
+    <span><i class="ck-box-d" data-s="1"></i> rezervované — platba nás ešte čaká (aj „platí sa na mieste“)</span>
+    <span><i class="ck-box-d" data-s="2">✓</i> zaplatené</span>
+    <span class="ck-legend-hint">Klikaním na štvorček sa stav prepína. Pole „Zaplatené €“ vypíš, keď vieš reálnu sumu — inak sa ráta odhad.</span>
+  </div>
+  <div class="tbl-scroll"><table class="fin-items" id="finItems">
+    <thead><tr><th>Stav</th><th>Položka</th><th>Kedy</th><th class="num">Odhad €</th><th class="num">Zaplatené €</th><th>Splatnosť / poznámka</th><th></th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+
+  <h3>Denné odhady — jedlo, skútre, miestna doprava, bočné výdavky</h3>
+  <p class="sub">Tu sa nič nerezervuje vopred. Odhad = € na deň × počet dní. Počas cesty dopĺňaj „Minuté doteraz“ — ak prekročí odhad, prognóza sa automaticky zvýši.</p>
+  <div class="tbl-scroll"><table class="fin-daily" id="finDaily">
+    <thead><tr><th>Položka</th><th class="num">€ / deň</th><th class="num">Dní</th><th class="num">Odhad</th><th class="num">Minuté doteraz</th><th>Poznámka</th><th></th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+
+  <div class="card small" style="margin-top:14px">
+    <strong>Ako to čítať:</strong> <em>Prognóza</em> = zaplatené + čaká na platbu + nezariadené + denné odhady (pri každej dennej položke sa berie vyššia z hodnôt odhad / minuté). <em>Rezerva</em> = rozpočet − prognóza. Stav sa ukladá v tomto prehliadači a cez „Uložiť do spoločného“ v checkliste sa zdieľa spolu s odklikávaním.
+    <button type="button" class="ck-btn ck-btn-warn" id="finReset" style="margin-left:8px">↺ Reset financií</button>
   </div>
 </section>
 
@@ -427,7 +520,7 @@
 
   <div class="sync">
     <div class="sync-head">
-      <span class="sync-title">☁️ Spoločný zoznam</span>
+      <span class="sync-title">☁️ Spoločný zoznam (checklist + financie)</span>
       <input type="text" id="syncWho" class="sync-who" placeholder="Kto si? (Milan / Terka)" maxlength="24" autocomplete="off">
     </div>
     <div class="sync-row">
@@ -878,7 +971,7 @@
 </section>
 
 <footer>
-  Thajsko Honeymoon · Milan &amp; Terka · <strong>verzia 4.0</strong> — prepracované podľa reálnych leteniek + priamy let Chiang Mai → Surat Thani (v4.0)<br>
+  Thajsko Honeymoon · Milan &amp; Terka · <strong>verzia 5.1</strong> — prepracované podľa reálnych leteniek + priamy let Chiang Mai → Surat Thani (v4.0)<br>
   3.–20. február 2027 · 16 dní v Thajsku · Rozpočet 3 500 € / 2 os. (bez PRG–BKK–PRG) · Kurz 1 € ≈ 37 THB<br>
   Zdroje: Trip.com, 12go.asia, seat61.com, thaitrainguide.com, Lomprayah, Greenbus, GetYourGuide, Booking/Tripadvisor prehľady, oficiálne stránky (Grand Palace, Wat Pho, SRT).
 </footer>
@@ -1234,7 +1327,7 @@
 
   document.getElementById("ckExport").addEventListener("click", function(){
     try{
-      var blob = new Blob([JSON.stringify(state,null,2)], {type:"application/json"});
+      var blob = new Blob([JSON.stringify({days:state, fin:(window.__finGet?window.__finGet():undefined)},null,2)], {type:"application/json"});
       var a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
       a.download = "thajsko-checklist.json";
@@ -1248,10 +1341,13 @@
     var r = new FileReader();
     r.onload = function(){
       try{
-        var d = JSON.parse(r.result);
+        var raw = JSON.parse(r.result);
+        var d = Array.isArray(raw) ? raw : raw.days;
         if(!Array.isArray(d) || !d.length) throw 0;
         d.forEach(function(x){ (x.items||[]).forEach(function(it){ if(typeof it.s!=="number") it.s = it.done?2:0; }); });
-        state = d; panel=null; pendingDel=null; save(); render(); note("Importované.");
+        state = d; panel=null; pendingDel=null; save(); render();
+        if(!Array.isArray(raw) && raw.fin && window.__finSet) window.__finSet(raw.fin);
+        note("Importované"+(!Array.isArray(raw)&&raw.fin?" (checklist + financie).":"."));
       }catch(err){ note("⚠️ Súbor sa nepodarilo prečítať.", true); }
     };
     r.readAsText(f); e.target.value="";
@@ -1277,6 +1373,278 @@
 })();
 </script>
 
+
+
+<script>
+/* ---------- FINANCIE — reaktívny prehľad ---------- */
+(function(){
+  "use strict";
+  var KEY="thajsko-fin-v1";
+  var CATS=[["doprava","✈️ Presuny"],["ubytko","🏨 Ubytovanie"],["aktivity","🤿 Aktivity a vstupy"],["ine","📦 Iné"]];
+  var LBL=["nezariadené","rezervované — čaká na platbu","zaplatené"];
+
+  function SEED(){ return {
+    v:1, budget:3500, rate:37,
+    daily:[
+      {id:"food",  name:"Jedlo a pitie", perDay:30, days:16, spent:0, note:"prevažne lokálne, ~1 100 THB/deň pre dvoch; počas treku 7.–9. 2. je jedlo v cene"},
+      {id:"scoot", name:"Skútre + palivo", perDay:10, days:8, spent:0, note:"Chiang Rai 1, Chiang Mai 2, Phangan 3, Samui 2 dni"},
+      {id:"local", name:"Miestna doprava (Grab, songthaew, tuk-tuk)", perDay:7, days:16, spent:0, note:"transfery na letiská a móla, Grab v Bangkoku"},
+      {id:"misc",  name:"Bočné výdavky (masáže, drinky, suveníry)", perDay:10, days:16, spent:0, note:"nie je to v pôvodnom rozpočte — nech máme s čím počítať"}
+    ],
+    items:[
+      {id:"t1", cat:"doprava", name:"Let Bangkok → Chiang Rai (Thai Airways 16:50)", when:"4. 2.", est:122, paid:null, s:0, due:"kúpiť po otvorení predaja (~sep/okt 2026)", u:"https://www.google.com/travel/flights?q=flights%20from%20BKK%20to%20CEI%20on%202027-02-04%20one%20way"},
+      {id:"t2", cat:"doprava", name:"Greenbus VIP Chiang Rai → Chiang Mai", when:"6. 2.", est:22, paid:null, s:0, due:"CNY — kúpiť online pár dní vopred", u:"https://www.greenbusthailand.com/website/"},
+      {id:"t3", cat:"doprava", name:"Let Chiang Mai → Surat Thani (AirAsia 08:10)", when:"11. 2.", est:190, paid:null, s:0, due:"už v predaji — kúpiť čo najskôr", u:"https://www.skyscanner.net/transport/flights/cnx/urt/270211/"},
+      {id:"t4", cat:"doprava", name:"Lomprayah bus + katamarán URT → Thong Sala", when:"11. 2.", est:52, paid:null, s:0, due:"kúpiť ~3–4 týždne vopred (nevratný lístok)", u:"https://12go.asia/en/travel/surat-thani-airport/koh-phangan?date=2027-02-11"},
+      {id:"t5", cat:"doprava", name:"Ferry Seatran Thong Sala → Bangrak (Samui)", when:"14. 2.", est:14, paid:null, s:0, due:"deň-dva vopred", u:"https://12go.asia/en/travel/koh-phangan/samui?date=2027-02-14"},
+      {id:"t6", cat:"doprava", name:"Lomprayah ferry + bus Samui → Ao Nang", when:"16. 2.", est:65, paid:null, s:0, due:"~2 týždne vopred", u:"https://12go.asia/en/travel/samui/ao-nang?date=2027-02-16"},
+      {id:"t7", cat:"doprava", name:"Let Krabi → Bangkok (VietJet VZ345 20:35)", when:"18. 2.", est:90, paid:null, s:0, due:"kúpiť po otvorení predaja", u:"https://www.google.com/travel/flights?q=flights%20from%20KBV%20to%20BKK%20on%202027-02-18%20one%20way"},
+
+      {id:"u1", cat:"ubytko", name:"Chiang Rai — Baan Norn Plearn (2 noci)", when:"4.–6. 2.", est:50, paid:null, s:0, due:"", u:"https://www.booking.com/hotel/th/po-baan-norn-plearn.html"},
+      {id:"u2", cat:"ubytko", name:"Chiang Mai — Yi's Garden Villa (1 noc)", when:"6.–7. 2.", est:31, paid:null, s:0, due:"", u:"https://www.booking.com/searchresults.html?ss=Yi%27s+Garden+Villa+Chiang+Mai&checkin=2027-02-06&checkout=2027-02-07&group_adults=2"},
+      {id:"u3", cat:"ubytko", name:"Chiang Mai — Yi's Garden Villa (2 noci po treku)", when:"9.–11. 2.", est:62, paid:null, s:0, due:"", u:"https://www.booking.com/searchresults.html?ss=Yi%27s+Garden+Villa+Chiang+Mai&checkin=2027-02-09&checkout=2027-02-11&group_adults=2"},
+      {id:"u4", cat:"ubytko", name:"Koh Phangan — Sunset Cove Resort (3 noci)", when:"11.–14. 2.", est:129, paid:null, s:0, due:"high season — rezervovať 2–4 mesiace vopred", u:"https://www.booking.com/searchresults.html?ss=Sunset+Cove+Resort+Koh+Phangan&checkin=2027-02-11&checkout=2027-02-14&group_adults=2"},
+      {id:"u5", cat:"ubytko", name:"Koh Samui — Baan Bophut Beach Hotel (2 noci)", when:"14.–16. 2.", est:106, paid:null, s:0, due:"rezervovať veľmi skoro", u:"https://www.booking.com/searchresults.html?ss=Baan+Bophut+Beach+Hotel+Samui&checkin=2027-02-14&checkout=2027-02-16&group_adults=2"},
+      {id:"u6", cat:"ubytko", name:"Krabi / Ao Nang — Sugar Marina Cliffhanger (2 noci)", when:"16.–18. 2.", est:76, paid:null, s:0, due:"", u:"https://www.booking.com/searchresults.html?ss=Sugar+Marina+Cliffhanger+Aonang&checkin=2027-02-16&checkout=2027-02-18&group_adults=2"},
+      {id:"u7", cat:"ubytko", name:"Bangkok — Casa Vimaya Riverside (2 noci)", when:"18.–20. 2.", est:84, paid:null, s:0, due:"", u:"https://www.booking.com/searchresults.html?ss=Casa+Vimaya+Riverside+Bangkok&checkin=2027-02-18&checkout=2027-02-20&group_adults=2"},
+
+      {id:"a1", cat:"aktivity", name:"3D/2N jungle trek z Chiang Mai", when:"7.–9. 2.", est:160, paid:null, s:0, due:"odhad pre CM Local Tours / Thailand Treks; Piroon by bol ~324 €", u:"https://www.chiangmai-trekking.com/Trekking-Tours/3-days-2-nights"},
+      {id:"a2", cat:"aktivity", name:"Doi Inthanon + Kew Mae Pan (skupinová tura)", when:"10. 2.", est:97, paid:null, s:0, due:"", u:"https://www.getyourguide.com/chiang-mai-l271/chiang-mai-kew-mae-pan-nature-trail-doi-inthanon-day-trip-t536292/"},
+      {id:"a3", cat:"aktivity", name:"Snorkel trip Koh Tao + Nang Yuan (vrátane vstupu)", when:"13. 2.", est:122, paid:null, s:0, due:"+250 THB/os. vstup Nang Yuan v hotovosti", u:"https://www.getyourguide.com/ko-phangan-l5038/koh-nangyuan-koh-tao-by-speed-boat-from-koh-phangan-t672990/"},
+      {id:"a4", cat:"aktivity", name:"Vodopády Koh Phangan — vstupy do NP", when:"12. 2.", est:12, paid:null, s:0, due:"platí sa na mieste, hotovosť", u:""},
+      {id:"a5", cat:"aktivity", name:"ATV / štvorkolky Samui (1 h)", when:"15. 2.", est:90, paid:null, s:0, due:"", u:"https://www.getyourguide.com/koh-samui-l898/koh-samui-quad-bike-safari-tour-t245437/"},
+      {id:"a6", cat:"aktivity", name:"Phi Phi / 4-island tour speedboatom (vrátane park fee)", when:"17. 2.", est:119, paid:null, s:0, due:"+400 THB/os. park fee v hotovosti", u:"https://bigtourkrabi.com/en/thailand/ao-nang/tours/4-islands-by-speedboat/"},
+      {id:"a7", cat:"aktivity", name:"Thai cooking class (Ya's Cookery)", when:"18. 2.", est:86, paid:null, s:0, due:"", u:"https://www.getyourguide.com/ao-nang-l89867/krabi-authentic-thai-cooking-class-at-ya-s-cookery-school-t366985/"},
+      {id:"a8", cat:"aktivity", name:"Muay Thai couple training", when:"18. 2.", est:54, paid:null, s:0, due:"lokálny gym ~25 €, GYG lekcia ~92 €", u:"https://overthetopkrabi.com/"},
+      {id:"a9", cat:"aktivity", name:"Vstupy do chrámov (Wat Rong Khun, Baan Dam, Grand Palace, Wat Pho)", when:"5. a 19. 2.", est:59, paid:null, s:0, due:"platí sa na mieste, hotovosť", u:""}
+    ]
+  };}
+
+  // ---------- stav ----------
+  function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); if(v===null) localStorage.removeItem(k); else localStorage.setItem(k,v); }catch(e){ return null; } }
+  function normalize(f){
+    if(!f || typeof f!=="object") f=SEED();
+    if(typeof f.budget!=="number") f.budget=3500;
+    if(typeof f.rate!=="number" || f.rate<=0) f.rate=37;
+    if(!Array.isArray(f.items)) f.items=SEED().items;
+    if(!Array.isArray(f.daily)) f.daily=SEED().daily;
+    f.items.forEach(function(it){
+      if(!CATS.some(function(c){return c[0]===it.cat;})) it.cat="ine";
+      if(typeof it.s!=="number"||it.s<0||it.s>2) it.s=0;
+      it.est=num(it.est); if(it.paid!==null && it.paid!==undefined && it.paid!=="") it.paid=num(it.paid); else it.paid=null;
+      it.name=it.name||""; it.when=it.when||""; it.due=it.due||""; it.u=it.u||"";
+    });
+    f.daily.forEach(function(d){ d.perDay=num(d.perDay); d.days=num(d.days); d.spent=num(d.spent); d.note=d.note||""; d.name=d.name||""; });
+    return f;
+  }
+  function num(v){ if(v===null||v===undefined||v==="") return 0; var n=parseFloat(String(v).replace(/\s/g,"").replace(",",".")); return isFinite(n)?n:0; }
+  var fin;
+  try{ fin=normalize(JSON.parse(ls(KEY)||"null")); }catch(e){ fin=SEED(); }
+  var storageOK=true;
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(fin)); }catch(e){ storageOK=false; } }
+
+  // ---------- výpočty ----------
+  function eff(it){ return (it.paid!==null) ? it.paid : it.est; }
+  function calc(){
+    var r={paid:0,pend:0,open:0,nPaid:0,nPend:0,nOpen:0,cats:{},dailyEst:0,dailySpent:0,dailyFc:0};
+    CATS.forEach(function(c){ r.cats[c[0]]={est:0,paid:0,pend:0,open:0,n:0,nPaid:0,nPend:0,nOpen:0}; });
+    fin.items.forEach(function(it){
+      var e=eff(it), c=r.cats[it.cat];
+      c.est+=it.est; c.n++;
+      if(it.s===2){ r.paid+=e; r.nPaid++; c.paid+=e; c.nPaid++; }
+      else if(it.s===1){ r.pend+=e; r.nPend++; c.pend+=e; c.nPend++; }
+      else { r.open+=e; r.nOpen++; c.open+=e; c.nOpen++; }
+    });
+    fin.daily.forEach(function(d){ var est=d.perDay*d.days; r.dailyEst+=est; r.dailySpent+=d.spent; r.dailyFc+=Math.max(est,d.spent); });
+    r.forecast=r.paid+r.pend+r.open+r.dailyFc;
+    r.reserve=fin.budget-r.forecast;
+    r.spentSoFar=r.paid+r.dailySpent;
+    return r;
+  }
+  function eur(n){ var v=Math.round(n); return v.toLocaleString("sk-SK")+" €"; }
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  function fmtIn(n){ return (n===null||n===undefined)?"":(Math.round(n*100)/100).toString(); }
+
+  // ---------- DOM ----------
+  var $=function(id){ return document.getElementById(id); };
+  var elBudget=$("finBudget"), elRate=$("finRate"), elThb=$("finThb"), elThbOut=$("finThbOut");
+  var tbItems=$("finItems").querySelector("tbody"), tbDaily=$("finDaily").querySelector("tbody"), tbCat=$("finCatTable").querySelector("tbody");
+  var editLink=null, armDel=null, armT=null;
+
+  function renderSummary(){
+    var r=calc();
+    $("kForecast").textContent=eur(r.forecast);
+    $("kPaid").textContent=eur(r.paid);
+    $("kPending").textContent=eur(r.pend);
+    $("kOpen").textContent=eur(r.open);
+    $("kDaily").textContent=eur(r.dailyFc);
+    var kr=$("kReserve"), box=$("kReserveBox");
+    kr.textContent=(r.reserve<0?"−":"")+eur(Math.abs(r.reserve));
+    box.className="kpi "+(r.reserve<0?"red":"green");
+    $("kReserveL").textContent = r.reserve<0 ? "NAD ROZPOČET" : "Rezerva ("+(fin.budget?Math.round(r.reserve/fin.budget*100):0)+" %)";
+    // bar
+    var B=fin.budget||1, over=Math.max(0,r.forecast-B), scale=Math.max(B,r.forecast);
+    var seg=$("finBar").children;
+    seg[0].style.width=(r.paid/scale*100)+"%";
+    seg[1].style.width=(r.pend/scale*100)+"%";
+    seg[2].style.width=(r.open/scale*100)+"%";
+    seg[3].style.width=(r.dailyFc/scale*100)+"%";
+    seg[4].style.width=(over/scale*100)+"%";
+    $("finOverLeg").hidden=!(over>0);
+    $("finCounts").innerHTML='✓ <b>'+r.nPaid+'</b> zaplatené · <b>'+r.nPend+'</b> čaká na platbu · <b>'+r.nOpen+'</b> nezariadené · minuté doteraz <b>'+eur(r.spentSoFar)+'</b>';
+    // kategórie
+    var h="";
+    CATS.forEach(function(c){
+      var k=r.cats[c[0]]; if(!k.n) return;
+      h+='<tr><td data-l="Kategória"><strong>'+c[1]+'</strong></td>'
+        +'<td class="num" data-l="Odhad">'+eur(k.est)+'</td>'
+        +'<td class="num pos" data-l="Zaplatené">'+eur(k.paid)+'</td>'
+        +'<td class="num pend" data-l="Čaká">'+eur(k.pend)+'</td>'
+        +'<td class="num" data-l="Nezariadené">'+eur(k.open)+'</td>'
+        +'<td class="num" data-l="Platby">'+k.nPaid+' / '+k.n+'</td></tr>';
+    });
+    h+='<tr><td data-l="Kategória"><strong>📅 Denné odhady</strong></td><td class="num" data-l="Odhad">'+eur(r.dailyEst)+'</td><td class="num pos" data-l="Minuté">'+eur(r.dailySpent)+'</td><td class="num" data-l="Čaká na platbu">—</td><td class="num" data-l="Zostáva minúť">'+eur(r.dailyFc-r.dailySpent)+'</td><td class="num" data-l="Platby">priebežne</td></tr>';
+    tbCat.innerHTML=h;
+    var tf=$("finCatTable").querySelector("tfoot"); if(!tf){ tf=document.createElement("tfoot"); $("finCatTable").appendChild(tf); }
+    var estAll=0; fin.items.forEach(function(it){ estAll+=it.est; });
+    tf.innerHTML='<tr><td data-l="">Spolu</td><td class="num" data-l="Odhad">'+eur(estAll+r.dailyEst)+'</td><td class="num" data-l="Zaplatené / minuté">'+eur(r.spentSoFar)+'</td><td class="num" data-l="Čaká na platbu">'+eur(r.pend)+'</td><td class="num" data-l="Zostáva zariadiť">'+eur(r.open+(r.dailyFc-r.dailySpent))+'</td><td class="num" data-l="Prognóza">prognóza <strong>'+eur(r.forecast)+'</strong></td></tr>';
+    // riadkové efektívne hodnoty
+    fin.items.forEach(function(it){
+      var el=tbItems.querySelector('tr[data-id="'+it.id+'"] .fin-eff'); if(el) el.textContent = it.paid===null ? "ráta sa odhad" : (it.paid>it.est?"o "+eur(it.paid-it.est)+" viac než odhad":(it.paid<it.est?"o "+eur(it.est-it.paid)+" menej než odhad":"presne podľa odhadu"));
+    });
+    fin.daily.forEach(function(d){
+      var tr=tbDaily.querySelector('tr[data-id="'+d.id+'"]'); if(!tr) return;
+      tr.querySelector(".d-est").textContent=eur(d.perDay*d.days);
+      tr.querySelector(".d-fc").textContent = d.spent>d.perDay*d.days ? "prognóza "+eur(d.spent) : "";
+    });
+    var dtf=$("finDaily").querySelector("tfoot"); if(!dtf){ dtf=document.createElement("tfoot"); $("finDaily").appendChild(dtf); }
+    dtf.innerHTML='<tr><td data-l="">Spolu</td><td class="num" data-l="">—</td><td class="num" data-l="">—</td><td class="num" data-l="Odhad">'+eur(r.dailyEst)+'</td><td class="num" data-l="Minuté">'+eur(r.dailySpent)+'</td><td data-l="Prognóza">prognóza <strong>'+eur(r.dailyFc)+'</strong></td><td data-l=""></td></tr>';
+  }
+
+  function renderItems(){
+    var h="";
+    CATS.forEach(function(c){
+      var list=fin.items.filter(function(it){return it.cat===c[0];});
+      h+='<tr class="fin-grp" data-cat="'+c[0]+'"><td colspan="7" data-l="">'+c[1]+' <span class="small">('+list.length+')</span><button type="button" class="fin-add" data-cat="'+c[0]+'">+ pridať</button></td></tr>';
+      list.forEach(function(it){
+        h+='<tr class="s'+it.s+'" data-id="'+esc(it.id)+'">'
+          +'<td data-l="Stav"><button type="button" class="ck-box fin-s" data-s="'+it.s+'" title="'+LBL[it.s]+' — klikni na zmenu">'+(it.s===2?"✓":"")+'</button></td>'
+          +'<td data-l="Položka"><span class="fin-ed fin-name" contenteditable="true" spellcheck="false" data-f="name" data-ph="názov">'+esc(it.name)+'</span>'
+          +(it.u?'<a class="ck-ico set" href="'+esc(it.u)+'" target="_blank" rel="noopener" title="'+esc(it.u)+'" style="margin-left:2px">🔗</a>':'')+'</td>'
+          +'<td data-l="Kedy"><span class="fin-ed fin-when" contenteditable="true" spellcheck="false" data-f="when" data-ph="dátum">'+esc(it.when)+'</span></td>'
+          +'<td class="num" data-l="Odhad €"><input type="number" class="fin-inp" data-f="est" value="'+fmtIn(it.est)+'" min="0" step="1" inputmode="decimal"></td>'
+          +'<td class="num" data-l="Zaplatené €"><input type="number" class="fin-inp" data-f="paid" value="'+fmtIn(it.paid)+'" placeholder="= odhad" min="0" step="0.01" inputmode="decimal"><div class="fin-eff"></div></td>'
+          +'<td data-l="Splatnosť / poznámka"><span class="fin-ed" contenteditable="true" spellcheck="false" data-f="due" data-ph="—">'+esc(it.due)+'</span></td>'
+          +'<td data-l=""><div class="fin-tools">'
+          +'<button type="button" class="ck-ico '+(it.u?'set':'unset')+' fin-link" title="'+(it.u?'zmeniť odkaz':'pridať odkaz')+'">'+(it.u?'✎':'🔗')+'</button>'
+          +'<button type="button" class="ck-ico del fin-del'+(armDel===it.id?' arm':'')+'" title="Zmazať">'+(armDel===it.id?'Naozaj?':'✕')+'</button>'
+          +'</div></td></tr>';
+        if(editLink===it.id){
+          h+='<tr class="fin-linkrow" data-id="'+esc(it.id)+'"><td colspan="7" data-l="Odkaz"><input type="text" class="fin-inp txt fin-url" value="'+esc(it.u)+'" placeholder="https://… (prázdne = odstrániť)" spellcheck="false"> <div class="ck-panel-row" style="margin-top:6px"><button type="button" class="ck-btn ck-primary fin-url-save">Uložiť</button><button type="button" class="ck-btn ck-ghost fin-url-cancel">Zrušiť</button></div></td></tr>';
+        }
+      });
+    });
+    tbItems.innerHTML=h;
+  }
+  function renderDaily(){
+    var h="";
+    fin.daily.forEach(function(d){
+      h+='<tr data-id="'+esc(d.id)+'">'
+        +'<td data-l="Položka"><span class="fin-ed" contenteditable="true" spellcheck="false" data-f="name" data-ph="názov">'+esc(d.name)+'</span></td>'
+        +'<td class="num" data-l="€ / deň"><input type="number" class="fin-inp" data-f="perDay" value="'+fmtIn(d.perDay)+'" min="0" step="1" inputmode="decimal"></td>'
+        +'<td class="num" data-l="Dní"><input type="number" class="fin-inp" data-f="days" value="'+fmtIn(d.days)+'" min="0" step="1" inputmode="numeric" style="width:64px"></td>'
+        +'<td class="num" data-l="Odhad"><strong class="d-est"></strong></td>'
+        +'<td class="num" data-l="Minuté doteraz"><input type="number" class="fin-inp" data-f="spent" value="'+(d.spent?fmtIn(d.spent):"")+'" placeholder="0" min="0" step="1" inputmode="decimal"><div class="fin-eff d-fc"></div></td>'
+        +'<td data-l="Poznámka"><span class="fin-ed small" contenteditable="true" spellcheck="false" data-f="note" data-ph="—">'+esc(d.note)+'</span></td>'
+        +'<td data-l=""><div class="fin-tools"><button type="button" class="ck-ico del fin-ddel'+(armDel===d.id?' arm':'')+'" title="Zmazať">'+(armDel===d.id?'Naozaj?':'✕')+'</button></div></td></tr>';
+    });
+    h+='<tr class="fin-grp"><td colspan="7" data-l=""><button type="button" class="fin-add" id="finDailyAdd">+ pridať dennú položku</button></td></tr>';
+    tbDaily.innerHTML=h;
+  }
+  function renderAll(){
+    elBudget.value=fin.budget; elRate.value=fin.rate;
+    renderItems(); renderDaily(); renderSummary(); conv();
+  }
+  function conv(){ var t=num(elThb.value); elThbOut.textContent = t? (Math.round(t/fin.rate*100)/100).toLocaleString("sk-SK")+" €" : "—"; }
+
+  function findItem(id){ for(var i=0;i<fin.items.length;i++) if(fin.items[i].id===id) return fin.items[i]; return null; }
+  function findDaily(id){ for(var i=0;i<fin.daily.length;i++) if(fin.daily[i].id===id) return fin.daily[i]; return null; }
+  function arm(id){ armDel=id; clearTimeout(armT); armT=setTimeout(function(){ if(armDel===id){ armDel=null; renderItems(); renderDaily(); renderSummary(); } },4000); }
+
+  // ---------- udalosti ----------
+  elBudget.addEventListener("input",function(){ fin.budget=num(elBudget.value); save(); renderSummary(); });
+  elRate.addEventListener("input",function(){ var v=num(elRate.value); if(v>0){ fin.rate=v; save(); conv(); } });
+  elThb.addEventListener("input",conv);
+
+  // živý prepočet pri písaní do číselných polí (bez prekreslenia tabuľky, aby neušiel fokus)
+  $("finItems").addEventListener("input",function(e){
+    var inp=e.target; if(!inp.classList.contains("fin-inp")||inp.classList.contains("fin-url")) return;
+    var it=findItem(inp.closest("tr").dataset.id); if(!it) return;
+    if(inp.dataset.f==="paid") it.paid = inp.value.trim()==="" ? null : num(inp.value);
+    else if(inp.dataset.f==="est") it.est=num(inp.value);
+    save(); renderSummary();
+  });
+  $("finDaily").addEventListener("input",function(e){
+    var inp=e.target; if(!inp.classList.contains("fin-inp")) return;
+    var d=findDaily(inp.closest("tr").dataset.id); if(!d) return;
+    d[inp.dataset.f]=num(inp.value); save(); renderSummary();
+  });
+  // texty (contenteditable) — uložiť pri odchode
+  document.getElementById("rozpocet").addEventListener("blur",function(e){
+    var el=e.target; if(!el.classList||!el.classList.contains("fin-ed")) return;
+    var tr=el.closest("tr"), id=tr.dataset.id, f=el.dataset.f, v=el.textContent.replace(/\s+/g," ").trim();
+    var obj = tr.closest("#finDaily") ? findDaily(id) : findItem(id);
+    if(obj && obj[f]!==v){ obj[f]=v; save(); if(f==="name") renderSummary(); }
+  },true);
+  document.getElementById("rozpocet").addEventListener("keydown",function(e){
+    if(e.key==="Enter" && e.target.classList && e.target.classList.contains("fin-ed")){ e.preventDefault(); e.target.blur(); }
+    if(e.key==="Enter" && e.target.classList && e.target.classList.contains("fin-url")){ e.preventDefault(); var b=e.target.closest("tr").querySelector(".fin-url-save"); if(b) b.click(); }
+    if(e.key==="Escape" && editLink){ editLink=null; renderItems(); renderSummary(); }
+  });
+
+  $("finItems").addEventListener("click",function(e){
+    var t=e.target;
+    var add=t.closest(".fin-add");
+    if(add){ var id="n"+Date.now(); fin.items.push({id:id,cat:add.dataset.cat,name:"",when:"",est:0,paid:null,s:0,due:"",u:""}); save(); renderItems(); renderSummary();
+      var el=tbItems.querySelector('tr[data-id="'+id+'"] .fin-name'); if(el) el.focus(); return; }
+    var tr=t.closest("tr"); if(!tr||!tr.dataset.id) return;
+    var it=findItem(tr.dataset.id); if(!it) return;
+    if(t.closest(".fin-s")){ it.s=(it.s+1)%3; save(); renderItems(); renderSummary(); return; }
+    if(t.closest(".fin-link")){ editLink = editLink===it.id ? null : it.id; armDel=null; renderItems(); renderSummary(); var u=tbItems.querySelector('.fin-linkrow[data-id="'+it.id+'"] .fin-url'); if(u) u.focus(); return; }
+    if(t.closest(".fin-url-save")){ var v=tr.querySelector(".fin-url").value.trim(); if(v && !/^(https?:\/\/|mailto:)/i.test(v)) v="https://"+v; it.u=v; editLink=null; save(); renderItems(); renderSummary(); return; }
+    if(t.closest(".fin-url-cancel")){ editLink=null; renderItems(); renderSummary(); return; }
+    if(t.closest(".fin-del")){
+      if(armDel===it.id){ fin.items=fin.items.filter(function(x){return x.id!==it.id;}); armDel=null; save(); renderItems(); renderSummary(); }
+      else { arm(it.id); renderItems(); }
+      return;
+    }
+  });
+  $("finDaily").addEventListener("click",function(e){
+    var t=e.target;
+    if(t.closest("#finDailyAdd")){ var id="d"+Date.now(); fin.daily.push({id:id,name:"",perDay:0,days:16,spent:0,note:""}); save(); renderDaily(); renderSummary();
+      var el=tbDaily.querySelector('tr[data-id="'+id+'"] .fin-ed'); if(el) el.focus(); return; }
+    var tr=t.closest("tr"); if(!tr||!tr.dataset.id) return;
+    if(t.closest(".fin-ddel")){
+      var id2=tr.dataset.id;
+      if(armDel===id2){ fin.daily=fin.daily.filter(function(x){return x.id!==id2;}); armDel=null; save(); renderDaily(); renderSummary(); }
+      else { arm(id2); renderDaily(); }
+    }
+  });
+
+  var rArm=false, rBtn=$("finReset");
+  rBtn.addEventListener("click",function(){
+    if(!rArm){ rArm=true; rBtn.textContent="↺ Naozaj? Klikni znova"; setTimeout(function(){ if(rArm){ rArm=false; rBtn.textContent="↺ Reset financií"; } },4000); return; }
+    rArm=false; rBtn.textContent="↺ Reset financií"; fin=SEED(); save(); renderAll();
+  });
+
+  // ---------- rozhranie pre sync / export ----------
+  window.__finGet=function(){ return JSON.parse(JSON.stringify(fin)); };
+  window.__finSet=function(obj){ fin=normalize(JSON.parse(JSON.stringify(obj))); save(); editLink=null; armDel=null; renderAll(); };
+  window.__finReload=function(){ try{ fin=normalize(JSON.parse(ls(KEY)||"null")); }catch(e){} renderAll(); };
+
+  renderAll();
+})();
+</script>
 
 
 <script>
@@ -1342,7 +1710,8 @@
       .then(function(j){
         if(!j || !Array.isArray(j.days)) throw new Error("zlý formát");
         writeState(j.days);
-        st("Načítané: "+(j.by?j.by+", ":"")+fmt(j.savedAt),"ok");
+        if(j.fin && window.__finSet) window.__finSet(j.fin);
+        st("Načítané: "+(j.by?j.by+", ":"")+fmt(j.savedAt)+(j.fin?" (checklist + financie)":" (len checklist)"),"ok");
       })
       .catch(function(e){
         if(silent){ st("Spoločná verzia zatiaľ neexistuje — pracuješ lokálne."); return; }
@@ -1369,8 +1738,8 @@
           setTimeout(function(){ delete elSave.dataset.force; },10000);
           throw new Error("__conflict__");
         }
-        var body={ message:"Checklist"+(who?" — "+who:"")+" "+new Date().toISOString().slice(0,16).replace("T"," "),
-                   content:b64(JSON.stringify({savedAt:new Date().toISOString(), by:who||"neznámy", days:days},null,2)),
+        var body={ message:"Checklist + financie"+(who?" — "+who:"")+" "+new Date().toISOString().slice(0,16).replace("T"," "),
+                   content:b64(JSON.stringify({savedAt:new Date().toISOString(), by:who||"neznámy", days:days, fin:(window.__finGet?window.__finGet():undefined)},null,2)),
                    branch:BRANCH };
         if(remote) body.sha=remote;
         return fetch(API,{method:"PUT",headers:H,body:JSON.stringify(body)});

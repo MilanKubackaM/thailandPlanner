@@ -1,6 +1,6 @@
 {
   "savedAt": "2026-08-22T18:00:00.000Z",
-  "by": "Milan (úvodný stav)",
+  "by": "Milan (úvodný stav + financie)",
   "days": [
     {
       "id": "pre",
@@ -355,5 +355,299 @@
         }
       ]
     }
-  ]
+  ],
+  "fin": {
+    "v": 1,
+    "budget": 3500,
+    "rate": 37,
+    "daily": [
+      {
+        "id": "food",
+        "name": "Jedlo a pitie",
+        "perDay": 30,
+        "days": 16,
+        "spent": 0,
+        "note": "prevažne lokálne, ~1 100 THB/deň pre dvoch; počas treku 7.–9. 2. je jedlo v cene"
+      },
+      {
+        "id": "scoot",
+        "name": "Skútre + palivo",
+        "perDay": 10,
+        "days": 8,
+        "spent": 0,
+        "note": "Chiang Rai 1, Chiang Mai 2, Phangan 3, Samui 2 dni"
+      },
+      {
+        "id": "local",
+        "name": "Miestna doprava (Grab, songthaew, tuk-tuk)",
+        "perDay": 7,
+        "days": 16,
+        "spent": 0,
+        "note": "transfery na letiská a móla, Grab v Bangkoku"
+      },
+      {
+        "id": "misc",
+        "name": "Bočné výdavky (masáže, drinky, suveníry)",
+        "perDay": 10,
+        "days": 16,
+        "spent": 0,
+        "note": "nie je to v pôvodnom rozpočte — nech máme s čím počítať"
+      }
+    ],
+    "items": [
+      {
+        "id": "t1",
+        "cat": "doprava",
+        "name": "Let Bangkok → Chiang Rai (Thai Airways 16:50)",
+        "when": "4. 2.",
+        "est": 122,
+        "paid": null,
+        "s": 0,
+        "due": "kúpiť po otvorení predaja (~sep/okt 2026)",
+        "u": "https://www.google.com/travel/flights?q=flights%20from%20BKK%20to%20CEI%20on%202027-02-04%20one%20way"
+      },
+      {
+        "id": "t2",
+        "cat": "doprava",
+        "name": "Greenbus VIP Chiang Rai → Chiang Mai",
+        "when": "6. 2.",
+        "est": 22,
+        "paid": null,
+        "s": 0,
+        "due": "CNY — kúpiť online pár dní vopred",
+        "u": "https://www.greenbusthailand.com/website/"
+      },
+      {
+        "id": "t3",
+        "cat": "doprava",
+        "name": "Let Chiang Mai → Surat Thani (AirAsia 08:10)",
+        "when": "11. 2.",
+        "est": 190,
+        "paid": null,
+        "s": 0,
+        "due": "už v predaji — kúpiť čo najskôr",
+        "u": "https://www.skyscanner.net/transport/flights/cnx/urt/270211/"
+      },
+      {
+        "id": "t4",
+        "cat": "doprava",
+        "name": "Lomprayah bus + katamarán URT → Thong Sala",
+        "when": "11. 2.",
+        "est": 52,
+        "paid": null,
+        "s": 0,
+        "due": "kúpiť ~3–4 týždne vopred (nevratný lístok)",
+        "u": "https://12go.asia/en/travel/surat-thani-airport/koh-phangan?date=2027-02-11"
+      },
+      {
+        "id": "t5",
+        "cat": "doprava",
+        "name": "Ferry Seatran Thong Sala → Bangrak (Samui)",
+        "when": "14. 2.",
+        "est": 14,
+        "paid": null,
+        "s": 0,
+        "due": "deň-dva vopred",
+        "u": "https://12go.asia/en/travel/koh-phangan/samui?date=2027-02-14"
+      },
+      {
+        "id": "t6",
+        "cat": "doprava",
+        "name": "Lomprayah ferry + bus Samui → Ao Nang",
+        "when": "16. 2.",
+        "est": 65,
+        "paid": null,
+        "s": 0,
+        "due": "~2 týždne vopred",
+        "u": "https://12go.asia/en/travel/samui/ao-nang?date=2027-02-16"
+      },
+      {
+        "id": "t7",
+        "cat": "doprava",
+        "name": "Let Krabi → Bangkok (VietJet VZ345 20:35)",
+        "when": "18. 2.",
+        "est": 90,
+        "paid": null,
+        "s": 0,
+        "due": "kúpiť po otvorení predaja",
+        "u": "https://www.google.com/travel/flights?q=flights%20from%20KBV%20to%20BKK%20on%202027-02-18%20one%20way"
+      },
+      {
+        "id": "u1",
+        "cat": "ubytko",
+        "name": "Chiang Rai — Baan Norn Plearn (2 noci)",
+        "when": "4.–6. 2.",
+        "est": 50,
+        "paid": null,
+        "s": 0,
+        "due": "",
+        "u": "https://www.booking.com/hotel/th/po-baan-norn-plearn.html"
+      },
+      {
+        "id": "u2",
+        "cat": "ubytko",
+        "name": "Chiang Mai — Yi's Garden Villa (1 noc)",
+        "when": "6.–7. 2.",
+        "est": 31,
+        "paid": null,
+        "s": 0,
+        "due": "",
+        "u": "https://www.booking.com/searchresults.html?ss=Yi%27s+Garden+Villa+Chiang+Mai&checkin=2027-02-06&checkout=2027-02-07&group_adults=2"
+      },
+      {
+        "id": "u3",
+        "cat": "ubytko",
+        "name": "Chiang Mai — Yi's Garden Villa (2 noci po treku)",
+        "when": "9.–11. 2.",
+        "est": 62,
+        "paid": null,
+        "s": 0,
+        "due": "",
+        "u": "https://www.booking.com/searchresults.html?ss=Yi%27s+Garden+Villa+Chiang+Mai&checkin=2027-02-09&checkout=2027-02-11&group_adults=2"
+      },
+      {
+        "id": "u4",
+        "cat": "ubytko",
+        "name": "Koh Phangan — Sunset Cove Resort (3 noci)",
+        "when": "11.–14. 2.",
+        "est": 129,
+        "paid": null,
+        "s": 0,
+        "due": "high season — rezervovať 2–4 mesiace vopred",
+        "u": "https://www.booking.com/searchresults.html?ss=Sunset+Cove+Resort+Koh+Phangan&checkin=2027-02-11&checkout=2027-02-14&group_adults=2"
+      },
+      {
+        "id": "u5",
+        "cat": "ubytko",
+        "name": "Koh Samui — Baan Bophut Beach Hotel (2 noci)",
+        "when": "14.–16. 2.",
+        "est": 106,
+        "paid": null,
+        "s": 0,
+        "due": "rezervovať veľmi skoro",
+        "u": "https://www.booking.com/searchresults.html?ss=Baan+Bophut+Beach+Hotel+Samui&checkin=2027-02-14&checkout=2027-02-16&group_adults=2"
+      },
+      {
+        "id": "u6",
+        "cat": "ubytko",
+        "name": "Krabi / Ao Nang — Sugar Marina Cliffhanger (2 noci)",
+        "when": "16.–18. 2.",
+        "est": 76,
+        "paid": null,
+        "s": 0,
+        "due": "",
+        "u": "https://www.booking.com/searchresults.html?ss=Sugar+Marina+Cliffhanger+Aonang&checkin=2027-02-16&checkout=2027-02-18&group_adults=2"
+      },
+      {
+        "id": "u7",
+        "cat": "ubytko",
+        "name": "Bangkok — Casa Vimaya Riverside (2 noci)",
+        "when": "18.–20. 2.",
+        "est": 84,
+        "paid": null,
+        "s": 0,
+        "due": "",
+        "u": "https://www.booking.com/searchresults.html?ss=Casa+Vimaya+Riverside+Bangkok&checkin=2027-02-18&checkout=2027-02-20&group_adults=2"
+      },
+      {
+        "id": "a1",
+        "cat": "aktivity",
+        "name": "3D/2N jungle trek z Chiang Mai",
+        "when": "7.–9. 2.",
+        "est": 160,
+        "paid": null,
+        "s": 0,
+        "due": "odhad pre CM Local Tours / Thailand Treks; Piroon by bol ~324 €",
+        "u": "https://www.chiangmai-trekking.com/Trekking-Tours/3-days-2-nights"
+      },
+      {
+        "id": "a2",
+        "cat": "aktivity",
+        "name": "Doi Inthanon + Kew Mae Pan (skupinová tura)",
+        "when": "10. 2.",
+        "est": 97,
+        "paid": null,
+        "s": 0,
+        "due": "",
+        "u": "https://www.getyourguide.com/chiang-mai-l271/chiang-mai-kew-mae-pan-nature-trail-doi-inthanon-day-trip-t536292/"
+      },
+      {
+        "id": "a3",
+        "cat": "aktivity",
+        "name": "Snorkel trip Koh Tao + Nang Yuan (vrátane vstupu)",
+        "when": "13. 2.",
+        "est": 122,
+        "paid": null,
+        "s": 0,
+        "due": "+250 THB/os. vstup Nang Yuan v hotovosti",
+        "u": "https://www.getyourguide.com/ko-phangan-l5038/koh-nangyuan-koh-tao-by-speed-boat-from-koh-phangan-t672990/"
+      },
+      {
+        "id": "a4",
+        "cat": "aktivity",
+        "name": "Vodopády Koh Phangan — vstupy do NP",
+        "when": "12. 2.",
+        "est": 12,
+        "paid": null,
+        "s": 0,
+        "due": "platí sa na mieste, hotovosť",
+        "u": ""
+      },
+      {
+        "id": "a5",
+        "cat": "aktivity",
+        "name": "ATV / štvorkolky Samui (1 h)",
+        "when": "15. 2.",
+        "est": 90,
+        "paid": null,
+        "s": 0,
+        "due": "",
+        "u": "https://www.getyourguide.com/koh-samui-l898/koh-samui-quad-bike-safari-tour-t245437/"
+      },
+      {
+        "id": "a6",
+        "cat": "aktivity",
+        "name": "Phi Phi / 4-island tour speedboatom (vrátane park fee)",
+        "when": "17. 2.",
+        "est": 119,
+        "paid": null,
+        "s": 0,
+        "due": "+400 THB/os. park fee v hotovosti",
+        "u": "https://bigtourkrabi.com/en/thailand/ao-nang/tours/4-islands-by-speedboat/"
+      },
+      {
+        "id": "a7",
+        "cat": "aktivity",
+        "name": "Thai cooking class (Ya's Cookery)",
+        "when": "18. 2.",
+        "est": 86,
+        "paid": null,
+        "s": 0,
+        "due": "",
+        "u": "https://www.getyourguide.com/ao-nang-l89867/krabi-authentic-thai-cooking-class-at-ya-s-cookery-school-t366985/"
+      },
+      {
+        "id": "a8",
+        "cat": "aktivity",
+        "name": "Muay Thai couple training",
+        "when": "18. 2.",
+        "est": 54,
+        "paid": null,
+        "s": 0,
+        "due": "lokálny gym ~25 €, GYG lekcia ~92 €",
+        "u": "https://overthetopkrabi.com/"
+      },
+      {
+        "id": "a9",
+        "cat": "aktivity",
+        "name": "Vstupy do chrámov (Wat Rong Khun, Baan Dam, Grand Palace, Wat Pho)",
+        "when": "5. a 19. 2.",
+        "est": 59,
+        "paid": null,
+        "s": 0,
+        "due": "platí sa na mieste, hotovosť",
+        "u": ""
+      }
+    ]
+  }
 }
